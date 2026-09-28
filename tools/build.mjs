@@ -55,6 +55,24 @@ const links = (item) =>
         .join('')}</p>`
     : '';
 
+const modules = (item) =>
+  item.modules && item.modules.length
+    ? `<div class="modules">
+          ${item.modules
+            .map(
+              (m) => `<div class="module-card">
+            <div class="module-head">
+              <span class="module-name">${esc(m.name)}</span>
+              <span class="module-role">${esc(m.role)}</span>
+            </div>
+            <p class="module-desc">${md(m.desc)}</p>
+            ${m.url ? `<a class="module-link" href="${esc(m.url)}" target="_blank" rel="noopener">查看仓库${iconExt}</a>` : ''}
+          </div>`
+            )
+            .join('\n          ')}
+        </div>`
+    : '';
+
 const entry = (item) => `      <article class="entry">
         <header class="entry-head">
           <div class="entry-org">
@@ -69,6 +87,7 @@ const entry = (item) => `      <article class="entry">
         ${bullets(item)}
         ${tags(item)}
         ${links(item)}
+        ${modules(item)}
       </article>`;
 
 const sectionBody = (section) => {

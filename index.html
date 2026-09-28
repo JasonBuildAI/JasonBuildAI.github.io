@@ -26,6 +26,7 @@
     <a class="brand" href="#overview"><span class="brand-mark">黄</span><span>黄江南</span></a>
     <nav class="nav" aria-label="页面导航">
           <a href="#overview">概览</a>
+          <a href="#startup">创业</a>
           <a href="#internship">实习</a>
           <a href="#opensource">开源</a>
           <a href="#projects">项目</a>
@@ -81,6 +82,64 @@
       </div>
     </section>
 
+    <section class="section" id="startup">
+      <div class="section-head"><h2>创业经历</h2></div>
+      <article class="entry">
+        <header class="entry-head">
+          <div class="entry-org">
+            
+            <h3>Meeta AI · 交互式陪伴虚拟数字人</h3>
+            <span class="role">技术负责人</span>
+          </div>
+          <span class="period">2026.08 – 2026.09</span>
+        </header>
+        <p class="entry-meta"><strong>角色</strong>：公司技术负责人，从 0 到 1 主导技术选型、架构设计与全部核心模块落地；产品能力最终解耦为 4 个可独立复用的开源模块（记忆 / 决策 / 表达 / 验收），5 个仓库累计提交 1,000+ 次。</p>
+        <p class="entry-bg"><strong>产品介绍</strong>：<strong>numberhuman</strong> —— 面向 C 端的交互式陪伴虚拟数字人，支持免按键实时语音通话与文字双通道，具备跨天长期记忆、拟人化说话规则与低成本高并发推理链路；后端 FastAPI + SSE，一轮对话由 LLM / TTS / 推送三线程并行驱动。</p>
+        <ul class="bullets">
+          <li><strong>端到端交付</strong>：独立完成对话编排、会话持久化、SSE 流式推送与独立运维台（用户 / 邀请码 / 额度 / 成本统计）；音频严格按片序播放并支持随时打断，本机实测首声约 <strong>3.2 s</strong>；单进程实测同时挂住 <strong>45 条 SSE 流、0 错误</strong>（RSS 221.5 MB、<code>/api/state</code> P50 10.9 ms）。</li>
+          <li><strong>成本结构</strong>：在 1 万用户规模的成本模型下，同等强度约为主流托管实时语音方案的 <strong>1/40 – 1/130</strong>；自研记忆为<strong>常数注入</strong>——聊 300 轮与聊 3 轮的注入量几乎一致，避免上下文随轮数膨胀。</li>
+          <li><strong>工程纪律</strong>：建立提交前自动化闸门，<strong>1,113 条用例通过 / 本机约 40 秒</strong>；跨天长期记忆 E2E <strong>29 项全部通过</strong>；后端累计 18,780 行（其中记忆系统 4,831 行）。</li>
+          <li><strong>架构解耦</strong>：把产品能力拆成 <strong>记忆（changqing）/ 决策（huatou）/ 表达（echoturn）/ 验收（touchstone）</strong> 四个独立模块并全部开源——每个模块都能单独讲清职责、单独测试、单独复用。</li>
+        </ul>
+        <ul class="tags"><li>技术负责人</li><li>0 → 1</li><li>FastAPI</li><li>SSE</li><li>实时语音</li><li>记忆系统</li><li>成本优化</li></ul>
+        
+        <div class="modules">
+          <div class="module-card">
+            <div class="module-head">
+              <span class="module-name">changqing</span>
+              <span class="module-role">记忆 · 我记得什么</span>
+            </div>
+            <p class="module-desc">四层记忆（L0 原话 / L1 事实 / L2 纪要 / L3 画像），每条事实都带 <code>turn_ref</code> 与 <code>quote</code>、可回引到原话；核心零第三方依赖，可挂载到任意 FastAPI 服务。</p>
+            <a class="module-link" href="https://github.com/JasonBuildAI/changqing" target="_blank" rel="noopener">查看仓库<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a>
+          </div>
+          <div class="module-card">
+            <div class="module-head">
+              <span class="module-name">huatou</span>
+              <span class="module-role">决策 · 我什么时候说、说什么</span>
+            </div>
+            <p class="module-desc">发言权管理器：这句话该不该出口、答完要不要把话头递回去、递回去等多久；把散落在业务代码里的 if 收敛成可注入时钟、可被假时钟测穿、状态可持久化的策略对象。</p>
+            <a class="module-link" href="https://github.com/JasonBuildAI/huatou" target="_blank" rel="noopener">查看仓库<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a>
+          </div>
+          <div class="module-card">
+            <div class="module-head">
+              <span class="module-name">echoturn</span>
+              <span class="module-role">表达 · 我怎么说出去</span>
+            </div>
+            <p class="module-desc">与供应商无关的实时语音流水线：说完判定（人声时长 + 端点模型，都不可用才回落静音阈值）、插话不吞掉用户的话、首声不等整段、音频严格按片序；核心仅 1 个依赖，mock 供应商即可离线跑通。</p>
+            <a class="module-link" href="https://github.com/JasonBuildAI/Echoturn" target="_blank" rel="noopener">查看仓库<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a>
+          </div>
+          <div class="module-card">
+            <div class="module-head">
+              <span class="module-name">touchstone</span>
+              <span class="module-role">验收 · 我怎么知道它变好了</span>
+            </div>
+            <p class="module-desc">把「好不好」变成可复现的比率与可失败的闸门：档位按前提划分（缺前提退出码 2，而不是静默跳过）、每条护栏自带「证明它会失败」的用例、每个数字带出处与日期；默认档断网即可跑。</p>
+            <a class="module-link" href="https://github.com/JasonBuildAI/touchstone" target="_blank" rel="noopener">查看仓库<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a>
+          </div>
+        </div>
+      </article>
+    </section>
+
     <section class="section" id="internship">
       <div class="section-head"><h2>实习经历</h2></div>
       <article class="entry">
@@ -102,6 +161,7 @@
         </ul>
         <ul class="tags"><li>Go</li><li>AI Agent</li><li>UIA 自动化</li><li>Agent 评测</li><li>开源协作</li></ul>
         <p class="entry-links"><a href="https://github.com/the-open-agent/openagent" target="_blank" rel="noopener">OpenAgent 仓库<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a><a href="https://github.com/the-open-agent/agentbench" target="_blank" rel="noopener">AgentBench 仓库<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a></p>
+        
       </article>
     </section>
 
@@ -123,6 +183,7 @@
         </ul>
         <ul class="tags"><li>Go</li><li>React</li><li>文档工程</li><li>社区运营</li></ul>
         
+        
       </article>
       <article class="entry">
         <header class="entry-head">
@@ -142,6 +203,7 @@
         </ul>
         <ul class="tags"><li>Python</li><li>JavaScript</li><li>会话持久化</li><li>媒体链路</li><li>稳定性治理</li></ul>
         <p class="entry-links"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline" target="_blank" rel="noopener">项目仓库<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a></p>
+        
       </article>
     </section>
 
@@ -166,6 +228,7 @@
         </ul>
         <ul class="tags"><li>Python</li><li>FastAPI</li><li>LangGraph</li><li>RAG</li><li>性能优化</li></ul>
         
+        
       </article>
       <article class="entry">
         <header class="entry-head">
@@ -185,6 +248,7 @@
           <li><strong>RAG 质量评估与调优</strong>：构建离线评估流水线，基于 50 条标注样本计算 Recall@K / MRR 指标并按 topic 分组统计；通过 A/B 对比将 TopK 从 10 调至 20，<strong>Recall@10 提升 7.3%</strong>、<strong>MySQL 领域召回率提升 16.7%</strong>。</li>
         </ul>
         <ul class="tags"><li>Go</li><li>Eino</li><li>Multi-Agent</li><li>Milvus</li><li>RAG 评估</li></ul>
+        
         
       </article>
     </section>
@@ -223,6 +287,7 @@
           <span class="period">2023.09 – 2027.06</span>
         </header>
         <p class="entry-meta">CET-4 / CET-6 · <strong>核心基础</strong>：计算机网络 / 高级语言程序设计 / 操作系统 / 数据库</p>
+        
         
         
         

@@ -18,21 +18,110 @@
     "resumePdfBw": "assets/resume/resume-bw.pdf",
     "summary": "2027 届本科生，专注 Go 后端与 AI Agent 工程。Apache Casbin 创始团队孵化的开源项目 OpenAgent（5,600+ Stars）官方 Member，累计代码变更超 1 万行，主导 Windows GUI 自动化引擎与 AgentBench 评测框架从 0 到 1 落地。个人项目覆盖 Multi-Agent 编排、RAG 混合检索与端到端性能优化。",
     "highlights": [
-      { "value": "5,600+", "label": "OpenAgent Stars" },
-      { "value": "1 万+", "label": "累计代码变更行数" },
-      { "value": "104", "label": "AgentBench 评测任务" },
-      { "value": "5 万+", "label": "技术文章累计阅读" }
+      {
+        "value": "5,600+",
+        "label": "OpenAgent Stars"
+      },
+      {
+        "value": "1 万+",
+        "label": "累计代码变更行数"
+      },
+      {
+        "value": "104",
+        "label": "AgentBench 评测任务"
+      },
+      {
+        "value": "5 万+",
+        "label": "技术文章累计阅读"
+      }
     ]
   },
   "nav": [
-    { "id": "overview", "label": "概览" },
-    { "id": "internship", "label": "实习" },
-    { "id": "opensource", "label": "开源" },
-    { "id": "projects", "label": "项目" },
-    { "id": "skills", "label": "技能" },
-    { "id": "education", "label": "教育" }
+    {
+      "id": "overview",
+      "label": "概览"
+    },
+    {
+      "id": "startup",
+      "label": "创业"
+    },
+    {
+      "id": "internship",
+      "label": "实习"
+    },
+    {
+      "id": "opensource",
+      "label": "开源"
+    },
+    {
+      "id": "projects",
+      "label": "项目"
+    },
+    {
+      "id": "skills",
+      "label": "技能"
+    },
+    {
+      "id": "education",
+      "label": "教育"
+    }
   ],
   "sections": [
+    {
+      "id": "startup",
+      "title": "创业经历",
+      "kind": "experience",
+      "items": [
+        {
+          "org": "Meeta AI · 交互式陪伴虚拟数字人",
+          "role": "技术负责人",
+          "period": "2026.08 – 2026.09",
+          "meta": "**角色**：公司技术负责人，从 0 到 1 主导技术选型、架构设计与全部核心模块落地；产品能力最终解耦为 4 个可独立复用的开源模块（记忆 / 决策 / 表达 / 验收），5 个仓库累计提交 1,000+ 次。",
+          "background": "**产品介绍**：**numberhuman** —— 面向 C 端的交互式陪伴虚拟数字人，支持免按键实时语音通话与文字双通道，具备跨天长期记忆、拟人化说话规则与低成本高并发推理链路；后端 FastAPI + SSE，一轮对话由 LLM / TTS / 推送三线程并行驱动。",
+          "tags": [
+            "技术负责人",
+            "0 → 1",
+            "FastAPI",
+            "SSE",
+            "实时语音",
+            "记忆系统",
+            "成本优化"
+          ],
+          "bullets": [
+            "**端到端交付**：独立完成对话编排、会话持久化、SSE 流式推送与独立运维台（用户 / 邀请码 / 额度 / 成本统计）；音频严格按片序播放并支持随时打断，本机实测首声约 **3.2 s**；单进程实测同时挂住 **45 条 SSE 流、0 错误**（RSS 221.5 MB、`/api/state` P50 10.9 ms）。",
+            "**成本结构**：在 1 万用户规模的成本模型下，同等强度约为主流托管实时语音方案的 **1/40 – 1/130**；自研记忆为**常数注入**——聊 300 轮与聊 3 轮的注入量几乎一致，避免上下文随轮数膨胀。",
+            "**工程纪律**：建立提交前自动化闸门，**1,113 条用例通过 / 本机约 40 秒**；跨天长期记忆 E2E **29 项全部通过**；后端累计 18,780 行（其中记忆系统 4,831 行）。",
+            "**架构解耦**：把产品能力拆成 **记忆（changqing）/ 决策（huatou）/ 表达（echoturn）/ 验收（touchstone）** 四个独立模块并全部开源——每个模块都能单独讲清职责、单独测试、单独复用。"
+          ],
+          "modules": [
+            {
+              "name": "changqing",
+              "role": "记忆 · 我记得什么",
+              "desc": "四层记忆（L0 原话 / L1 事实 / L2 纪要 / L3 画像），每条事实都带 `turn_ref` 与 `quote`、可回引到原话；核心零第三方依赖，可挂载到任意 FastAPI 服务。",
+              "url": "https://github.com/JasonBuildAI/changqing"
+            },
+            {
+              "name": "huatou",
+              "role": "决策 · 我什么时候说、说什么",
+              "desc": "发言权管理器：这句话该不该出口、答完要不要把话头递回去、递回去等多久；把散落在业务代码里的 if 收敛成可注入时钟、可被假时钟测穿、状态可持久化的策略对象。",
+              "url": "https://github.com/JasonBuildAI/huatou"
+            },
+            {
+              "name": "echoturn",
+              "role": "表达 · 我怎么说出去",
+              "desc": "与供应商无关的实时语音流水线：说完判定（人声时长 + 端点模型，都不可用才回落静音阈值）、插话不吞掉用户的话、首声不等整段、音频严格按片序；核心仅 1 个依赖，mock 供应商即可离线跑通。",
+              "url": "https://github.com/JasonBuildAI/Echoturn"
+            },
+            {
+              "name": "touchstone",
+              "role": "验收 · 我怎么知道它变好了",
+              "desc": "把「好不好」变成可复现的比率与可失败的闸门：档位按前提划分（缺前提退出码 2，而不是静默跳过）、每条护栏自带「证明它会失败」的用例、每个数字带出处与日期；默认档断网即可跑。",
+              "url": "https://github.com/JasonBuildAI/touchstone"
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "internship",
       "title": "实习经历",
@@ -43,13 +132,28 @@
           "orgUrl": "https://github.com/casbin/casbin",
           "role": "2026 明日之星预选生",
           "period": "2026.04 – 2026.06",
-          "badge": { "src": "assets/img/apache-color.png", "alt": "Apache" },
+          "badge": {
+            "src": "assets/img/apache-color.png",
+            "alt": "Apache"
+          },
           "meta": "导师：hsluoyz（北京大学罗杨教授，Apache Casbin 社区负责人） · 项目：**OpenAgent** —— Casbin 原班人马孵化的独立开源项目，GitHub 5,600+ Stars；本人为**官方 Member**，**累计代码变更超 1 万行**，撰写技术文章累计浏览超 5 万、带动项目 Star 增长 1,500+。",
           "background": "**项目背景**：OpenAgent 是面向个人本地部署的开源 AI Agent，采用 Go 单进程架构，将 Agent 运行时、工具调用、多模型接入与 Web 控制台收敛为一个预编译二进制：**单文件约 23 MB、冷启动约 2.7 s**，相较同类 Node.js 方案（29.2 s、4.2 万+ 文件、382 MB）**快约 11 倍、体积约为其 1/16**。",
-          "tags": ["Go", "AI Agent", "UIA 自动化", "Agent 评测", "开源协作"],
+          "tags": [
+            "Go",
+            "AI Agent",
+            "UIA 自动化",
+            "Agent 评测",
+            "开源协作"
+          ],
           "links": [
-            { "label": "OpenAgent 仓库", "url": "https://github.com/the-open-agent/openagent" },
-            { "label": "AgentBench 仓库", "url": "https://github.com/the-open-agent/agentbench" }
+            {
+              "label": "OpenAgent 仓库",
+              "url": "https://github.com/the-open-agent/openagent"
+            },
+            {
+              "label": "AgentBench 仓库",
+              "url": "https://github.com/the-open-agent/agentbench"
+            }
           ],
           "bullets": [
             "**Windows GUI 自动化引擎**：**从 0 到 1 独立设计并交付**基于 UIA 的 GUI 工具链，新增 UIA 引擎、任务调度器与 9 个原子工具（元素查找 / 交互 / 等待 / 断言 / 应用启动 / 系统指标读取等），并同步提供非 Windows 平台降级实现与安全熔断。",
@@ -70,7 +174,12 @@
           "orgUrl": "https://github.com/casdoor/casdoor",
           "role": "开源贡献者",
           "period": "2026.04",
-          "tags": ["Go", "React", "文档工程", "社区运营"],
+          "tags": [
+            "Go",
+            "React",
+            "文档工程",
+            "社区运营"
+          ],
           "bullets": [
             "重构并改进项目 README（已合入），新增简体中文 README 与语言切换入口，优化文档链接与章节结构；并参与社区运营与对外推广，提升中文开发者的上手体验与文档可维护性。"
           ]
@@ -80,11 +189,23 @@
           "orgUrl": "https://github.com/FireRedTeam/FireRed-OpenStoryline",
           "role": "核心贡献者",
           "period": "2026.02 – 2026.04",
-          "badge": { "src": "assets/img/xiaohongshu-color.png", "alt": "小红书 FireRed" },
+          "badge": {
+            "src": "assets/img/xiaohongshu-color.png",
+            "alt": "小红书 FireRed"
+          },
           "background": "**项目背景**：小红书 FireRedTeam 开源的 AI 视频剪辑 Agent，以自然语言交互 + LLM 规划 + 工具编排把手工剪辑转变为“意图驱动”的创作流程；本人在所有贡献者中 **PR 数第二**，独立承担会话状态持久化与恢复、会话历史、媒体链路与可用性治理等主干模块。",
-          "tags": ["Python", "JavaScript", "会话持久化", "媒体链路", "稳定性治理"],
+          "tags": [
+            "Python",
+            "JavaScript",
+            "会话持久化",
+            "媒体链路",
+            "稳定性治理"
+          ],
           "links": [
-            { "label": "项目仓库", "url": "https://github.com/FireRedTeam/FireRed-OpenStoryline" }
+            {
+              "label": "项目仓库",
+              "url": "https://github.com/FireRedTeam/FireRed-OpenStoryline"
+            }
           ],
           "bullets": [
             "**会话状态持久化与安全恢复**：独立设计并实现会话状态落盘与恢复机制——对损坏的工具调用行采取 fail-closed 策略而非静默跳过；为会话历史与 LangChain 消息分别设置 2000 / 4000 条上限；构建递归密钥脱敏链路，按字段名与内联赋值两种模式识别 `client_secret` / `refresh_token` / `x-api-key` / `access_key` 等敏感字段并统一替换为 `***`；对 `getSession` 异常做类型化处理。",
@@ -103,7 +224,13 @@
           "org": "AegisNest 智能客服系统（Python + FastAPI + LangGraph）",
           "role": "个人项目",
           "period": "2026.07 – 2026.09",
-          "tags": ["Python", "FastAPI", "LangGraph", "RAG", "性能优化"],
+          "tags": [
+            "Python",
+            "FastAPI",
+            "LangGraph",
+            "RAG",
+            "性能优化"
+          ],
           "background": "**项目介绍**：面向 API 开放平台的 Multi-Agent 智能客服系统，以 LangGraph 的 DAG 编排协作为核心，集成意图路由、RAG 混合检索、工具诊断、会话记忆、安全脱敏、多级兜底等能力，为开发者提供全流程智能技术支持。",
           "bullets": [
             "**Multi-Agent 编排**：基于 LangGraph StateGraph 设计意图路由、文档 RAG、API 诊断、账单、工单、安全审查 6 个专业 Agent 的职责划分与 DAG 管线，由中心编排器统一调度，安全审查节点串行收口，保证安全审查一定在最终输出之前执行。",
@@ -116,7 +243,13 @@
           "org": "MockAtlas 智能面试助手（Go + Eino · Multi-Agent）",
           "role": "个人项目",
           "period": "2025.12 – 2026.02",
-          "tags": ["Go", "Eino", "Multi-Agent", "Milvus", "RAG 评估"],
+          "tags": [
+            "Go",
+            "Eino",
+            "Multi-Agent",
+            "Milvus",
+            "RAG 评估"
+          ],
           "background": "**项目介绍**：基于 Go 与 Eino 框架的 AI 智能面试助手，以 Multi-Agent 的 DAG 编排协作为核心，集成 RAG 多路召回题库检索、动态难度调节、Agent 记忆系统等能力，提供简历分析、智能出题、实时面试、评估报告的全流程模拟面试体验。",
           "bullets": [
             "**Multi-Agent 编排**：设计 7 个 Agent 的职责划分与 7 阶段 DAG 编排流程，采用中央编排器模式管理 Agent 间数据流转，实现从 JD 分析、简历匹配、出题规划到面试评估的全链路自动化。",
@@ -132,10 +265,42 @@
       "title": "技术栈",
       "kind": "skills",
       "groups": [
-        { "name": "编程语言", "items": ["Go", "Python", "TypeScript / JavaScript", "C"] },
-        { "name": "后端与数据", "items": ["MySQL", "Redis", "消息队列", "RESTful API"] },
-        { "name": "AI 与 Agent", "items": ["LangChain / LangGraph / Eino", "RAG（向量检索 / BM25 / RRF / Rerank）", "Tool Calling", "MCP / A2A"] },
-        { "name": "工程与工具", "items": ["Docker", "Linux", "Git", "React / Vue"] }
+        {
+          "name": "编程语言",
+          "items": [
+            "Go",
+            "Python",
+            "TypeScript / JavaScript",
+            "C"
+          ]
+        },
+        {
+          "name": "后端与数据",
+          "items": [
+            "MySQL",
+            "Redis",
+            "消息队列",
+            "RESTful API"
+          ]
+        },
+        {
+          "name": "AI 与 Agent",
+          "items": [
+            "LangChain / LangGraph / Eino",
+            "RAG（向量检索 / BM25 / RRF / Rerank）",
+            "Tool Calling",
+            "MCP / A2A"
+          ]
+        },
+        {
+          "name": "工程与工具",
+          "items": [
+            "Docker",
+            "Linux",
+            "Git",
+            "React / Vue"
+          ]
+        }
       ]
     },
     {
