@@ -1,0 +1,17 @@
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/
+
+# 本地私有数据（含手机号等敏感信息，永不提交）
+data/private.json
+data/*.private.json
+*.local.json
+
+# 依赖与构建产物
+node_modules/
+tools/node_modules/
+dist/
