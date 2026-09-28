@@ -16,7 +16,7 @@
     "avatar": "assets/img/avatar.png",
     "resumePdf": "assets/resume/resume.pdf",
     "resumePdfBw": "assets/resume/resume-bw.pdf",
-    "summary": "2027 届本科生，专注 Go 后端与 AI Agent 工程。Apache Casbin 创始团队孵化的开源项目 OpenAgent（5,600+ Stars）官方 Member，累计代码变更超 1 万行，主导 Windows GUI 自动化引擎与 AgentBench 评测框架从 0 到 1 落地。个人项目覆盖 Multi-Agent 编排、RAG 混合检索与端到端性能优化。",
+    "summary": "2027 届本科生，专注 Go 后端与 AI Agent 工程。**Meeta AI 技术负责人**，从 0 到 1 交付交互式陪伴虚拟数字人 **numberhuman**，并解耦出记忆 / 决策 / 表达 / 验收四个独立开源模块。Apache Casbin 创始团队孵化的开源项目 OpenAgent（5,600+ Stars）官方 Member，累计代码变更超 1 万行，主导 Windows GUI 自动化引擎与 AgentBench 评测框架从 0 到 1 落地。个人项目覆盖 Multi-Agent 编排、RAG 混合检索与端到端性能优化。",
     "highlights": [
       {
         "value": "5,600+",
@@ -29,6 +29,10 @@
       {
         "value": "104",
         "label": "AgentBench 评测任务"
+      },
+      {
+        "value": "1/40",
+        "label": "实时语音链路成本（对比托管方案）"
       },
       {
         "value": "5 万+",

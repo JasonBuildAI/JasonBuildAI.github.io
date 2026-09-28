@@ -24,6 +24,8 @@ const md = (text = '') =>
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/`([^`]+)`/g, '<code>$1</code>');
 
+const plain = (text = '') => String(text).replace(/\*\*/g, '').replace(/`/g, '');
+
 const iconExt = '<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg>';
 
 const badge = (item) =>
@@ -143,7 +145,7 @@ const html = `<!DOCTYPE html>
 <meta name="theme-color" content="#1F4E79">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="${esc(data.basics.name)} · ${esc(data.basics.headline)}">
-<meta property="og:description" content="${esc(data.basics.summary)}">
+<meta property="og:description" content="${esc(plain(data.basics.summary))}">
 <meta property="og:url" content="${esc(data.meta.site)}">
 <meta property="og:image" content="${esc(data.meta.site)}/${esc(data.basics.avatar)}">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -202,7 +204,7 @@ const html = `<!DOCTYPE html>
     <section class="section" id="about">
       <div class="section-head"><h2>关于我</h2></div>
       <div class="about-text">
-        <p>我目前关注的方向是 <strong>后端工程与 AI Agent 系统</strong>：在开源社区里做真实的产品级工程（Windows GUI 自动化、Agent 评测框架、会话与媒体链路），在个人项目里打磨 Multi-Agent 编排、RAG 检索质量与端到端性能。<strong>喜欢用量化指标验证每一次优化</strong>，也习惯把过程写成可复现的技术文章。</p>
+        <p>我目前关注的方向是 <strong>后端工程与 AI Agent 系统</strong>：作为技术负责人把一款陪伴向数字人产品从 0 做到上线（实时语音链路、长期记忆系统、SSE 高并发推送），在开源社区里打磨 Windows GUI 自动化与 Agent 评测框架，在个人项目里演练 Multi-Agent 编排、RAG 检索质量与端到端性能。<strong>喜欢用量化指标验证每一次优化</strong>，也习惯把过程写成可复现的技术文章。</p>
         <p>目前是南京邮电大学 2027 届本科生（微电子科学与工程），正在寻找 <strong>后端开发 / Agent 开发</strong> 方向的实习与校招机会。更多代码与项目可以查看 ${md(`[GitHub @${data.basics.githubHandle}](${data.basics.github})`)}。</p>
       </div>
     </section>
