@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="黄江南">
-  <rect width="64" height="64" rx="15" fill="#1F4E79"/>
-  <text x="32" y="44" font-family="-apple-system, 'Segoe UI', 'Microsoft YaHei', sans-serif" font-size="36" font-weight="700" fill="#ffffff" text-anchor="middle">黄</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Jason Cat">
+  <rect width="64" height="64" rx="15" fill="#0b211b"/>
+  <path d="M13 47V17h6v24h10v6H13Zm20 0V17h19v6H39v6h11v6H39v6h13v6H33Z" fill="#75e4c1"/>
+  <circle cx="49" cy="14" r="4" fill="#f4bd77"/>
 </svg>

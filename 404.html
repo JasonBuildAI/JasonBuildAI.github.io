@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>页面不存在 · 黄江南</title>
-<meta name="robots" content="noindex">
-<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>页面不存在 · Jason Cat</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#07120f">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/sections.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('jc-theme');
+        var theme = saved === 'light' || saved === 'dark'
+          ? saved
+          : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        var themeMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeMeta) themeMeta.setAttribute('content', theme === 'light' ? '#f5f2ea' : '#07120f');
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    }());
+  </script>
 </head>
 <body>
   <main class="notfound">
-    <p class="notfound-code">404</p>
-    <h1>页面不存在</h1>
-    <p class="notfound-text">你访问的页面可能已被移动或从未存在。</p>
-    <p><a class="btn btn-primary" href="/">返回首页</a></p>
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">JC</span>
+      <span class="brand-text"><strong>Jason Cat</strong><small>JasonBuildAI</small></span>
+    </a>
+    <p class="notfound-code">404 / LOST SIGNAL</p>
+    <h1>这个页面<br><em>跑丢了。</em></h1>
+    <p class="notfound-text">链接可能已经移动，或者从未存在。回到主页继续看看最近的 Agent runtime、sandbox 与跨平台工作。</p>
+    <a class="button button-primary" href="/">返回主页 <span aria-hidden="true">↗</span></a>
   </main>
 </body>
 </html>

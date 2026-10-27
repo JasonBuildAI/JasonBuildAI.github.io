@@ -1,335 +1,401 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>黄江南 · 软件开发工程师 · 后端（Go）/ AI Agent</title>
-<meta name="description" content="黄江南的个人简历网站：软件开发工程师 · 后端（Go）/ AI Agent，2027 届 · 南京邮电大学 · 微电子科学与工程 · 本科。Apache Casbin 创始团队 OpenAgent 项目官方 Member，聚焦 Multi-Agent 编排、RAG 检索与后端性能优化。">
-<meta name="author" content="黄江南">
-<meta name="theme-color" content="#1F4E79">
-<meta property="og:type" content="profile">
-<meta property="og:title" content="黄江南 · 软件开发工程师 · 后端（Go）/ AI Agent">
-<meta property="og:description" content="2027 届本科生，专注 Go 后端与 AI Agent 工程。Meeta AI 技术负责人，从 0 到 1 交付交互式陪伴虚拟数字人 numberhuman，并解耦出记忆 / 决策 / 表达 / 验收四个独立开源模块。Apache Casbin 创始团队孵化的开源项目 OpenAgent（5,600+ Stars）官方 Member，累计代码变更超 1 万行，主导 Windows GUI 自动化引擎与 AgentBench 评测框架从 0 到 1 落地。个人项目覆盖 Multi-Agent 编排、RAG 混合检索与端到端性能优化。">
-<meta property="og:url" content="https://jasonbuildai.github.io">
-<meta property="og:image" content="https://jasonbuildai.github.io/assets/img/avatar.png">
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/img/avatar.png">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="canonical" href="https://jasonbuildai.github.io/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"黄江南","jobTitle":"软件开发工程师 · 后端（Go）/ AI Agent","url":"https://jasonbuildai.github.io","email":"mailto:3310145612@qq.com","sameAs":["https://github.com/JasonBuildAI"],"alumniOf":{"@type":"CollegeOrUniversity","name":"南京邮电大学"}}</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jason Cat — AI Agent Runtime &amp; Execution Safety</title>
+  <meta name="description" content="Jason Cat（JasonBuildAI）的个人主页：专注 AI Agent 运行时、沙箱安全与跨平台可靠性。开源贡献覆盖 openclaw、OpenSandbox、loopx、deer-flow 等项目。">
+  <meta name="author" content="Jason Cat">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#07120f">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://jasonbuildai.github.io/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/avatar.png">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/sections.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Jason Cat — AI Agent Runtime &amp; Execution Safety">
+  <meta property="og:description" content="专注 AI Agent 运行时、沙箱安全与跨平台可靠性。让 Agent 跑得起、跑得稳、跑得安全。">
+  <meta property="og:url" content="https://jasonbuildai.github.io/">
+  <meta property="og:image" content="https://jasonbuildai.github.io/assets/img/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jason Cat — AI Agent Runtime &amp; Execution Safety">
+  <meta name="twitter:description" content="专注 AI Agent 运行时、沙箱安全与跨平台可靠性。">
+  <meta name="twitter:image" content="https://jasonbuildai.github.io/assets/img/og-card.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jason Cat",
+    "alternateName": "JasonBuildAI",
+    "url": "https://jasonbuildai.github.io/",
+    "jobTitle": "AI Agent Runtime & Execution Safety",
+    "description": "Open-source contributor working on agent runtime reliability, sandbox security, and cross-platform execution.",
+    "sameAs": ["https://github.com/JasonBuildAI"],
+    "memberOf": [
+      {"@type": "Organization", "name": "the-open-agent", "url": "https://github.com/the-open-agent"},
+      {"@type": "Organization", "name": "effectorHQ", "url": "https://github.com/effectorHQ"}
+    ]
+  }
+  </script>
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('jc-theme');
+        var theme = saved === 'light' || saved === 'dark'
+          ? saved
+          : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        var themeMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeMeta) themeMeta.setAttribute('content', theme === 'light' ? '#f5f2ea' : '#07120f');
+      } catch (error) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    }());
+  </script>
 </head>
 <body>
-<a class="skip-link" href="#overview">跳到主要内容</a>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress"></span></div>
 
-<header class="topbar">
-  <div class="topbar-inner">
-    <a class="brand" href="#overview"><span class="brand-mark">黄</span><span>黄江南</span></a>
-    <nav class="nav" aria-label="页面导航">
-          <a href="#overview">概览</a>
-          <a href="#startup">创业</a>
-          <a href="#internship">实习</a>
-          <a href="#opensource">开源</a>
-          <a href="#projects">项目</a>
-          <a href="#skills">技能</a>
-          <a href="#education">教育</a>
-    </nav>
-    <a class="top-cta" href="assets/resume/resume.pdf" download>下载 PDF</a>
-  </div>
-</header>
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">JC</span>
+        <span class="brand-text"><strong>Jason Cat</strong><small>JasonBuildAI</small></span>
+      </a>
 
-<main>
-    <section class="hero" id="overview">
-      <div class="hero-main">
-        <div class="hero-id">
-          <img class="avatar" src="assets/img/avatar.png" width="112" height="112" alt="黄江南的头像">
-          <div>
-            <h1>黄江南</h1>
-            <p class="headline">软件开发工程师 · 后端（Go）/ AI Agent</p>
-            <p class="subline">2027 届 · 南京邮电大学 · 微电子科学与工程 · 本科</p>
-            <p class="target">求职意向：后端开发 / Agent 开发</p>
-          </div>
-        </div>
-        <p class="summary">2027 届本科生，专注 Go 后端与 AI Agent 工程。<strong>Meeta AI 技术负责人</strong>，从 0 到 1 交付交互式陪伴虚拟数字人 <strong>numberhuman</strong>，并解耦出记忆 / 决策 / 表达 / 验收四个独立开源模块。Apache Casbin 创始团队孵化的开源项目 OpenAgent（5,600+ Stars）官方 Member，累计代码变更超 1 万行，主导 Windows GUI 自动化引擎与 AgentBench 评测框架从 0 到 1 落地。个人项目覆盖 Multi-Agent 编排、RAG 混合检索与端到端性能优化。</p>
-        <ul class="stats">
-          <li><b>5,600+</b><span>OpenAgent Stars</span></li>
-          <li><b>1 万+</b><span>累计代码变更行数</span></li>
-          <li><b>104</b><span>AgentBench 评测任务</span></li>
-          <li><b>1/40</b><span>实时语音链路成本（对比托管方案）</span></li>
-          <li><b>5 万+</b><span>技术文章累计阅读</span></li>
-        </ul>
-        <div class="cta">
-          <a class="btn btn-primary" href="assets/resume/resume.pdf" download>下载 PDF 简历</a>
-          <a class="btn" href="mailto:3310145612@qq.com">邮件联系</a>
-          <a class="btn" href="https://github.com/JasonBuildAI" target="_blank" rel="noopener">GitHub<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a>
-        </div>
+      <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="#focus">方向</a>
+        <a href="#work">贡献</a>
+        <a href="#projects">项目</a>
+        <a href="#activity">动态</a>
+        <a href="#about">关于</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button" type="button" data-theme-toggle aria-label="切换到浅色主题" title="切换主题">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.1A8.5 8.5 0 0 1 9.9 3.5 8.5 8.5 0 1 0 20.5 14.1Z"></path></svg>
+        </button>
+        <button class="menu-button" type="button" id="menu-button" aria-controls="site-nav" aria-expanded="false" aria-label="打开导航">
+          <span></span><span></span>
+        </button>
       </div>
-      <aside class="hero-side card">
-        <h2 class="card-title">联系方式</h2>
-        <ul class="contact-list">
-          <li><span class="label">邮箱</span><span class="copy-row"><a href="mailto:3310145612@qq.com">3310145612@qq.com</a><button class="copy-btn" type="button" data-copy="3310145612@qq.com">复制</button></span></li>
-          <li><span class="label">GitHub</span><a href="https://github.com/JasonBuildAI" target="_blank" rel="noopener">@JasonBuildAI</a></li>
-          <li><span class="label">简历</span><span><a href="assets/resume/resume.pdf" download>彩色版</a> / <a href="assets/resume/resume-bw.pdf" download>黑白版</a></span></li>
-          <li><span class="label">更新</span><span>2026-09-28</span></li>
-        </ul>
-        <p class="card-note">网页版不公开手机号；投递用简历会附完整联系方式。</p>
-      </aside>
-    </section>
+    </div>
+  </header>
 
-    <section class="section" id="about">
-      <div class="section-head"><h2>关于我</h2></div>
-      <div class="about-text">
-        <p>我目前关注的方向是 <strong>后端工程与 AI Agent 系统</strong>：作为技术负责人把一款陪伴向数字人产品从 0 做到上线（实时语音链路、长期记忆系统、SSE 高并发推送），在开源社区里打磨 Windows GUI 自动化与 Agent 评测框架，在个人项目里演练 Multi-Agent 编排、RAG 检索质量与端到端性能。<strong>喜欢用量化指标验证每一次优化</strong>，也习惯把过程写成可复现的技术文章。</p>
-        <p>目前是南京邮电大学 2027 届本科生（微电子科学与工程），正在寻找 <strong>后端开发 / Agent 开发</strong> 方向的实习与校招机会。更多代码与项目可以查看 <a href="https://github.com/JasonBuildAI" target="_blank" rel="noopener">GitHub @JasonBuildAI</a>。</p>
+  <main id="main">
+    <section class="hero shell" id="top" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Open source contributor <span class="eyebrow-sep">/</span> Nanjing, CN</p>
+          <h1 id="hero-title">
+            <span class="hero-name">Jason Cat</span>
+            <span class="hero-thesis">
+              <span class="thesis-line"><span class="thesis-seg">让 Agent</span> <span class="thesis-seg"><em>跑得起、</em></span></span>
+              <span class="thesis-line"><span class="thesis-seg"><em>跑得稳、</em></span><span class="thesis-seg"><em>跑得安全。</em></span></span>
+            </span>
+          </h1>
+          <p class="hero-lede">我在开源 Agent 运行时里处理真正影响可靠性的细节：<strong>流式输出</strong>、<strong>会话与目标生命周期</strong>、<strong>沙箱边界</strong>，以及 Windows / WSL 上的原生执行。</p>
+          <p class="hero-lede hero-lede-en">Runtime reliability, sandbox security, and cross-platform execution for agents that need to hold up in the real world.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">看看代表贡献 <span aria-hidden="true">↓</span></a>
+            <a class="button button-ghost" href="https://github.com/JasonBuildAI" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="个人资料和当前工作重点">
+          <div class="portrait-wrap">
+            <img class="portrait" src="assets/img/avatar.png" width="460" height="460" alt="Jason Cat 的猫头像" fetchpriority="high">
+            <span class="portrait-tag">JasonBuildAI</span>
+          </div>
+          <div class="hero-card-body">
+            <p class="card-label">Current signal</p>
+            <p class="card-statement">Streaming stability<br>Sandbox boundaries<br>Native Windows execution</p>
+            <dl class="mini-facts">
+              <div><dt>Focus</dt><dd>Agent runtime &amp; safety</dd></div>
+              <div><dt>Builds with</dt><dd>Python · Java · TypeScript</dd></div>
+            </dl>
+          </div>
+        </aside>
       </div>
-    </section>
 
-    <section class="section" id="startup">
-      <div class="section-head"><h2>创业经历</h2></div>
-      <article class="entry">
-        <header class="entry-head">
-          <div class="entry-org">
-            
-            <h3>Meeta AI · 交互式陪伴虚拟数字人</h3>
-            <span class="role">技术负责人</span>
-          </div>
-          <span class="period">2026.08 – 2026.09</span>
-        </header>
-        <p class="entry-meta"><strong>角色</strong>：公司技术负责人，从 0 到 1 主导技术选型、架构设计与全部核心模块落地；产品能力最终解耦为 4 个可独立复用的开源模块（记忆 / 决策 / 表达 / 验收），5 个仓库累计提交 1,000+ 次。</p>
-        <p class="entry-bg"><strong>产品介绍</strong>：<strong>numberhuman</strong> —— 面向 C 端的交互式陪伴虚拟数字人，支持免按键实时语音通话与文字双通道，具备跨天长期记忆、拟人化说话规则与低成本高并发推理链路；后端 FastAPI + SSE，一轮对话由 LLM / TTS / 推送三线程并行驱动。</p>
-        <ul class="bullets">
-          <li><strong>端到端交付</strong>：独立完成对话编排、会话持久化、SSE 流式推送与独立运维台（用户 / 邀请码 / 额度 / 成本统计）；音频严格按片序播放并支持随时打断，本机实测首声约 <strong>3.2 s</strong>；单进程实测同时挂住 <strong>45 条 SSE 流、0 错误</strong>（RSS 221.5 MB、<code>/api/state</code> P50 10.9 ms）。</li>
-          <li><strong>成本结构</strong>：在 1 万用户规模的成本模型下，同等强度约为主流托管实时语音方案的 <strong>1/40 – 1/130</strong>；自研记忆为<strong>常数注入</strong>——聊 300 轮与聊 3 轮的注入量几乎一致，避免上下文随轮数膨胀。</li>
-          <li><strong>工程纪律</strong>：建立提交前自动化闸门，<strong>1,113 条用例通过 / 本机约 40 秒</strong>；跨天长期记忆 E2E <strong>29 项全部通过</strong>；后端累计 18,780 行（其中记忆系统 4,831 行）。</li>
-          <li><strong>架构解耦</strong>：把产品能力拆成 <strong>记忆（changqing）/ 决策（huatou）/ 表达（echoturn）/ 验收（touchstone）</strong> 四个独立模块并全部开源——每个模块都能单独讲清职责、单独测试、单独复用。</li>
-        </ul>
-        <ul class="tags"><li>技术负责人</li><li>0 → 1</li><li>FastAPI</li><li>SSE</li><li>实时语音</li><li>记忆系统</li><li>成本优化</li></ul>
-        
-        <div class="modules">
-          <div class="module-card">
-            <div class="module-head">
-              <span class="module-name">changqing</span>
-              <span class="module-role">记忆 · 我记得什么</span>
-            </div>
-            <p class="module-desc">四层记忆（L0 原话 / L1 事实 / L2 纪要 / L3 画像），每条事实都带 <code>turn_ref</code> 与 <code>quote</code>、可回引到原话；核心零第三方依赖，可挂载到任意 FastAPI 服务。</p>
-            <a class="module-link" href="https://github.com/JasonBuildAI/changqing" target="_blank" rel="noopener">查看仓库<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a>
-          </div>
-          <div class="module-card">
-            <div class="module-head">
-              <span class="module-name">huatou</span>
-              <span class="module-role">决策 · 我什么时候说、说什么</span>
-            </div>
-            <p class="module-desc">发言权管理器：这句话该不该出口、答完要不要把话头递回去、递回去等多久；把散落在业务代码里的 if 收敛成可注入时钟、可被假时钟测穿、状态可持久化的策略对象。</p>
-            <a class="module-link" href="https://github.com/JasonBuildAI/huatou" target="_blank" rel="noopener">查看仓库<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a>
-          </div>
-          <div class="module-card">
-            <div class="module-head">
-              <span class="module-name">echoturn</span>
-              <span class="module-role">表达 · 我怎么说出去</span>
-            </div>
-            <p class="module-desc">与供应商无关的实时语音流水线：说完判定（人声时长 + 端点模型，都不可用才回落静音阈值）、插话不吞掉用户的话、首声不等整段、音频严格按片序；核心仅 1 个依赖，mock 供应商即可离线跑通。</p>
-            <a class="module-link" href="https://github.com/JasonBuildAI/Echoturn" target="_blank" rel="noopener">查看仓库<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a>
-          </div>
-          <div class="module-card">
-            <div class="module-head">
-              <span class="module-name">touchstone</span>
-              <span class="module-role">验收 · 我怎么知道它变好了</span>
-            </div>
-            <p class="module-desc">把「好不好」变成可复现的比率与可失败的闸门：档位按前提划分（缺前提退出码 2，而不是静默跳过）、每条护栏自带「证明它会失败」的用例、每个数字带出处与日期；默认档断网即可跑。</p>
-            <a class="module-link" href="https://github.com/JasonBuildAI/touchstone" target="_blank" rel="noopener">查看仓库<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a>
-          </div>
+      <div class="metrics" role="group" aria-label="GitHub 数据速览">
+        <div class="metrics-grid">
+          <div class="metric"><span class="metric-label">Contributions</span><strong>3,474</strong><span class="metric-note">近 12 个月</span></div>
+          <div class="metric"><span class="metric-label">Commits</span><strong>2,254</strong><span class="metric-note">近 12 个月</span></div>
+          <div class="metric metric-accent"><span class="metric-label">Merged PRs</span><strong>146</strong><span class="metric-note">已合并</span></div>
+          <div class="metric"><span class="metric-label">Issues</span><strong>171</strong><span class="metric-note">已参与</span></div>
+          <div class="metric"><span class="metric-label">Selected reach</span><strong>554K<span>+</span></strong><span class="metric-note">代表项目 Stars</span></div>
         </div>
-      </article>
-    </section>
-
-    <section class="section" id="internship">
-      <div class="section-head"><h2>实习经历</h2></div>
-      <article class="entry">
-        <header class="entry-head">
-          <div class="entry-org">
-            <img class="badge" src="assets/img/apache-color.png" alt="Apache" height="20" loading="lazy">
-            <h3><a href="https://github.com/casbin/casbin" target="_blank" rel="noopener">Apache Casbin（Apache 在孵项目）· Casbin 创始团队<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a></h3>
-            <span class="role">2026 明日之星预选生</span>
-          </div>
-          <span class="period">2026.04 – 2026.06</span>
-        </header>
-        <p class="entry-meta">导师：hsluoyz（北京大学罗杨教授，Apache Casbin 社区负责人） · 项目：<strong>OpenAgent</strong> —— Casbin 原班人马孵化的独立开源项目，GitHub 5,600+ Stars；本人为<strong>官方 Member</strong>，<strong>累计代码变更超 1 万行</strong>，撰写技术文章累计浏览超 5 万、带动项目 Star 增长 1,500+。</p>
-        <p class="entry-bg"><strong>项目背景</strong>：OpenAgent 是面向个人本地部署的开源 AI Agent，采用 Go 单进程架构，将 Agent 运行时、工具调用、多模型接入与 Web 控制台收敛为一个预编译二进制：<strong>单文件约 23 MB、冷启动约 2.7 s</strong>，相较同类 Node.js 方案（29.2 s、4.2 万+ 文件、382 MB）<strong>快约 11 倍、体积约为其 1/16</strong>。</p>
-        <ul class="bullets">
-          <li><strong>Windows GUI 自动化引擎</strong>：<strong>从 0 到 1 独立设计并交付</strong>基于 UIA 的 GUI 工具链，新增 UIA 引擎、任务调度器与 9 个原子工具（元素查找 / 交互 / 等待 / 断言 / 应用启动 / 系统指标读取等），并同步提供非 Windows 平台降级实现与安全熔断。</li>
-          <li><strong>AgentBench 评测框架</strong>：<strong>从 0 到 1 独立设计并交付</strong> Agent 能力基准框架 <code>the-open-agent/agentbench</code>（Python 核心 1692 行 / 33 文件），覆盖 <strong>8 大套件、104 个任务</strong>，内置 bootstrap 置信区间统计，评测可脚本化复现；据此完成对标 OpenClaw 的横向实测：工具调用成功率 <strong>83.33% vs 61.11%</strong>、单次耗时 <strong>14.2s vs 26.1s</strong>、Token 消耗 <strong>1312 vs 2362</strong>。</li>
-          <li><strong>会话标题容错链路</strong>：设计并实现会话标题自动生成与降级链路，通过 <code>ResolveChatTitle</code> 等函数完成用户消息兜底、HTML 清洗、空白折叠与 rune 安全截断，保证模型调用失败时标题仍可用。</li>
-          <li><strong>性能、部署与大型特性</strong>：移除 <code>GetAnswer</code> 接口重复 LLM 调用、补齐 Casdoor 不可用时的默认用量元数据、对齐 docker-compose 端口与数据库主机；推进动态模型目录与自适应定价（覆盖 15 个 Provider）与站点知识自动生成 Skill 两项大型特性。</li>
-        </ul>
-        <ul class="tags"><li>Go</li><li>AI Agent</li><li>UIA 自动化</li><li>Agent 评测</li><li>开源协作</li></ul>
-        <p class="entry-links"><a href="https://github.com/the-open-agent/openagent" target="_blank" rel="noopener">OpenAgent 仓库<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a><a href="https://github.com/the-open-agent/agentbench" target="_blank" rel="noopener">AgentBench 仓库<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a></p>
-        
-      </article>
-    </section>
-
-    <section class="section" id="opensource">
-      <div class="section-head"><h2>开源经历</h2></div>
-      <article class="entry">
-        <header class="entry-head">
-          <div class="entry-org">
-            
-            <h3><a href="https://github.com/casdoor/casdoor" target="_blank" rel="noopener">Casdoor（CNCF 云原生全景图收录 · Go + React · 14,000+ Stars）<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a></h3>
-            <span class="role">开源贡献者</span>
-          </div>
-          <span class="period">2026.04</span>
-        </header>
-        
-        
-        <ul class="bullets">
-          <li>重构并改进项目 README（已合入），新增简体中文 README 与语言切换入口，优化文档链接与章节结构；并参与社区运营与对外推广，提升中文开发者的上手体验与文档可维护性。</li>
-        </ul>
-        <ul class="tags"><li>Go</li><li>React</li><li>文档工程</li><li>社区运营</li></ul>
-        
-        
-      </article>
-      <article class="entry">
-        <header class="entry-head">
-          <div class="entry-org">
-            <img class="badge" src="assets/img/xiaohongshu-color.png" alt="小红书 FireRed" height="20" loading="lazy">
-            <h3><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline" target="_blank" rel="noopener">小红书 FireRed-OpenStoryline（Python + JavaScript · 3,385 Stars / 394 Forks）<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a></h3>
-            <span class="role">核心贡献者</span>
-          </div>
-          <span class="period">2026.02 – 2026.04</span>
-        </header>
-        
-        <p class="entry-bg"><strong>项目背景</strong>：小红书 FireRedTeam 开源的 AI 视频剪辑 Agent，以自然语言交互 + LLM 规划 + 工具编排把手工剪辑转变为“意图驱动”的创作流程；本人在所有贡献者中 <strong>PR 数第二</strong>，独立承担会话状态持久化与恢复、会话历史、媒体链路与可用性治理等主干模块。</p>
-        <ul class="bullets">
-          <li><strong>会话状态持久化与安全恢复</strong>：独立设计并实现会话状态落盘与恢复机制——对损坏的工具调用行采取 fail-closed 策略而非静默跳过；为会话历史与 LangChain 消息分别设置 2000 / 4000 条上限；构建递归密钥脱敏链路，按字段名与内联赋值两种模式识别 <code>client_secret</code> / <code>refresh_token</code> / <code>x-api-key</code> / <code>access_key</code> 等敏感字段并统一替换为 <code>***</code>；对 <code>getSession</code> 异常做类型化处理。</li>
-          <li><strong>会话历史与媒体链路</strong>：独立完成 Web 端对话历史侧栏（面板 DOM / 样式 / 中英双语 i18n / <code>aria</code> 无障碍标签），基于 localStorage 实现会话 ID 与列表双键存储、历史会话渲染切换与切换保护；后端抽象 MCP 媒体传输策略 <code>inline_media = auto / always / never</code>，按 <code>connect_host</code> 自动判定同机与跨机链路，同机路径直传、跨机才内联 base64，避免远程模式下 base64 放大导致的超大 payload。</li>
-          <li><strong>Agent 可用性与稳定性治理</strong>：新增 API Key 前置校验，任务开始前向 OpenAI 兼容接口发一次最小请求（<code>max_tokens=1</code> 控制成本、10s 超时），区分 401 / 404 / 429 / 5xx / 超时 / 连接失败并返回可操作提示；为媒体搜索与下载补齐指数退避重试（初始 1s、2 倍退避、上限 10s），区分网络错误与非网络错误；统一日志出口并完善媒体文件保存的错误处理。</li>
-        </ul>
-        <ul class="tags"><li>Python</li><li>JavaScript</li><li>会话持久化</li><li>媒体链路</li><li>稳定性治理</li></ul>
-        <p class="entry-links"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline" target="_blank" rel="noopener">项目仓库<svg class="icon-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V3z"/><path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"/></svg></a></p>
-        
-      </article>
-    </section>
-
-    <section class="section" id="projects">
-      <div class="section-head"><h2>项目经历</h2></div>
-      <article class="entry">
-        <header class="entry-head">
-          <div class="entry-org">
-            
-            <h3>AegisNest 智能客服系统（Python + FastAPI + LangGraph）</h3>
-            <span class="role">个人项目</span>
-          </div>
-          <span class="period">2026.07 – 2026.09</span>
-        </header>
-        
-        <p class="entry-bg"><strong>项目介绍</strong>：面向 API 开放平台的 Multi-Agent 智能客服系统，以 LangGraph 的 DAG 编排协作为核心，集成意图路由、RAG 混合检索、工具诊断、会话记忆、安全脱敏、多级兜底等能力，为开发者提供全流程智能技术支持。</p>
-        <ul class="bullets">
-          <li><strong>Multi-Agent 编排</strong>：基于 LangGraph StateGraph 设计意图路由、文档 RAG、API 诊断、账单、工单、安全审查 6 个专业 Agent 的职责划分与 DAG 管线，由中心编排器统一调度，安全审查节点串行收口，保证安全审查一定在最终输出之前执行。</li>
-          <li><strong>RAG 混合检索</strong>：实现向量检索（text-embedding-v3，1024 维）+ BM25 双路并行召回，经 RRF 融合、gte-rerank-v2 精排、上下文压缩后带引用生成；为错误码类问题设计标量热路径直查数据库，该环节耗时<strong>从 0.74s 降到 0.010s（约 78 倍）</strong>。</li>
-          <li><strong>性能优化</strong>：设计语义缓存、路由缓存与模型分层，叠加错误码热路径和 Multi-Agent 并行策略，冷启动 P95 <strong>从 48.58s 降到 6.83s（约 7 倍）</strong>，吞吐<strong>从 0.18 提升到 0.75 req/s</strong>，热点问题命中缓存仅 <strong>0.38s、零 token 消耗（约 26 倍加速）</strong>。</li>
-          <li><strong>安全、兜底与可观测</strong>：实现覆盖 API Key、Token、手机号等八类敏感信息的三层脱敏（用户输入、工具日志、最终输出），安全审查节点在管线末端收口；多级兜底覆盖从单 Agent 异常到整条管线崩溃的各种失败；基于逐节点链路追踪实现全链路可观测与按租户成本统计。</li>
-        </ul>
-        <ul class="tags"><li>Python</li><li>FastAPI</li><li>LangGraph</li><li>RAG</li><li>性能优化</li></ul>
-        
-        
-      </article>
-      <article class="entry">
-        <header class="entry-head">
-          <div class="entry-org">
-            
-            <h3>MockAtlas 智能面试助手（Go + Eino · Multi-Agent）</h3>
-            <span class="role">个人项目</span>
-          </div>
-          <span class="period">2025.12 – 2026.02</span>
-        </header>
-        
-        <p class="entry-bg"><strong>项目介绍</strong>：基于 Go 与 Eino 框架的 AI 智能面试助手，以 Multi-Agent 的 DAG 编排协作为核心，集成 RAG 多路召回题库检索、动态难度调节、Agent 记忆系统等能力，提供简历分析、智能出题、实时面试、评估报告的全流程模拟面试体验。</p>
-        <ul class="bullets">
-          <li><strong>Multi-Agent 编排</strong>：设计 7 个 Agent 的职责划分与 7 阶段 DAG 编排流程，采用中央编排器模式管理 Agent 间数据流转，实现从 JD 分析、简历匹配、出题规划到面试评估的全链路自动化。</li>
-          <li><strong>RAG 多路召回</strong>：实现 Milvus 向量检索（1024 维）+ 纯内存 BM25 关键词检索双路并行召回，通过 RRF(k=60) 融合排序 + LLM Rerank 重排序输出最终候选题，支持按 <code>user_id</code> 字段的用户级数据隔离。</li>
-          <li><strong>记忆、难度调节与 Skill</strong>：实现滑动窗口短期记忆 + Redis/MySQL 长期用户画像存储与薄弱知识点自动追踪；采用两阶段出题 + 动态难度调节 + 智能追问实现难度自适应；设计有状态多轮交互 Skill 接口（区别于无状态 Tool），开发快速测验、概念教学等 4 个内置 Skill，通过优先级匹配的 SkillRegistry 统一管理。</li>
-          <li><strong>RAG 质量评估与调优</strong>：构建离线评估流水线，基于 50 条标注样本计算 Recall@K / MRR 指标并按 topic 分组统计；通过 A/B 对比将 TopK 从 10 调至 20，<strong>Recall@10 提升 7.3%</strong>、<strong>MySQL 领域召回率提升 16.7%</strong>。</li>
-        </ul>
-        <ul class="tags"><li>Go</li><li>Eino</li><li>Multi-Agent</li><li>Milvus</li><li>RAG 评估</li></ul>
-        
-        
-      </article>
-    </section>
-
-    <section class="section" id="skills">
-      <div class="section-head"><h2>技术栈</h2></div>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>编程语言</h3>
-          <ul><li>Go</li><li>Python</li><li>TypeScript / JavaScript</li><li>C</li></ul>
-        </div>
-        <div class="skill-card">
-          <h3>后端与数据</h3>
-          <ul><li>MySQL</li><li>Redis</li><li>消息队列</li><li>RESTful API</li></ul>
-        </div>
-        <div class="skill-card">
-          <h3>AI 与 Agent</h3>
-          <ul><li>LangChain / LangGraph / Eino</li><li>RAG（向量检索 / BM25 / RRF / Rerank）</li><li>Tool Calling</li><li>MCP / A2A</li></ul>
-        </div>
-        <div class="skill-card">
-          <h3>工程与工具</h3>
-          <ul><li>Docker</li><li>Linux</li><li>Git</li><li>React / Vue</li></ul>
-        </div>
+        <p class="metrics-note"><span aria-hidden="true"></span> GitHub snapshot · 2026-10-27 · 含私密贡献</p>
       </div>
     </section>
 
-    <section class="section" id="education">
-      <div class="section-head"><h2>教育背景</h2></div>
-      <article class="entry">
-        <header class="entry-head">
-          <div class="entry-org">
-            
-            <h3>南京邮电大学（双一流）</h3>
-            <span class="role">微电子科学与工程 · 本科</span>
-          </div>
-          <span class="period">2023.09 – 2027.06</span>
-        </header>
-        <p class="entry-meta">CET-4 / CET-6 · <strong>核心基础</strong>：计算机网络 / 高级语言程序设计 / 操作系统 / 数据库</p>
-        
-        
-        
-        
-        
-      </article>
-    </section>
+    <section class="section shell" id="focus" aria-labelledby="focus-title">
+      <div class="section-head">
+        <p class="section-index">01 / Focus</p>
+        <div class="section-intro">
+          <h2 id="focus-title">工作的边界，<br><em>就是可靠性本身。</em></h2>
+          <p>不把 Agent 当成一次性演示。真正决定体验的，是长时间运行时的状态、出错时的边界，以及跨平台之后还能不能复现。</p>
+        </div>
+      </div>
 
-    <section class="section" id="contact">
-      <div class="section-head"><h2>联系与下载</h2></div>
-      <div class="contact-grid">
-        <a class="contact-card" href="mailto:3310145612@qq.com">
-          <span class="contact-label">邮箱</span>
-          <span class="contact-value">3310145612@qq.com</span>
-        </a>
-        <a class="contact-card" href="https://github.com/JasonBuildAI" target="_blank" rel="noopener">
-          <span class="contact-label">GitHub</span>
-          <span class="contact-value">@JasonBuildAI</span>
-        </a>
-        <a class="contact-card" href="assets/resume/resume.pdf" download>
-          <span class="contact-label">简历 PDF</span>
-          <span class="contact-value">彩色版下载</span>
-        </a>
-        <a class="contact-card" href="assets/resume/resume-bw.pdf" download>
-          <span class="contact-label">简历 PDF</span>
-          <span class="contact-value">黑白打印版下载</span>
-        </a>
+      <div class="focus-grid">
+        <article class="focus-card">
+          <div class="focus-top"><span class="focus-number">01</span><span class="focus-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M5 12a7 7 0 0 1 7-7h2M19 12a7 7 0 0 1-7 7h-2"></path><path d="m16 2 3 3-3 3M8 22l-3-3 3-3"></path></svg></span></div>
+          <h3>Agent Runtime <span>运行时与可靠性</span></h3>
+          <p>让会话和目标在真实负载下可恢复、可观察、可收尾；让流式输出在复杂内容边界也不阻塞。</p>
+          <ul class="detail-list">
+            <li>Session / goal lifecycle</li>
+            <li>Scheduling, locks &amp; leases</li>
+            <li>Streaming stability</li>
+          </ul>
+        </article>
+
+        <article class="focus-card">
+          <div class="focus-top"><span class="focus-number">02</span><span class="focus-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3Z"></path><path d="m9 12 2 2 4-4"></path></svg></span></div>
+          <h3>Sandbox Security <span>沙箱与执行安全</span></h3>
+          <p>把权限边界写进实现：租户密钥隔离、原子写入、失败关闭，以及可验证的重试语义。</p>
+          <ul class="detail-list">
+            <li>Sandbox lifecycle</li>
+            <li>Egress / ingress policy</li>
+            <li>Secret hygiene</li>
+          </ul>
+        </article>
+
+        <article class="focus-card">
+          <div class="focus-top"><span class="focus-number">03</span><span class="focus-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4M7 9l2 2-2 2M12 13h5"></path></svg></span></div>
+          <h3>Cross-platform <span>跨平台工程</span></h3>
+          <p>跨平台不是兼容性附加题，而是运行时正确性的一部分；CI 与验证门禁必须能复现这些边界。</p>
+          <ul class="detail-list">
+            <li>Native Windows / WSL</li>
+            <li>Paths, encoding &amp; process spawn</li>
+            <li>CI health &amp; verification gates</li>
+          </ul>
+        </article>
       </div>
     </section>
-</main>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <p>© <span id="year">2026</span> 黄江南 · 本站托管于 GitHub Pages · 内容更新于 2026-09-28</p>
-    <p class="footer-links">
-      <a href="https://github.com/JasonBuildAI" target="_blank" rel="noopener">GitHub</a>
-      <a href="mailto:3310145612@qq.com">邮箱</a>
-      <a href="https://jasonbuildai.github.io" target="_self">jasonbuildai.github.io</a>
-    </p>
-  </div>
-</footer>
+    <section class="section shell" id="work" aria-labelledby="work-title">
+      <div class="section-head">
+        <p class="section-index">02 / Selected work</p>
+        <div class="section-intro">
+          <h2 id="work-title">把「能跑」<br><em>推进到「可依赖」。</em></h2>
+          <p>这些不是收藏列表，而是我在开源项目中实际修改、验证并合并过的工作。按方向筛选，查看每项工作的落点。</p>
+        </div>
+      </div>
 
-<script src="assets/js/app.js" defer></script>
+      <div class="work-toolbar">
+        <div class="filters" role="group" aria-label="按方向筛选代表贡献">
+          <button class="filter is-active" type="button" data-filter="all" data-label="全部" aria-pressed="true">全部 <span>9</span></button>
+          <button class="filter" type="button" data-filter="runtime" data-label="Runtime" aria-pressed="false">Runtime</button>
+          <button class="filter" type="button" data-filter="sandbox" data-label="Sandbox" aria-pressed="false">Sandbox</button>
+          <button class="filter" type="button" data-filter="platform" data-label="Platform" aria-pressed="false">Platform</button>
+        </div>
+        <p class="filter-status" id="filter-status" aria-live="polite">9 个代表项目</p>
+      </div>
+
+      <div class="work-list" id="work-list">
+        <a class="work-item" href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener" data-category="runtime">
+          <span class="work-main"><span class="work-title">openclaw/openclaw <span class="work-arrow" aria-hidden="true">↗</span></span><span class="work-desc">修复流式回复在 HTML / JSX / 代码块 / 列表边界上的重投影与卡顿；收敛工具调用文本泄漏和重复上下文清洗。</span></span>
+          <span class="work-meta"><span class="tag">Runtime</span><span class="stars">★ 393K</span></span>
+        </a>
+        <a class="work-item" href="https://github.com/loopx-project/loopx" target="_blank" rel="noopener" data-category="platform">
+          <span class="work-main"><span class="work-title">loopx-project/loopx <span class="work-arrow" aria-hidden="true">↗</span></span><span class="work-desc">Windows 任务租约与机器标识、Goal 中断恢复、UTF-8 报告产物、CI / canary 门禁与 NSIS 签名更新。</span></span>
+          <span class="work-meta"><span class="tag">Platform</span><span class="stars">★ 6.4K</span></span>
+        </a>
+        <a class="work-item" href="https://github.com/opensandbox-group/OpenSandbox" target="_blank" rel="noopener" data-category="sandbox">
+          <span class="work-main"><span class="work-title">opensandbox-group/OpenSandbox <span class="work-arrow" aria-hidden="true">↗</span></span><span class="work-desc">Go / JS / Kotlin / C# SDK：租户密钥隔离、SSE 唤醒重试、非幂等写入、文件传输超时与非 UTF-8 输出。</span></span>
+          <span class="work-meta"><span class="tag">Sandbox</span><span class="stars">★ 16.2K</span></span>
+        </a>
+        <a class="work-item" href="https://github.com/bytedance/deer-flow" target="_blank" rel="noopener" data-category="platform">
+          <span class="work-main"><span class="work-title">bytedance/deer-flow <span class="work-arrow" aria-hidden="true">↗</span></span><span class="work-desc">Windows Agent 启动与 PATH、DuckDuckGo / Tavily 异常载荷容错、超大载荷与 symlink 测试加固。</span></span>
+          <span class="work-meta"><span class="tag">Platform</span><span class="stars">★ 84.5K</span></span>
+        </a>
+        <a class="work-item" href="https://github.com/agentscope-ai/QwenPaw" target="_blank" rel="noopener" data-category="runtime">
+          <span class="work-main"><span class="work-title">agentscope-ai/QwenPaw <span class="work-arrow" aria-hidden="true">↗</span></span><span class="work-desc">会话状态原子化持久化；通道配置类型与内置注册表对齐。</span></span>
+          <span class="work-meta"><span class="tag">Runtime</span><span class="stars">★ 36.5K</span></span>
+        </a>
+        <a class="work-item" href="https://github.com/apache/maka" target="_blank" rel="noopener" data-category="sandbox">
+          <span class="work-main"><span class="work-title">apache/maka <span class="work-arrow" aria-hidden="true">↗</span></span><span class="work-desc">补齐细粒度 GitHub PAT 的密钥脱敏；为 CI 中的 Electron 安装加入限时重试。</span></span>
+          <span class="work-meta"><span class="tag">Sandbox</span><span class="stars">★ 5.9K</span></span>
+        </a>
+        <a class="work-item" href="https://github.com/the-open-agent/openagent" target="_blank" rel="noopener" data-category="runtime">
+          <span class="work-main"><span class="work-title">the-open-agent/openagent <span class="work-arrow" aria-hidden="true">↗</span></span><span class="work-desc">聊天标题自动生成与回退、用量元数据容错、Windows GUI（UIA）自动化工具。</span></span>
+          <span class="work-meta"><span class="tag">Runtime</span><span class="stars">★ 5.7K</span></span>
+        </a>
+        <a class="work-item" href="https://github.com/FireRedTeam/FireRed-OpenStoryline" target="_blank" rel="noopener" data-category="runtime">
+          <span class="work-main"><span class="work-title">FireRedTeam/FireRed-OpenStoryline <span class="work-arrow" aria-hidden="true">↗</span></span><span class="work-desc">会话恢复 fail-closed、配置密钥脱敏、拖拽上传、类型化错误与重试。</span></span>
+          <span class="work-meta"><span class="tag">Runtime</span><span class="stars">★ 3.6K</span></span>
+        </a>
+        <a class="work-item" href="https://github.com/0xsline/OpenChatCut" target="_blank" rel="noopener" data-category="platform">
+          <span class="work-main"><span class="work-title">0xsline/OpenChatCut <span class="work-arrow" aria-hidden="true">↗</span></span><span class="work-desc">Windows 验证套件隔离、Ctrl 组合键、whisper.cpp 分词、本地媒体导入。</span></span>
+          <span class="work-meta"><span class="tag">Platform</span><span class="stars">★ 2.7K</span></span>
+        </a>
+      </div>
+
+      <div class="work-footer">
+        <p>9 个代表项目合计 554K+ GitHub Stars；项目与数据快照截至 2026-10-27。</p>
+        <a class="text-link" href="https://github.com/search?q=author%3AJasonBuildAI+type%3Apr+is%3Amerged&type=pullrequests" target="_blank" rel="noopener">在 GitHub 查看全部合并记录 <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="section shell" id="projects" aria-labelledby="projects-title">
+      <div class="section-head">
+        <p class="section-index">03 / Personal projects</p>
+        <div class="section-intro">
+          <h2 id="projects-title">也把想法，<br><em>做成能运行的东西。</em></h2>
+          <p>从 Agent 工具链到真实可用的产品界面，这三项最有代表性。代码、文档和验证都在仓库里。</p>
+        </div>
+      </div>
+
+      <article class="project-feature">
+        <a class="project-shot" href="https://github.com/JasonBuildAI/GoldMind" target="_blank" rel="noopener" aria-label="打开 GoldMind 仓库">
+          <img src="assets/img/goldmind-dashboard.jpg" width="1440" height="1000" alt="GoldMind 黄金市场分析看板截图">
+        </a>
+        <div class="project-feature-copy">
+          <p class="card-label">Featured project · Python / Vue 3</p>
+          <h3>GoldMind</h3>
+          <p>面向国际黄金市场的 AI 数据分析看板：自动采集行情与新闻，生成多空对照、机构观点、量化情景与可追溯的数据新鲜度。数据不可用时明确说「不可用」，而不是编造。</p>
+          <ul class="project-meta" aria-label="项目数据">
+            <li>66 stars</li><li>8 forks</li><li>v2.0.3</li><li>MIT</li>
+          </ul>
+          <div class="project-links">
+            <a class="button button-small button-primary" href="https://github.com/JasonBuildAI/GoldMind" target="_blank" rel="noopener">查看仓库 <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/JasonBuildAI/GoldMind/releases/tag/v2.0.3" target="_blank" rel="noopener">Release v2.0.3</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-card-head"><span class="project-monogram">LC</span><span class="project-type">AI coding assistant</span></div>
+          <h3>LikeCodex</h3>
+          <p>开源 AI 编程助手，以 Rust + Python + TypeScript 分层：控制面、Agent 循环与 Web UI 解耦，内置审批策略、Docker 沙箱和工具权限边界。</p>
+          <div class="project-tags"><span>Rust</span><span>Python</span><span>TypeScript</span></div>
+          <div class="project-card-foot"><span>★ 1 · MIT</span><a href="https://github.com/JasonBuildAI/likecodex" target="_blank" rel="noopener">Open repo <span aria-hidden="true">↗</span></a></div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card-head"><span class="project-monogram">AG</span><span class="project-type">Agent workflow playbook</span></div>
+          <h3>agents-md-playbook</h3>
+          <p>一套给 Codex / Claude Code 等 AI 编程代理的一页纸工作规约：单一真源、全绿才提交、CI 闸门与分台阶流程，提供中英双语模板。</p>
+          <div class="project-tags"><span>AGENTS.md</span><span>Codex</span><span>Claude Code</span></div>
+          <div class="project-card-foot"><span>★ 1 · MIT</span><a href="https://github.com/JasonBuildAI/agents-md-playbook" target="_blank" rel="noopener">Open repo <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+
+      <p class="project-more"><a class="text-link" href="https://github.com/JasonBuildAI?tab=repositories" target="_blank" rel="noopener">查看全部公开仓库 <span aria-hidden="true">↗</span></a></p>
+    </section>
+
+    <section class="section shell" id="activity" aria-labelledby="activity-title">
+      <div class="section-head">
+        <p class="section-index">04 / Activity</p>
+        <div class="section-intro">
+          <h2 id="activity-title">不是一次爆发，<br><em>是持续在修边界。</em></h2>
+          <p>贡献节奏和最近的合并记录，能更直接地说明时间花在了哪里。</p>
+        </div>
+      </div>
+
+      <div class="activity-grid">
+        <figure class="activity-panel chart-panel">
+          <div class="panel-head">
+            <p class="card-label">Contribution rhythm</p>
+            <h3>近 12 个月贡献</h3>
+          </div>
+          <div class="chart" role="img" aria-label="2026 年 2 月至 10 月的贡献数：2 月 77，3 月 44，4 月 26，5 月 119，6 月 633，7 月 576，8 月 78，9 月 1,154，10 月至 27 日为 766。">
+            <div class="bar-group" style="--h: 6.7%" title="2026-02 · 77 contributions"><span class="bar"></span><span class="bar-month">2月</span></div>
+            <div class="bar-group" style="--h: 3.8%" title="2026-03 · 44 contributions"><span class="bar"></span><span class="bar-month">3月</span></div>
+            <div class="bar-group" style="--h: 2.3%" title="2026-04 · 26 contributions"><span class="bar"></span><span class="bar-month">4月</span></div>
+            <div class="bar-group" style="--h: 10.3%" title="2026-05 · 119 contributions"><span class="bar"></span><span class="bar-month">5月</span></div>
+            <div class="bar-group" style="--h: 54.9%" title="2026-06 · 633 contributions"><span class="bar"></span><span class="bar-month">6月</span></div>
+            <div class="bar-group" style="--h: 49.9%" title="2026-07 · 576 contributions"><span class="bar"></span><span class="bar-month">7月</span></div>
+            <div class="bar-group" style="--h: 6.8%" title="2026-08 · 78 contributions"><span class="bar"></span><span class="bar-month">8月</span></div>
+            <div class="bar-group is-peak" style="--h: 100%" title="2026-09 · 1,154 contributions"><span class="bar"></span><span class="bar-month">9月</span></div>
+            <div class="bar-group is-current" style="--h: 66.4%" title="2026-10 · 766 contributions through Oct 27"><span class="bar"></span><span class="bar-month">10月</span></div>
+          </div>
+          <figcaption class="chart-note">峰值 1,154 · 2026.09 <span>/</span> 10 月统计至 27 日</figcaption>
+        </figure>
+
+        <article class="activity-panel merge-panel">
+          <div class="panel-head">
+            <p class="card-label">Recently merged</p>
+            <h3>最近的公开合并</h3>
+          </div>
+          <ol class="merge-list">
+            <li><a href="https://github.com/openclaw/openclaw/pull/181511" target="_blank" rel="noopener"><span class="merge-date">10.27</span><span class="merge-copy"><strong>openclaw/openclaw</strong><span>Streamed answers with a list after a code block no longer re-project the whole list</span></span><span class="merge-arrow" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/loopx-project/loopx/pull/7482" target="_blank" rel="noopener"><span class="merge-date">10.27</span><span class="merge-copy"><strong>loopx-project/loopx</strong><span>Follow the renamed tentative-finding label in workspace tests</span></span><span class="merge-arrow" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2426" target="_blank" rel="noopener"><span class="merge-date">10.27</span><span class="merge-copy"><strong>opensandbox-group/OpenSandbox</strong><span>Retry gateway wake timeouts when starting an SSE stream</span></span><span class="merge-arrow" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/loopx-project/loopx/pull/7381" target="_blank" rel="noopener"><span class="merge-date">10.26</span><span class="merge-copy"><strong>loopx-project/loopx</strong><span>Resume interrupted canonical Goal creation</span></span><span class="merge-arrow" aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2149" target="_blank" rel="noopener"><span class="merge-date">10.27</span><span class="merge-copy"><strong>opensandbox-group/OpenSandbox</strong><span>Keep the tenant API key out of direct code-interpreter requests</span></span><span class="merge-arrow" aria-hidden="true">↗</span></a></li>
+          </ol>
+          <a class="text-link panel-link" href="https://github.com/search?q=author%3AJasonBuildAI+type%3Apr+is%3Amerged&type=pullrequests" target="_blank" rel="noopener">查看全部合并 PR <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell about-section" id="about" aria-labelledby="about-title">
+      <div class="about-grid">
+        <div class="about-copy">
+          <p class="section-index">05 / About</p>
+          <h2 id="about-title">开源是工作现场，<br><em>不是展示柜。</em></h2>
+          <p>我把大部分时间花在开源 Agent 的真实边界上：让流式输出不阻塞，让沙箱的密钥边界更清楚，让 Windows 上的 Agent 和 Linux 一样可用，也让 CI 能证明这些改动没有把别处弄坏。</p>
+          <p>长期目标很简单：持续让 AI Agent 在开源世界里<strong>跑得稳、跑得安全</strong>。欢迎交流 Agent、沙箱与运行时可靠性，也欢迎单纯打个招呼。</p>
+          <p>键盘之外，我也踢球、到处走走、认识有故事的人。永远在学习，也始终觉得总有人比自己更强是一件好事。</p>
+          <div class="org-list">
+            <span>Community</span>
+            <a href="https://github.com/the-open-agent" target="_blank" rel="noopener">the-open-agent ↗</a>
+            <a href="https://github.com/effectorHQ" target="_blank" rel="noopener">effectorHQ ↗</a>
+          </div>
+        </div>
+
+        <aside class="contact-card" id="contact" aria-labelledby="contact-title">
+          <p class="card-label">Let's talk</p>
+          <h3 id="contact-title">想聊 Agent，或只是来打个招呼？</h3>
+          <p>邮件最快；也可以直接来 GitHub 看最近在做什么。</p>
+          <div class="contact-list">
+            <div class="contact-row">
+              <span class="contact-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></span>
+              <span class="contact-value"><small>Email</small><a href="mailto:jasonbuildai@gmail.com">jasonbuildai@gmail.com</a></span>
+              <button class="copy-button" type="button" data-copy="jasonbuildai@gmail.com" aria-label="复制邮箱">复制</button>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M9.5 4.5c3.6 0 6.5 2.4 6.5 5.4s-2.9 5.4-6.5 5.4c-.8 0-1.6-.1-2.3-.3L4 16l.9-2.7A5.1 5.1 0 0 1 3 9.9C3 6.9 5.9 4.5 9.5 4.5Z"></path><path d="M17 9.4c2.3.5 4 2.2 4 4.3 0 1.1-.5 2.1-1.2 2.9l.7 2.2-2.6-1.1c-.6.2-1.2.3-1.9.3-1.2 0-2.4-.3-3.2-.8"></path></svg></span>
+              <span class="contact-value"><small>WeChat</small><span>HJN522312MOST</span></span>
+              <button class="copy-button" type="button" data-copy="HJN522312MOST" aria-label="复制微信号">复制</button>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.1-6-3m12 6v-3.4c0-1 .1-1.4-.5-2 2.6-.3 5.4-1.3 5.4-5.8a4.5 4.5 0 0 0-1.2-3.1 4.2 4.2 0 0 0-.1-3.1s-1-.3-3.2 1.2a11.2 11.2 0 0 0-5.8 0C7.4 3.3 6.4 3.6 6.4 3.6a4.2 4.2 0 0 0-.1 3.1 4.5 4.5 0 0 0-1.2 3.2c0 4.4 2.8 5.4 5.4 5.7-.4.4-.5.9-.5 1.5V22"></path></svg></span>
+              <span class="contact-value"><small>GitHub</small><a href="https://github.com/JasonBuildAI" target="_blank" rel="noopener">github.com/JasonBuildAI</a></span>
+              <span class="contact-open" aria-hidden="true">↗</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© <span id="year">2026</span> Jason Cat · AI Agent Runtime &amp; Execution Safety</p>
+      <div class="footer-links">
+        <a href="https://github.com/JasonBuildAI/JasonBuildAI.github.io" target="_blank" rel="noopener">Source</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script src="assets/js/app.js" defer></script>
 </body>
 </html>
