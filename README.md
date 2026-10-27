@@ -2,22 +2,21 @@
 
 线上地址：**https://jasonbuildai.github.io/**
 
-以 GitHub 个人主页为基础的独立个人网站：更完整地展开 AI Agent Runtime、Sandbox Security 与跨平台工程方向，并集中展示代表贡献、个人项目和最近的公开活动。
+一份克制的技术工作者个人主页。内容以 GitHub 个人主页为基础展开，重点呈现 AI Agent 运行时、执行安全与跨平台工程方向的开源工作，同时保留个人项目、学习空间与业余生活。
 
-页面是纯静态 HTML / CSS / JavaScript，托管于 GitHub Pages，不依赖 CDN、前端框架或网络字体。采用本地字体栈、响应式布局、深色 / 浅色主题，并支持键盘操作与「减少动态效果」系统偏好。
+页面是纯静态 HTML / CSS / JavaScript，直接托管于 GitHub Pages，不依赖 CDN、前端框架或网络字体。交互只包含移动导航、当前区块提示、微信号复制和年份更新，各部分彼此独立。
 
 ## 内容结构
 
 | 区块 | 内容 |
 | --- | --- |
-| Hero | 个人定位、当前工作重点与 GitHub 数据快照 |
-| Focus | Agent Runtime、Sandbox Security、Cross-platform 三个方向 |
-| Selected work | 9 个代表贡献，可按方向即时筛选 |
-| Projects | GoldMind 重点展示，以及 LikeCodex、agents-md-playbook |
-| Activity | 近 12 个月贡献节奏与最近合并的公开 PR |
-| About | 工作方式、开源组织与联系方式 |
+| 个人介绍 | 身份、所在地、关注方向、常用语言与明确联系邀请 |
+| 开源贡献 | OpenStoryline、OpenAgent 系列、loopx、openclaw、OpenSandbox；使用原生 `<details>` 展开 |
+| 实战项目 | GoldMind、LikeCodex、agents-md-playbook |
+| 学习空间 | Agent Runtime、Sandbox Security、Cross-platform Engineering 三个持续研究主题 |
+| 业余生活 | 足球、行走、聊天与持续学习 |
 
-数据快照截至 **2026-10-27**；贡献统计包含私密贡献。
+开源贡献只展示 GitHub 已合并的 Pull Request。当前快照为 **7 个仓库、112 条已合并 PR，数据截至 2026-10-28**。较小的项目线展示全部记录；loopx 展示 12 条代表记录，并提供完整 GitHub 检索入口。
 
 ## 文件结构
 
@@ -25,29 +24,35 @@
 | --- | --- |
 | `index.html` | 主页内容、SEO / Open Graph 元数据 |
 | `404.html` | 独立 404 页面 |
-| `assets/css/base.css` | 设计令牌、基础样式、导航与公共组件 |
-| `assets/css/sections.css` | 各内容区块的独立样式 |
-| `assets/css/responsive.css` | 平板、手机、触屏与打印适配 |
-| `assets/js/app.js` | 主题、移动导航、滚动状态、筛选、复制等独立交互 |
-| `assets/img/` | 头像、项目截图、站点图标与社交分享图 |
+| `assets/css/profile.css` | 设计变量、基础排版、布局与组件 |
+| `assets/css/responsive.css` | 平板、手机、减少动态效果与打印样式 |
+| `assets/js/profile.js` | 移动导航、区块导航、微信号复制与年份 |
+| `assets/img/` | 头像、项目截图、站点图标与分享图 |
 
 ## 本地预览
 
-在仓库根目录启动任意静态文件服务器：
+在仓库根目录启动静态文件服务器：
 
 ```powershell
 python -m http.server 8765
 ```
 
-然后打开 `http://127.0.0.1:8765/`。不要直接双击 `index.html`，部分浏览器会限制本地脚本与剪贴板能力。
+打开 `http://127.0.0.1:8765/`。不要直接双击 `index.html`，部分浏览器会限制本地脚本与剪贴板能力。
 
-## 修改内容
+## 更新内容
 
-- 文案与链接：直接编辑 `index.html`。
-- 配色与主题：修改 `assets/css/base.css` 顶部的 CSS 变量。
-- 布局与组件：修改 `assets/css/sections.css`。
-- 响应式断点：修改 `assets/css/responsive.css`。
-- GitHub 数据与近期记录：手动更新对应数字、链接和时间标签，并同步更新页面中的快照日期。
+- 个人文案、项目与 PR 记录：编辑 `index.html`。
+- 颜色、字体与布局：编辑 `assets/css/profile.css` 顶部的设计变量和对应组件。
+- 响应式断点：编辑 `assets/css/responsive.css`。
+- 社交分享图：替换 `assets/img/og-card-2026.png`，保持 1200 × 630 尺寸。
+
+更新 PR 列表前，先用 GitHub CLI 核对记录确实已经合并：
+
+```powershell
+gh search prs --author=JasonBuildAI --merged --repo=OWNER/REPO --limit=1000 --json number,title,url,closedAt
+```
+
+不要把未合并、草稿或已关闭但未合并的 PR 放进页面。
 
 ## 部署
 
@@ -55,4 +60,4 @@ GitHub Pages 当前设置为 **Deploy from a branch → main / (root)**。推送
 
 ## 交互约定
 
-主题、移动菜单、滚动进度与导航高亮、贡献筛选、联系信息复制都由 `assets/js/app.js` 中的独立模块处理。修改其中一项时，不需要改动其他模块的逻辑。
+移动导航、区块高亮、复制按钮和年份是四个独立模块，均在 `assets/js/profile.js` 中处理。开源项目展开使用浏览器原生 `<details>`，不依赖 JavaScript。
