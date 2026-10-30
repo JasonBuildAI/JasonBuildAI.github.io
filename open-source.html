@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>开源贡献 | Jason Cat</title>
-  <meta name="description" content="Jason Cat 在 23 个公开仓库中的 156 条已合并 PR，按项目影响力列出参与仓库，并重点整理 LoopX、OpenSandbox、openclaw、OpenAgent 与 OpenStoryline 的代表性贡献。">
+  <meta name="description" content="Jason Cat 在 23 个公开仓库中的 156 条已合并 PR，先重点整理 LoopX、OpenSandbox、openclaw、OpenAgent 与 OpenStoryline 的代表性贡献，再按项目影响力列出全部参与仓库。">
   <meta name="author" content="Jason Cat">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#f5f7f4">
@@ -14,11 +14,11 @@
   <link rel="apple-touch-icon" href="/assets/img/avatar-20261030.png">
   <link rel="stylesheet" href="/assets/css/profile.css?v=20261030b">
   <link rel="stylesheet" href="/assets/css/responsive.css?v=20261030b">
-  <link rel="stylesheet" href="/assets/css/open-source.css?v=20261030c">
+  <link rel="stylesheet" href="/assets/css/open-source.css?v=20261030d">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="开源贡献 | Jason Cat">
-  <meta property="og:description" content="按项目影响力查看全部参与仓库，并阅读 Agent 运行时、沙箱安全与跨平台工程的代表性已合并 PR。">
+  <meta property="og:description" content="先阅读 Agent 运行时、沙箱安全与跨平台工程的代表性已合并 PR，再按项目影响力查看全部参与仓库。">
   <meta property="og:url" content="https://jasonbuildai.github.io/open-source.html">
   <meta property="og:image" content="https://jasonbuildai.github.io/assets/img/og-card-20261030.png">
   <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
   <meta property="og:image:alt" content="Jason Cat 的个人主页分享图，包含身份、关注方向与开源贡献。">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="开源贡献 | Jason Cat">
-  <meta name="twitter:description" content="按项目影响力查看全部参与仓库，并阅读代表性已合并 PR。">
+  <meta name="twitter:description" content="先阅读代表性已合并 PR，再按项目影响力查看全部参与仓库。">
   <meta name="twitter:image" content="https://jasonbuildai.github.io/assets/img/og-card-20261030.png">
   <meta name="twitter:image:alt" content="Jason Cat 的个人主页分享图">
 
@@ -62,7 +62,7 @@
       <div class="container">
         <p class="page-kicker">Open Source · 开源贡献</p>
         <h1 id="page-title">开源贡献</h1>
-        <p class="page-lede">持续参与 Agent 运行时、沙箱执行安全与跨平台工程。这里按真实合并记录整理我的开源工作：先列出全部参与仓库，再展开五个长期投入的项目。</p>
+        <p class="page-lede">持续参与 Agent 运行时、沙箱执行安全与跨平台工程。这里按真实合并记录整理我的开源工作：先展开五个长期投入项目的代表性贡献，再列出全部参与仓库。</p>
         <ul class="hero-facts" aria-label="开源贡献数据概览">
           <li><strong>156</strong><span>条已合并 PR</span></li>
           <li><strong>23</strong><span>个参与仓库</span></li>
@@ -73,6 +73,158 @@
 
     <div class="page-content oss-content">
       <div class="container">
+        <section class="featured-contributions" aria-labelledby="featured-title">
+          <div class="section-heading featured-heading">
+            <div>
+              <p class="section-kicker">Selected work</p>
+              <h2 id="featured-title">主要贡献</h2>
+            </div>
+            <div class="section-side">
+              <p class="section-deck">五个持续投入的项目，共 119 条已合并 PR。按近期投入由近及远排列，每张卡片保留最近一次合并时间、代表性 PR 与完整记录入口。</p>
+            </div>
+          </div>
+
+          <div class="contribution-stack">
+            <article class="oss-project" aria-labelledby="loopx-title">
+              <div class="project-rail" aria-hidden="true"><span class="project-number">01</span></div>
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="project-role project-role--member">组织成员</span>
+                  <span class="project-latest">最近合并 <time datetime="2026-10-29">2026-10-29</time></span>
+                </div>
+                <h3 class="project-title" id="loopx-title"><a href="https://github.com/loopx-project/loopx" target="_blank" rel="noopener">LoopX<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
+                <p class="project-repo"><span>loopx-project / loopx</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">68 条已合并</span></p>
+                <p class="project-summary">围绕 LoopX 的本地控制平面，修复 Windows 原生运行、UTF-8 与路径边界、凭据出站检查、Goal/Turn 状态恢复、守护进程发现及桌面签名更新，让中断后的任务可恢复、不安全数据按失败关闭处理。</p>
+
+                <div class="representative-work">
+                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条近期记录</span></div>
+                  <ol class="representative-prs">
+                    <li class="rep-pr"><a href="https://github.com/loopx-project/loopx/pull/7636" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-29">2026-10-29</time><span class="pr-number">#7636</span><span class="pr-title">fix(capability): detect unlabeled provider tokens in the outbound scan</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/loopx-project/loopx/pull/7477" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-27">2026-10-27</time><span class="pr-number">#7477</span><span class="pr-title">fix(chat): keep a completed Turn's event history when a stop races it</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/loopx-project/loopx/pull/7381" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-26">2026-10-26</time><span class="pr-number">#7381</span><span class="pr-title">fix(coordination): resume interrupted canonical Goal creation</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/loopx-project/loopx/pull/6854" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-22">2026-10-22</time><span class="pr-number">#6854</span><span class="pr-title">feat(desktop): signed Windows NSIS updates on the main channel</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                  </ol>
+                </div>
+
+                <div class="project-footer">
+                  <a class="project-all-link" href="https://github.com/search?q=repo%3Aloopx-project%2Floopx+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
+                  <span class="project-record-note">该仓库共 68 条已合并 PR</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="oss-project" aria-labelledby="opensandbox-title">
+              <div class="project-rail" aria-hidden="true"><span class="project-number">02</span></div>
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="project-role">活跃贡献者</span>
+                  <span class="project-latest">最近合并 <time datetime="2026-10-28">2026-10-28</time></span>
+                </div>
+                <h3 class="project-title" id="opensandbox-title"><a href="https://github.com/opensandbox-group/OpenSandbox" target="_blank" rel="noopener">OpenSandbox<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
+                <p class="project-repo"><span>opensandbox-group / OpenSandbox</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">14 条已合并</span></p>
+                <p class="project-summary">为 OpenSandbox 的多语言 SDK 与 CLI 收紧租户密钥隔离、代理认证、幂等重试、原子文件写入和上传下载超时边界，使 Go、JavaScript、Kotlin、C# 与命令行接口在不同平台上保持一致。</p>
+
+                <div class="representative-work">
+                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条近期记录</span></div>
+                  <ol class="representative-prs">
+                    <li class="rep-pr"><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2433" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-28">2026-10-28</time><span class="pr-number">#2433</span><span class="pr-title">fix(execd): replace uploads atomically so a failed write keeps the old file</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2149" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-27">2026-10-27</time><span class="pr-number">#2149</span><span class="pr-title">fix(sdk): keep the tenant API key out of direct code-interpreter requests</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2342" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-24">2026-10-24</time><span class="pr-number">#2342</span><span class="pr-title">fix(sdk-go): stop retrying non-idempotent writes by default</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2206" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-15">2026-10-15</time><span class="pr-number">#2206</span><span class="pr-title">fix(sdk-csharp): stop capping file uploads and downloads at the request timeout</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                  </ol>
+                </div>
+
+                <div class="project-footer">
+                  <a class="project-all-link" href="https://github.com/search?q=repo%3Aopensandbox-group%2FOpenSandbox+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
+                  <span class="project-record-note">该仓库共 14 条已合并 PR</span>
+                </div>
+              </div>
+            </article>
+            <article class="oss-project" aria-labelledby="openclaw-title">
+              <div class="project-rail" aria-hidden="true"><span class="project-number">03</span></div>
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="project-role">活跃贡献者</span>
+                  <span class="project-latest">最近合并 <time datetime="2026-10-29">2026-10-29</time></span>
+                </div>
+                <h3 class="project-title" id="openclaw-title"><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">openclaw<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
+                <p class="project-repo"><span>openclaw / openclaw</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">16 条已合并</span></p>
+                <p class="project-summary">聚焦 openclaw Gateway 的流式输出路径，修复长 HTML/JSX、被拆分的工具调用标记、控制 token 与引用文本触发的停摆、重复解析和内部参数泄漏，让分块响应在异常边界下仍能持续、安全地推进。</p>
+
+                <div class="representative-work">
+                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条近期记录</span></div>
+                  <ol class="representative-prs">
+                    <li class="rep-pr"><a href="https://github.com/openclaw/openclaw/pull/187656" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-29">2026-10-29</time><span class="pr-number">#187656</span><span class="pr-title">fix: streamed replies with a literal [[ in prose no longer re-parse the whole answer</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/openclaw/openclaw/pull/185293" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-27">2026-10-27</time><span class="pr-number">#185293</span><span class="pr-title">fix: long streamed HTML/JSX replies no longer re-project the whole reply at every partial tag</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/openclaw/openclaw/pull/184529" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-27">2026-10-27</time><span class="pr-number">#184529</span><span class="pr-title">fix: block-streaming replies no longer post tool-call arguments</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/openclaw/openclaw/pull/181511" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-24">2026-10-24</time><span class="pr-number">#181511</span><span class="pr-title">fix: streamed answers with a list after a code block no longer re-project the whole list</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                  </ol>
+                </div>
+
+                <div class="project-footer">
+                  <a class="project-all-link" href="https://github.com/search?q=repo%3Aopenclaw%2Fopenclaw+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
+                  <span class="project-record-note">该仓库共 16 条已合并 PR</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="oss-project" aria-labelledby="openagent-title">
+              <div class="project-rail" aria-hidden="true"><span class="project-number">04</span></div>
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="project-role project-role--member">组织成员</span>
+                  <span class="project-latest">最近合并 <time datetime="2026-05-22">2026-05-22</time></span>
+                </div>
+                <h3 class="project-title" id="openagent-title"><a href="https://github.com/the-open-agent" target="_blank" rel="noopener">OpenAgent<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
+                <p class="project-repo"><span>the-open-agent / openagent · agentbench · static</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">13 条已合并</span></p>
+                <p class="project-summary">为 OpenAgent 系列补齐基于 Windows UIA 的 GUI 自动化、会话标题与用量元数据回退、AgentBench 基准框架和静态资源，推动桌面执行、服务可用性与测试基础设施从 0 到 1 落地。</p>
+
+                <div class="representative-work">
+                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条跨仓库记录</span></div>
+                  <ol class="representative-prs">
+                    <li class="rep-pr"><a href="https://github.com/the-open-agent/openagent/pull/2287" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-05-22">2026-05-22</time><span class="pr-number">#2287</span><span class="pr-title"><span class="pr-repo">openagent</span> fix: remove duplicated LLM call in GetAnswer API</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/the-open-agent/openagent/pull/2267" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-05-18">2026-05-18</time><span class="pr-number">#2267</span><span class="pr-title"><span class="pr-repo">openagent</span> feat(chat): auto-generate chat titles with user-message fallback</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/the-open-agent/agentbench/pull/2" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-05-17">2026-05-17</time><span class="pr-number">#2</span><span class="pr-title"><span class="pr-repo">agentbench</span> feat: add system-level benchmark suites (startup, memory, throughput, reliability)</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/the-open-agent/openagent/pull/2192" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-04-30">2026-04-30</time><span class="pr-number">#2192</span><span class="pr-title"><span class="pr-repo">openagent</span> feat: add GUI tool based on windows gui automation uia</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                  </ol>
+                </div>
+
+                <div class="project-footer">
+                  <a class="project-all-link" href="https://github.com/search?q=org%3Athe-open-agent+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
+                  <span class="project-record-note">3 个仓库合计 13 条已合并 PR</span>
+                </div>
+              </div>
+            </article>
+            <article class="oss-project" aria-labelledby="openstoryline-title">
+              <div class="project-rail" aria-hidden="true"><span class="project-number">05</span></div>
+              <div class="project-body">
+                <div class="project-meta-row">
+                  <span class="project-role project-role--core">核心贡献者</span>
+                  <span class="project-latest">最近合并 <time datetime="2026-04-09">2026-04-09</time></span>
+                </div>
+                <h3 class="project-title" id="openstoryline-title"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline" target="_blank" rel="noopener">OpenStoryline<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
+                <p class="project-repo"><span>FireRedTeam / FireRed-OpenStoryline</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">8 条已合并</span></p>
+                <p class="project-summary">为 AI 视频剪辑 Agent 处理会话恢复、聊天历史切换、媒体拖拽上传、API Key 校验与网络重试，重点防止损坏数据、凭据泄露和瞬时网络错误破坏创作流程。</p>
+
+                <div class="representative-work">
+                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条代表性记录</span></div>
+                  <ol class="representative-prs">
+                    <li class="rep-pr"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/79" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-04-09">2026-04-09</time><span class="pr-number">#79</span><span class="pr-title">Fix session restore invariants: fail-closed on corrupted tool rows, redact config secrets, and type getSession errors</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/58" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-03-18">2026-03-18</time><span class="pr-number">#58</span><span class="pr-title">feat: support drag-and-drop media upload</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/57" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-03-18">2026-03-18</time><span class="pr-number">#57</span><span class="pr-title">feat(web): add chat history and session switch guards</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                    <li class="rep-pr"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/26" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-03-04">2026-03-04</time><span class="pr-number">#26</span><span class="pr-title">fix(search_media): add exponential backoff retry for network requests</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
+                  </ol>
+                </div>
+
+                <div class="project-footer">
+                  <a class="project-all-link" href="https://github.com/search?q=repo%3AFireRedTeam%2FFireRed-OpenStoryline+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
+                  <span class="project-record-note">该仓库共 8 条已合并 PR</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
         <section class="repo-index" aria-labelledby="repo-index-title">
           <div class="section-heading">
             <div>
@@ -272,158 +424,6 @@
             </li>
           </ol>
           <p class="repo-index-note"><span>整行链接至该仓库的已合并 PR 检索</span><span>Stars 与合并数均为 2026-10-30 快照</span></p>
-        </section>
-
-        <section class="featured-contributions" aria-labelledby="featured-title">
-          <div class="section-heading featured-heading">
-            <div>
-              <p class="section-kicker">Selected work</p>
-              <h2 id="featured-title">主要贡献</h2>
-            </div>
-            <div class="section-side">
-              <p class="section-deck">五个持续投入的项目，共 119 条已合并 PR。按近期投入由近及远排列，每张卡片保留最近一次合并时间、代表性 PR 与完整记录入口。</p>
-            </div>
-          </div>
-
-          <div class="contribution-stack">
-            <article class="oss-project" aria-labelledby="loopx-title">
-              <div class="project-rail" aria-hidden="true"><span class="project-number">01</span></div>
-              <div class="project-body">
-                <div class="project-meta-row">
-                  <span class="project-role project-role--member">组织成员</span>
-                  <span class="project-latest">最近合并 <time datetime="2026-10-29">2026-10-29</time></span>
-                </div>
-                <h3 class="project-title" id="loopx-title"><a href="https://github.com/loopx-project/loopx" target="_blank" rel="noopener">LoopX<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
-                <p class="project-repo"><span>loopx-project / loopx</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">68 条已合并</span></p>
-                <p class="project-summary">围绕 LoopX 的本地控制平面，修复 Windows 原生运行、UTF-8 与路径边界、凭据出站检查、Goal/Turn 状态恢复、守护进程发现及桌面签名更新，让中断后的任务可恢复、不安全数据按失败关闭处理。</p>
-
-                <div class="representative-work">
-                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条近期记录</span></div>
-                  <ol class="representative-prs">
-                    <li class="rep-pr"><a href="https://github.com/loopx-project/loopx/pull/7636" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-29">2026-10-29</time><span class="pr-number">#7636</span><span class="pr-title">fix(capability): detect unlabeled provider tokens in the outbound scan</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/loopx-project/loopx/pull/7477" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-27">2026-10-27</time><span class="pr-number">#7477</span><span class="pr-title">fix(chat): keep a completed Turn's event history when a stop races it</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/loopx-project/loopx/pull/7381" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-26">2026-10-26</time><span class="pr-number">#7381</span><span class="pr-title">fix(coordination): resume interrupted canonical Goal creation</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/loopx-project/loopx/pull/6854" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-22">2026-10-22</time><span class="pr-number">#6854</span><span class="pr-title">feat(desktop): signed Windows NSIS updates on the main channel</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                  </ol>
-                </div>
-
-                <div class="project-footer">
-                  <a class="project-all-link" href="https://github.com/search?q=repo%3Aloopx-project%2Floopx+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
-                  <span class="project-record-note">该仓库共 68 条已合并 PR</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="oss-project" aria-labelledby="opensandbox-title">
-              <div class="project-rail" aria-hidden="true"><span class="project-number">02</span></div>
-              <div class="project-body">
-                <div class="project-meta-row">
-                  <span class="project-role">活跃贡献者</span>
-                  <span class="project-latest">最近合并 <time datetime="2026-10-28">2026-10-28</time></span>
-                </div>
-                <h3 class="project-title" id="opensandbox-title"><a href="https://github.com/opensandbox-group/OpenSandbox" target="_blank" rel="noopener">OpenSandbox<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
-                <p class="project-repo"><span>opensandbox-group / OpenSandbox</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">14 条已合并</span></p>
-                <p class="project-summary">为 OpenSandbox 的多语言 SDK 与 CLI 收紧租户密钥隔离、代理认证、幂等重试、原子文件写入和上传下载超时边界，使 Go、JavaScript、Kotlin、C# 与命令行接口在不同平台上保持一致。</p>
-
-                <div class="representative-work">
-                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条近期记录</span></div>
-                  <ol class="representative-prs">
-                    <li class="rep-pr"><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2433" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-28">2026-10-28</time><span class="pr-number">#2433</span><span class="pr-title">fix(execd): replace uploads atomically so a failed write keeps the old file</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2149" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-27">2026-10-27</time><span class="pr-number">#2149</span><span class="pr-title">fix(sdk): keep the tenant API key out of direct code-interpreter requests</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2342" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-24">2026-10-24</time><span class="pr-number">#2342</span><span class="pr-title">fix(sdk-go): stop retrying non-idempotent writes by default</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2206" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-15">2026-10-15</time><span class="pr-number">#2206</span><span class="pr-title">fix(sdk-csharp): stop capping file uploads and downloads at the request timeout</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                  </ol>
-                </div>
-
-                <div class="project-footer">
-                  <a class="project-all-link" href="https://github.com/search?q=repo%3Aopensandbox-group%2FOpenSandbox+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
-                  <span class="project-record-note">该仓库共 14 条已合并 PR</span>
-                </div>
-              </div>
-            </article>
-            <article class="oss-project" aria-labelledby="openclaw-title">
-              <div class="project-rail" aria-hidden="true"><span class="project-number">03</span></div>
-              <div class="project-body">
-                <div class="project-meta-row">
-                  <span class="project-role">活跃贡献者</span>
-                  <span class="project-latest">最近合并 <time datetime="2026-10-29">2026-10-29</time></span>
-                </div>
-                <h3 class="project-title" id="openclaw-title"><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">openclaw<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
-                <p class="project-repo"><span>openclaw / openclaw</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">16 条已合并</span></p>
-                <p class="project-summary">聚焦 openclaw Gateway 的流式输出路径，修复长 HTML/JSX、被拆分的工具调用标记、控制 token 与引用文本触发的停摆、重复解析和内部参数泄漏，让分块响应在异常边界下仍能持续、安全地推进。</p>
-
-                <div class="representative-work">
-                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条近期记录</span></div>
-                  <ol class="representative-prs">
-                    <li class="rep-pr"><a href="https://github.com/openclaw/openclaw/pull/187656" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-29">2026-10-29</time><span class="pr-number">#187656</span><span class="pr-title">fix: streamed replies with a literal [[ in prose no longer re-parse the whole answer</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/openclaw/openclaw/pull/185293" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-27">2026-10-27</time><span class="pr-number">#185293</span><span class="pr-title">fix: long streamed HTML/JSX replies no longer re-project the whole reply at every partial tag</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/openclaw/openclaw/pull/184529" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-27">2026-10-27</time><span class="pr-number">#184529</span><span class="pr-title">fix: block-streaming replies no longer post tool-call arguments</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/openclaw/openclaw/pull/181511" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-24">2026-10-24</time><span class="pr-number">#181511</span><span class="pr-title">fix: streamed answers with a list after a code block no longer re-project the whole list</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                  </ol>
-                </div>
-
-                <div class="project-footer">
-                  <a class="project-all-link" href="https://github.com/search?q=repo%3Aopenclaw%2Fopenclaw+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
-                  <span class="project-record-note">该仓库共 16 条已合并 PR</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="oss-project" aria-labelledby="openagent-title">
-              <div class="project-rail" aria-hidden="true"><span class="project-number">04</span></div>
-              <div class="project-body">
-                <div class="project-meta-row">
-                  <span class="project-role project-role--member">组织成员</span>
-                  <span class="project-latest">最近合并 <time datetime="2026-05-22">2026-05-22</time></span>
-                </div>
-                <h3 class="project-title" id="openagent-title"><a href="https://github.com/the-open-agent" target="_blank" rel="noopener">OpenAgent<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
-                <p class="project-repo"><span>the-open-agent / openagent · agentbench · static</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">13 条已合并</span></p>
-                <p class="project-summary">为 OpenAgent 系列补齐基于 Windows UIA 的 GUI 自动化、会话标题与用量元数据回退、AgentBench 基准框架和静态资源，推动桌面执行、服务可用性与测试基础设施从 0 到 1 落地。</p>
-
-                <div class="representative-work">
-                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条跨仓库记录</span></div>
-                  <ol class="representative-prs">
-                    <li class="rep-pr"><a href="https://github.com/the-open-agent/openagent/pull/2287" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-05-22">2026-05-22</time><span class="pr-number">#2287</span><span class="pr-title"><span class="pr-repo">openagent</span> fix: remove duplicated LLM call in GetAnswer API</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/the-open-agent/openagent/pull/2267" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-05-18">2026-05-18</time><span class="pr-number">#2267</span><span class="pr-title"><span class="pr-repo">openagent</span> feat(chat): auto-generate chat titles with user-message fallback</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/the-open-agent/agentbench/pull/2" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-05-17">2026-05-17</time><span class="pr-number">#2</span><span class="pr-title"><span class="pr-repo">agentbench</span> feat: add system-level benchmark suites (startup, memory, throughput, reliability)</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/the-open-agent/openagent/pull/2192" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-04-30">2026-04-30</time><span class="pr-number">#2192</span><span class="pr-title"><span class="pr-repo">openagent</span> feat: add GUI tool based on windows gui automation uia</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                  </ol>
-                </div>
-
-                <div class="project-footer">
-                  <a class="project-all-link" href="https://github.com/search?q=org%3Athe-open-agent+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
-                  <span class="project-record-note">3 个仓库合计 13 条已合并 PR</span>
-                </div>
-              </div>
-            </article>
-            <article class="oss-project" aria-labelledby="openstoryline-title">
-              <div class="project-rail" aria-hidden="true"><span class="project-number">05</span></div>
-              <div class="project-body">
-                <div class="project-meta-row">
-                  <span class="project-role project-role--core">核心贡献者</span>
-                  <span class="project-latest">最近合并 <time datetime="2026-04-09">2026-04-09</time></span>
-                </div>
-                <h3 class="project-title" id="openstoryline-title"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline" target="_blank" rel="noopener">OpenStoryline<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
-                <p class="project-repo"><span>FireRedTeam / FireRed-OpenStoryline</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">8 条已合并</span></p>
-                <p class="project-summary">为 AI 视频剪辑 Agent 处理会话恢复、聊天历史切换、媒体拖拽上传、API Key 校验与网络重试，重点防止损坏数据、凭据泄露和瞬时网络错误破坏创作流程。</p>
-
-                <div class="representative-work">
-                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条代表性记录</span></div>
-                  <ol class="representative-prs">
-                    <li class="rep-pr"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/79" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-04-09">2026-04-09</time><span class="pr-number">#79</span><span class="pr-title">Fix session restore invariants: fail-closed on corrupted tool rows, redact config secrets, and type getSession errors</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/58" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-03-18">2026-03-18</time><span class="pr-number">#58</span><span class="pr-title">feat: support drag-and-drop media upload</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/57" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-03-18">2026-03-18</time><span class="pr-number">#57</span><span class="pr-title">feat(web): add chat history and session switch guards</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/26" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-03-04">2026-03-04</time><span class="pr-number">#26</span><span class="pr-title">fix(search_media): add exponential backoff retry for network requests</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                  </ol>
-                </div>
-
-                <div class="project-footer">
-                  <a class="project-all-link" href="https://github.com/search?q=repo%3AFireRedTeam%2FFireRed-OpenStoryline+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
-                  <span class="project-record-note">该仓库共 8 条已合并 PR</span>
-                </div>
-              </div>
-            </article>
-          </div>
         </section>
 
         <footer class="data-note">
