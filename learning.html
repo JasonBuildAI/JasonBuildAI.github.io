@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>学习空间 | Jason Cat</title>
+  <meta name="description" content="Jason Cat 在 Agent Runtime、Sandbox Security 与跨平台工程方向持续整理的问题与笔记。">
+  <meta name="author" content="Jason Cat">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#f5f7f4">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://jasonbuildai.github.io/learning.html">
+  <link rel="icon" href="/assets/img/favicon.svg?v=20261030a" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/avatar.png">
+  <link rel="stylesheet" href="/assets/css/profile.css?v=20261030a">
+  <link rel="stylesheet" href="/assets/css/responsive.css?v=20261030a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="学习空间 | Jason Cat">
+  <meta property="og:description" content="不是教程目录，而是正在阅读、拆解和验证的问题：Agent Runtime、沙箱安全与跨平台工程。">
+  <meta property="og:url" content="https://jasonbuildai.github.io/learning.html">
+  <meta property="og:image" content="https://jasonbuildai.github.io/assets/img/og-card-2026.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jason Cat 的个人主页分享图，包含身份、关注方向与已合并 PR 数量。">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="学习空间 | Jason Cat">
+  <meta name="twitter:description" content="不是教程目录，而是正在阅读、拆解和验证的问题：Agent Runtime、沙箱安全与跨平台工程。">
+  <meta name="twitter:image" content="https://jasonbuildai.github.io/assets/img/og-card-2026.png">
+  <meta name="twitter:image:alt" content="Jason Cat 的个人主页分享图">
+
+  <script src="/assets/js/profile.js?v=20261030a" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">JC</span>
+        <span class="brand-name">Jason Cat</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="/">介绍</a>
+        <a href="/open-source.html">开源贡献</a>
+        <a href="/projects.html">实战项目</a>
+        <a href="/learning.html" aria-current="page">学习空间</a>
+        <a href="/life.html">业余生活</a>
+      </nav>
+
+      <a class="header-mail" href="mailto:jasonbuildai@gmail.com">写信给 Jason</a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="打开导航">
+        <span class="menu-toggle-bars" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="page-kicker">Learning · 学习空间</p>
+        <h1 id="page-title">学习空间</h1>
+        <p class="page-lede">不是教程目录，而是我正在阅读、拆解和验证的问题。内容会随着实际工作持续整理。</p>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <div class="container">
+        <p class="learning-intro">这里整理我在 Agent 系统里反复遇到、但还没有形成定论的问题。每条都来自真实代码、issue 或失败案例；等结论稳定后，再补上完整笔记。</p>
+        <div class="learning-list">
+          <article class="learning-topic">
+            <h3>Agent Runtime</h3>
+            <div>
+              <p>阅读流式协议、会话与目标生命周期、调度恢复和可观测性的实现。</p>
+              <p>尚未解决的问题：流式输出在任意 chunk 边界被截断时，解析、持久化和前端呈现如何保持一致？</p>
+            </div>
+          </article>
+          <article class="learning-topic">
+            <h3>Sandbox Security</h3>
+            <div>
+              <p>关注密钥生命周期、租户隔离、出口策略，以及不可信代码执行时的最小权限边界。</p>
+              <p>最近的疑问是：多语言 SDK 的重试语义如何区分幂等与非幂等操作，而不把一次失败扩散成额外副作用？</p>
+            </div>
+          </article>
+          <article class="learning-topic">
+            <h3>Cross-platform Engineering</h3>
+            <div>
+              <p>整理 Windows 与 WSL 上的路径、编码、进程模型和 CI 验证差异。</p>
+              <p>下一步实验：怎样让只在原生 Windows 出现的问题稳定进入自动化测试，而不是依赖人工复现？</p>
+            </div>
+          </article>
+        </div>
+        <p class="learning-note">笔记会按主题陆续补充。只有内容和结论完整后，才会放上链接。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-current-year>2026</span> Jason Cat。本站只记录真实合并的公开贡献。</p>
+      <nav class="footer-links" aria-label="页脚链接">
+        <a href="/open-source.html">开源贡献</a>
+        <a href="/projects.html">实战项目</a>
+        <a href="/learning.html">学习空间</a>
+        <a href="/life.html">业余生活</a>
+        <a href="mailto:jasonbuildai@gmail.com">邮箱</a>
+        <a href="https://github.com/JasonBuildAI" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

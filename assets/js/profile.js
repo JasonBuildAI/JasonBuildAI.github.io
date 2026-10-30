@@ -38,55 +38,6 @@
     });
   }
 
-  function initSectionNavigation() {
-    var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav a[href^="#"]'));
-    if (!links.length) return;
-
-    var sections = links.map(function (link) {
-      return document.querySelector(link.getAttribute('href'));
-    }).filter(Boolean);
-
-    if (!sections.length) return;
-
-    var ticking = false;
-
-    function setCurrent(sectionId) {
-      links.forEach(function (link) {
-        if (link.getAttribute('href') === '#' + sectionId) {
-          link.setAttribute('aria-current', 'location');
-        } else {
-          link.removeAttribute('aria-current');
-        }
-      });
-    }
-
-    function update() {
-      var marker = Math.min(window.innerHeight * 0.26, 190);
-      var current = sections[0];
-
-      sections.forEach(function (section) {
-        if (section.getBoundingClientRect().top <= marker) current = section;
-      });
-
-      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
-        current = sections[sections.length - 1];
-      }
-
-      setCurrent(current.id);
-      ticking = false;
-    }
-
-    function requestUpdate() {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(update);
-    }
-
-    window.addEventListener('scroll', requestUpdate, { passive: true });
-    window.addEventListener('resize', requestUpdate);
-    update();
-  }
-
   function copyText(value) {
     if (navigator.clipboard && window.isSecureContext) {
       return navigator.clipboard.writeText(value);
@@ -151,7 +102,6 @@
   }
 
   initMenu();
-  initSectionNavigation();
   initCopyButtons();
   initYear();
 }());
