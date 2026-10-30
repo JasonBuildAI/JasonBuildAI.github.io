@@ -1,0 +1,693 @@
+.life-hero {
+  padding: clamp(48px, 7vw, 86px) 0 clamp(36px, 5vw, 57px);
+  background:
+    radial-gradient(circle at 88% 20%, rgba(172, 109, 54, 0.11), transparent 22rem),
+    linear-gradient(180deg, #f7f8f4 0%, var(--paper) 100%);
+}
+
+.life-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(310px, 0.92fr);
+  gap: clamp(36px, 7vw, 90px);
+  align-items: end;
+}
+
+.life-hero h1 {
+  margin: 0;
+  font-family: Bahnschrift, "Segoe UI Variable Display", "Segoe UI", "Microsoft YaHei UI", sans-serif;
+  font-size: clamp(3rem, 6.5vw, 5.55rem);
+  font-weight: 610;
+  line-height: 1.02;
+  letter-spacing: -0.06em;
+}
+
+.life-hero h1 span {
+  color: var(--accent);
+}
+
+.life-hero-copy > p {
+  max-width: 31em;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: clamp(14.5px, 1.5vw, 16px);
+  line-height: 1.92;
+}
+
+.life-identity {
+  display: grid;
+  grid-template-columns: 51px minmax(0, 1fr);
+  gap: 13px;
+  align-items: center;
+  margin-top: 27px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-strong);
+}
+
+.life-identity img {
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: saturate(0.9);
+}
+
+.life-identity strong,
+.life-identity span,
+.life-identity small {
+  display: block;
+}
+
+.life-identity strong {
+  color: var(--ink);
+  font-size: 12.5px;
+  font-weight: 650;
+}
+
+.life-identity span {
+  margin-top: 1px;
+  color: var(--muted);
+  font-size: 10.5px;
+  line-height: 1.55;
+}
+
+.life-identity small {
+  margin-top: 2px;
+  color: var(--muted-light);
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  line-height: 1.55;
+}
+
+.life-leading-photo {
+  padding: 0 0 clamp(55px, 8vw, 92px);
+}
+
+.life-leading-photo .container {
+  width: min(calc(100% - (2 * var(--gutter))), 1235px);
+}
+
+.lead-photo {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: #24352d;
+}
+
+.lead-photo::after {
+  content: "";
+  position: absolute;
+  inset: 28% 0 0;
+  background: linear-gradient(180deg, transparent, rgba(10, 19, 15, 0.78));
+  pointer-events: none;
+}
+
+.lead-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  object-fit: cover;
+}
+
+.lead-photo figcaption {
+  position: absolute;
+  z-index: 1;
+  right: clamp(21px, 4vw, 52px);
+  bottom: clamp(20px, 4vw, 44px);
+  left: clamp(21px, 4vw, 52px);
+  max-width: 39em;
+  color: #fff;
+}
+
+.lead-photo figcaption span,
+.lead-photo figcaption strong,
+.lead-photo figcaption small {
+  display: block;
+}
+
+.lead-photo figcaption span {
+  color: #d6e7dc;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+}
+
+.lead-photo figcaption strong {
+  margin-top: 8px;
+  font-family: Bahnschrift, "Segoe UI", "Microsoft YaHei UI", sans-serif;
+  font-size: clamp(1.45rem, 3vw, 2.55rem);
+  font-weight: 520;
+  line-height: 1.28;
+  letter-spacing: -0.025em;
+}
+
+.lead-photo figcaption small {
+  margin-top: 8px;
+  color: #d1dfd6;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  line-height: 1.55;
+}
+
+.life-body {
+  padding: 0 0 clamp(48px, 7vw, 84px);
+}
+
+.life-body .container {
+  width: min(calc(100% - (2 * var(--gutter))), 1120px);
+}
+
+.life-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  gap: clamp(34px, 7vw, 94px);
+  align-items: start;
+  padding: clamp(38px, 5vw, 55px) 0 clamp(30px, 5vw, 44px);
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line);
+}
+
+.life-kicker,
+.hobby-index {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 9.8px;
+  line-height: 1.55;
+  letter-spacing: 0.06em;
+}
+
+.life-section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.65rem, 3vw, 2.45rem);
+  font-weight: 610;
+  line-height: 1.4;
+  letter-spacing: -0.035em;
+}
+
+.life-intro-copy p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14.2px;
+  line-height: 1.95;
+}
+
+.life-intro-copy p + p {
+  margin-top: 13px;
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: clamp(35px, 5vw, 54px);
+}
+
+.hobby-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: var(--paper-raised);
+}
+
+.hobby-card figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: #d9e0db;
+}
+
+.hobby-card figure::after {
+  content: "";
+  position: absolute;
+  inset: 62% 0 0;
+  background: linear-gradient(180deg, transparent, rgba(13, 23, 18, 0.48));
+}
+
+.hobby-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 280ms ease;
+}
+
+.hobby-card:hover img {
+  transform: scale(1.018);
+}
+
+.hobby-card figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 13px;
+  bottom: 11px;
+  left: 13px;
+  color: #f5f8f5;
+  font-size: 9.7px;
+  line-height: 1.55;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+.hobby-copy {
+  flex: 1;
+  padding: 20px 20px 23px;
+}
+
+.hobby-copy h3 {
+  margin: 0;
+  font-family: Bahnschrift, "Segoe UI", "Microsoft YaHei UI", sans-serif;
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  font-weight: 550;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+.hobby-copy > p:last-child {
+  margin: 13px 0 0;
+  color: var(--muted);
+  font-size: 12.4px;
+  line-height: 1.86;
+}
+
+.hobby-card--music .hobby-index {
+  color: #7b6648;
+}
+
+.hobby-card--talk .hobby-index {
+  color: #925e45;
+}
+
+.hobby-card--tools .hobby-index {
+  color: #3e7165;
+}
+
+.football-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  min-height: 430px;
+  margin-top: clamp(39px, 6vw, 66px);
+  border: 1px solid var(--line);
+  background: #f8faf7;
+}
+
+.football-photo {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #203226;
+}
+
+.football-photo::after {
+  content: "";
+  position: absolute;
+  inset: 62% 0 0;
+  background: linear-gradient(180deg, transparent, rgba(11, 22, 16, 0.66));
+}
+
+.football-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 430px;
+  object-fit: cover;
+  transition: transform 320ms ease;
+}
+
+.football-feature:hover .football-photo img {
+  transform: scale(1.012);
+}
+
+.football-photo figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 18px;
+  bottom: 13px;
+  left: 18px;
+  color: #dbe8df;
+  font-size: 9.8px;
+  line-height: 1.55;
+}
+
+.football-copy {
+  align-self: center;
+  padding: clamp(24px, 4vw, 43px);
+}
+
+.football-copy h3 {
+  margin: 0;
+  color: var(--ink);
+  font-family: Bahnschrift, "Segoe UI", "Microsoft YaHei UI", sans-serif;
+  font-size: clamp(1.82rem, 3.45vw, 2.8rem);
+  font-weight: 550;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.football-copy > p:not(.hobby-index):not(.football-destinations) {
+  margin: 15px 0 0;
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.87;
+}
+
+.football-destinations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 21px 0 0;
+}
+
+.football-destinations span {
+  padding: 5px 8px;
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
+}
+
+.life-wish {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.36fr);
+  gap: clamp(32px, 7vw, 92px);
+  align-items: end;
+  margin-top: clamp(42px, 7vw, 76px);
+  padding: clamp(30px, 5vw, 48px);
+  background:
+    radial-gradient(circle at 92% 14%, rgba(130, 169, 151, 0.22), transparent 18rem),
+    #17221e;
+  color: #eff5f0;
+}
+
+.life-wish .life-kicker {
+  color: #90b3a2;
+}
+
+.wish-copy h2 {
+  max-width: 17em;
+  margin: 0;
+  color: #fff;
+  font-family: Bahnschrift, "Segoe UI", "Microsoft YaHei UI", sans-serif;
+  font-size: clamp(1.58rem, 3vw, 2.42rem);
+  font-weight: 520;
+  line-height: 1.48;
+  letter-spacing: -0.035em;
+}
+
+.wish-mobile-break {
+  display: none;
+}
+
+.wish-copy > p:not(.life-kicker):not(.wish-footnote) {
+  max-width: 44em;
+  margin: 17px 0 0;
+  color: #bdcbc3;
+  font-size: 12.7px;
+  line-height: 1.88;
+}
+
+.wish-footnote {
+  margin: 19px 0 0;
+  color: #8fa69a;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  line-height: 1.7;
+}
+
+.wish-thanks {
+  padding-top: 5px;
+  border-top: 1px solid rgba(216, 231, 221, 0.25);
+}
+
+.wish-thanks > span {
+  display: block;
+  color: #d9e8df;
+  font-family: Bahnschrift, "Segoe UI", "Microsoft YaHei UI", sans-serif;
+  font-size: clamp(2.5rem, 4.8vw, 4.2rem);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+
+.wish-thanks > p {
+  margin: 8px 0 0;
+  color: #a8bbb0;
+  font-size: 12px;
+}
+
+.wish-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.wish-contact-id {
+  color: #a8bbb0;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.wish-mail,
+.wish-copy-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1px solid #718b7d;
+  background: transparent;
+  color: #edf5f0;
+  font-family: var(--font-sans);
+  font-size: 10.5px;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.wish-mail:hover,
+.wish-copy-button:hover {
+  border-color: #b6cec0;
+  background: rgba(210, 230, 218, 0.1);
+  color: #fff;
+}
+
+.wish-copy-button[data-copied="true"] {
+  border-color: #a8c8b6;
+  color: #dff0e5;
+}
+
+.copy-status {
+  display: block;
+  min-height: 18px;
+  margin-top: 7px;
+  color: #8ba196;
+  font-size: 9.5px;
+}
+
+.photo-note {
+  margin: 19px 0 0;
+  color: var(--muted-light);
+  font-size: 9.5px;
+  line-height: 1.7;
+}
+
+@media (max-width: 980px) {
+  .life-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    align-items: start;
+  }
+
+  .life-hero-copy > p {
+    max-width: 42em;
+  }
+
+  .life-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hobby-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hobby-card--tools {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  .hobby-card--tools figure {
+    height: 100%;
+  }
+
+  .hobby-card--tools img {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .football-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .football-photo img {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .life-wish {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 650px) {
+  .life-hero {
+    padding-top: 35px;
+    padding-bottom: 32px;
+  }
+
+  .life-hero h1 {
+    font-size: clamp(2.7rem, 13vw, 3.8rem);
+  }
+
+  .life-hero-copy > p {
+    font-size: 14.2px;
+  }
+
+  .life-leading-photo {
+    padding-bottom: 51px;
+  }
+
+  .lead-photo img {
+    aspect-ratio: 4 / 5;
+  }
+
+  .lead-photo figcaption {
+    right: 19px;
+    bottom: 18px;
+    left: 19px;
+  }
+
+  .lead-photo figcaption strong {
+    font-size: 1.42rem;
+  }
+
+  .lead-photo figcaption small {
+    font-size: 8.5px;
+  }
+
+  .life-intro-grid {
+    padding-top: 34px;
+    padding-bottom: 30px;
+  }
+
+  .life-section-heading h2 {
+    font-size: 1.55rem;
+  }
+
+  .life-intro-copy p {
+    font-size: 13.5px;
+  }
+
+  .hobby-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 31px;
+  }
+
+  .hobby-card--tools {
+    display: flex;
+    grid-column: auto;
+  }
+
+  .hobby-card--tools img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .hobby-copy {
+    padding: 18px 17px 21px;
+  }
+
+  .hobby-copy h3 {
+    font-size: 1.47rem;
+  }
+
+  .hobby-copy > p:last-child {
+    font-size: 12.3px;
+  }
+
+  .football-feature {
+    margin-top: 36px;
+  }
+
+  .football-photo img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .football-copy {
+    padding: 23px 19px 26px;
+  }
+
+  .football-copy h3 {
+    font-size: 1.8rem;
+  }
+
+  .life-wish {
+    margin-top: 38px;
+    padding: 26px 20px 27px;
+  }
+
+  .wish-copy h2 {
+    font-size: 1.54rem;
+    line-height: 1.55;
+  }
+
+  .wish-mobile-break {
+    display: inline;
+  }
+
+  .wish-thanks > span {
+    font-size: 3.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hobby-card img,
+  .football-photo img {
+    transition: none;
+  }
+}
+
+@media print {
+  .site-header,
+  .site-footer,
+  .wish-actions,
+  .copy-status {
+    display: none;
+  }
+
+  .life-hero,
+  .life-body,
+  .life-leading-photo {
+    padding: 20pt 0;
+  }
+
+  .life-hero {
+    background: #fff;
+  }
+
+  .life-wish {
+    background: #fff;
+    color: #000;
+  }
+
+  .wish-copy h2,
+  .wish-thanks > span {
+    color: #000;
+  }
+}

@@ -1,0 +1,402 @@
+.projects-hero {
+  padding: clamp(52px, 8vw, 108px) 0 clamp(52px, 7vw, 88px);
+  border-bottom: 1px solid var(--line-strong);
+  background:
+    radial-gradient(circle at 80% 22%, rgba(36, 93, 112, 0.1), transparent 25rem),
+    repeating-linear-gradient(90deg, transparent 0, transparent 79px, rgba(36, 93, 112, 0.04) 80px);
+}
+
+.projects-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.26fr) minmax(290px, 0.74fr);
+  gap: clamp(40px, 7vw, 96px);
+  align-items: center;
+}
+
+.projects-hero h1 {
+  max-width: 9.5em;
+  margin: 0;
+  font-family: Bahnschrift, "Segoe UI Variable Display", "Segoe UI", "Microsoft YaHei UI", sans-serif;
+  font-size: clamp(2.75rem, 5.7vw, 4.65rem);
+  font-weight: 620;
+  line-height: 1.03;
+  letter-spacing: -0.055em;
+}
+
+.projects-hero h1 span {
+  color: var(--accent);
+}
+
+.projects-hero .page-lede {
+  max-width: 41em;
+  margin-top: 25px;
+  font-size: clamp(1rem, 1.5vw, 1.13rem);
+  line-height: 1.88;
+}
+
+.projects-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+}
+
+.projects-status > span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--focus);
+  box-shadow: 0 0 0 4px rgba(182, 106, 36, 0.12);
+}
+
+.projects-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 22px;
+  margin-top: 28px;
+}
+
+.projects-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.projects-button:hover {
+  border-color: var(--accent-strong);
+  background: var(--accent-strong);
+  color: #fff;
+}
+
+.projects-quiet-link {
+  color: var(--ink-soft);
+  font-size: 13px;
+  text-decoration-color: var(--line-strong);
+}
+
+.projects-quiet-link:hover {
+  color: var(--accent);
+}
+
+.direction-note {
+  position: relative;
+  padding: clamp(27px, 4vw, 42px);
+  overflow: hidden;
+  background: #17221e;
+  color: #f3f6f2;
+}
+
+.direction-note::before {
+  content: "";
+  position: absolute;
+  top: -58px;
+  right: -58px;
+  width: 178px;
+  height: 178px;
+  border: 1px solid rgba(214, 226, 218, 0.18);
+  border-radius: 50%;
+}
+
+.direction-note::after {
+  content: "";
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 98px;
+  height: 98px;
+  border: 1px solid rgba(214, 226, 218, 0.12);
+  border-radius: 50%;
+}
+
+.direction-kicker {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #a9c4b8;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.direction-list {
+  position: relative;
+  z-index: 1;
+  margin: 26px 0 0;
+  padding: 0;
+  border-top: 1px solid rgba(223, 234, 226, 0.2);
+  list-style: none;
+}
+
+.direction-list li {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 12px;
+  padding: 17px 0 18px;
+  border-bottom: 1px solid rgba(223, 234, 226, 0.14);
+}
+
+.direction-list li > span {
+  padding-top: 3px;
+  color: #819b8f;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+}
+
+.direction-list strong {
+  display: block;
+  color: #fff;
+  font-family: Bahnschrift, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 560;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+.direction-list small {
+  display: block;
+  margin-top: 4px;
+  color: #b9c8c0;
+  font-size: 11.5px;
+  line-height: 1.6;
+}
+
+.direction-footnote {
+  position: relative;
+  z-index: 1;
+  margin: 19px 0 0;
+  color: #82998e;
+  font-size: 10.5px;
+  line-height: 1.6;
+}
+
+.projects-body {
+  padding: clamp(55px, 8vw, 96px) 0 clamp(58px, 8vw, 100px);
+}
+
+.projects-body .container {
+  width: min(calc(100% - (2 * var(--gutter))), 1120px);
+}
+
+.empty-project {
+  display: grid;
+  grid-template-columns: 135px minmax(0, 1.45fr) minmax(230px, 0.62fr);
+  gap: clamp(28px, 5vw, 68px);
+  align-items: start;
+  padding: 0 0 clamp(42px, 6vw, 64px);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.empty-index {
+  color: var(--line-strong);
+  font-family: Bahnschrift, "Segoe UI", sans-serif;
+  font-size: clamp(4.7rem, 10vw, 8.7rem);
+  font-weight: 300;
+  line-height: 0.85;
+  letter-spacing: -0.07em;
+}
+
+.section-kicker {
+  margin: 0 0 13px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.07em;
+}
+
+.empty-copy h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+  font-weight: 610;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.empty-copy > p:last-child {
+  max-width: 35em;
+  margin: 17px 0 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.88;
+}
+
+.empty-aside {
+  margin: 30px 0 0;
+  padding-left: 18px;
+  border-left: 1px solid var(--accent);
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.8;
+}
+
+.project-principles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin-top: clamp(37px, 5vw, 58px);
+  border-top: 1px solid var(--line);
+}
+
+.project-principles article {
+  padding: 23px 28px 8px 0;
+}
+
+.project-principles article + article {
+  padding-left: 28px;
+  border-left: 1px solid var(--line);
+}
+
+.project-principles span {
+  color: var(--muted-light);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+}
+
+.project-principles h3 {
+  margin: 12px 0 8px;
+  font-size: 17px;
+  font-weight: 620;
+  letter-spacing: -0.015em;
+}
+
+.project-principles p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.78;
+}
+
+.projects-closing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px 24px;
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.projects-closing p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+.projects-closing a {
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.projects-closing a span {
+  margin-left: 3px;
+}
+
+@media (max-width: 880px) {
+  .projects-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .direction-note {
+    max-width: 620px;
+  }
+
+  .empty-project {
+    grid-template-columns: 78px minmax(0, 1fr);
+  }
+
+  .empty-aside {
+    grid-column: 2;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-hero {
+    padding-top: 38px;
+  }
+
+  .projects-hero h1 {
+    font-size: clamp(2.35rem, 10.7vw, 3.25rem);
+  }
+
+  .projects-hero .page-lede {
+    font-size: 15px;
+  }
+
+  .direction-note {
+    padding: 24px 21px;
+  }
+
+  .projects-body {
+    padding-top: 47px;
+  }
+
+  .empty-project {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .empty-index {
+    font-size: 4.3rem;
+  }
+
+  .empty-copy > p:last-child {
+    font-size: 14.2px;
+  }
+
+  .empty-copy h2 {
+    font-size: 1.85rem;
+  }
+
+  .empty-aside {
+    grid-column: auto;
+  }
+
+  .project-principles {
+    grid-template-columns: 1fr;
+  }
+
+  .project-principles article {
+    padding: 18px 0;
+  }
+
+  .project-principles article + article {
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .projects-button,
+  .projects-quiet-link {
+    transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+  }
+}
+
+@media print {
+  .projects-actions,
+  .direction-note,
+  .projects-closing,
+  .site-header,
+  .site-footer {
+    display: none;
+  }
+
+  .projects-hero,
+  .projects-body {
+    padding: 22pt 0;
+    background: #fff;
+  }
+}

@@ -75,19 +75,20 @@
 
       button.addEventListener('click', function () {
         var value = button.getAttribute('data-copy-text');
+        var label = button.getAttribute('data-copy-label') || '内容';
 
         copyText(value).then(function () {
           window.clearTimeout(resetTimer);
           button.textContent = '已复制';
           button.setAttribute('data-copied', 'true');
-          if (status) status.textContent = '微信号已复制到剪贴板';
+          if (status) status.textContent = label + '已复制到剪贴板';
           resetTimer = window.setTimeout(function () {
             button.textContent = original;
             button.removeAttribute('data-copied');
           }, 1800);
         }).catch(function () {
           button.textContent = '复制失败';
-          if (status) status.textContent = '无法自动复制，请手动选择微信号';
+          if (status) status.textContent = '无法自动复制' + label + '，请手动选择';
           window.setTimeout(function () {
             button.textContent = original;
           }, 1800);
