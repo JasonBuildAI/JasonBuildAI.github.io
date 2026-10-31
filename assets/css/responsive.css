@@ -16,11 +16,15 @@
 
   .menu-toggle {
     display: block;
-    margin-left: auto;
+    margin-left: 0;
   }
 
   .header-mail {
     display: none;
+  }
+
+  .language-switch {
+    margin-left: auto;
   }
 
   .site-nav {

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Source | Jason Cat</title>
+  <meta name="description" content="Selected merged pull requests by Jason Cat across LoopX, OpenSandbox, openclaw, OpenAgent, and OpenStoryline, plus an index of open-source repositories he has contributed to.">
+  <meta name="author" content="Jason Cat">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#f5f7f4">
+  <meta name="color-scheme" content="light">
+  <link rel="canonical" href="https://jasonbuildai.github.io/en/open-source.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://jasonbuildai.github.io/open-source.html">
+  <link rel="alternate" hreflang="en" href="https://jasonbuildai.github.io/en/open-source.html">
+  <link rel="alternate" hreflang="x-default" href="https://jasonbuildai.github.io/open-source.html">
+  <link rel="icon" href="/assets/img/favicon.svg?v=20261031a" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/avatar-20261030.png">
+  <link rel="stylesheet" href="/assets/css/profile.css?v=20261031b">
+  <link rel="stylesheet" href="/assets/css/responsive.css?v=20261031b">
+  <link rel="stylesheet" href="/assets/css/open-source.css?v=20261031a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Open Source | Jason Cat">
+  <meta property="og:description" content="Representative merged PRs in agent runtimes, sandbox security, and cross-platform engineering, plus an index of open-source repositories.">
+  <meta property="og:url" content="https://jasonbuildai.github.io/en/open-source.html">
+  <meta property="og:image" content="https://jasonbuildai.github.io/assets/img/og-card-en-20261031.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jason Cat's English site share card, featuring his identity, focus areas, and open-source contributions.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Open Source | Jason Cat">
+  <meta name="twitter:description" content="Representative merged PRs and an index of open-source repositories.">
+  <meta name="twitter:image" content="https://jasonbuildai.github.io/assets/img/og-card-en-20261031.png">
+  <meta name="twitter:image:alt" content="Jason Cat's English site share card">
+
+  <script src="/assets/js/profile.js?v=20261031b" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/en/">
+        <span class="brand-mark" aria-hidden="true">JC</span>
+        <span class="brand-name">Jason Cat</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="/en/">About</a>
+        <a href="/en/open-source.html" aria-current="page">Open Source</a>
+        <a href="/en/projects.html">Projects</a>
+        <a href="/en/learning.html">Learning</a>
+      </nav>
+
+      <a class="header-mail" href="mailto:jasonbuildai@gmail.com">Email Jason</a>
+      <div class="language-switch" role="group" aria-label="Language">
+        <a href="/open-source.html" hreflang="zh-CN" lang="zh-CN">中</a>
+        <a href="/en/open-source.html" hreflang="en" lang="en" aria-current="page">EN</a>
+      </div>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Open navigation">
+        <span class="menu-toggle-bars" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="oss-page">
+    <section class="oss-header" aria-labelledby="page-title">
+      <div class="container oss-header-inner">
+        <div>
+          <p class="page-kicker">Open Source · Contributions</p>
+          <h1 id="page-title">Open Source</h1>
+        </div>
+        <p class="oss-lede">I contribute continuously to agent runtimes, sandbox execution security, and cross-platform engineering. Featured work and representative PRs come first, followed by an index of repositories I have contributed to.</p>
+      </div>
+    </section>
+
+    <div class="oss-content">
+      <div class="container">
+        <section class="contribution-board" aria-labelledby="featured-title">
+          <div class="board-heading">
+            <div>
+              <p class="section-kicker">Selected contributions</p>
+              <h2 id="featured-title">Featured contributions</h2>
+            </div>
+            <p>Ordered by recent investment. Each entry includes an overview, representative PRs, and a link to the full record.</p>
+          </div>
+
+          <ol class="project-board">
+            <li class="project-row">
+              <div class="project-identity">
+                <span class="project-number" aria-hidden="true">01</span>
+                <h3 id="loopx-title"><a href="https://github.com/loopx-project/loopx" target="_blank" rel="noopener">LoopX</a></h3>
+                <span class="project-role project-role--member">Organization member</span>
+              </div>
+              <p class="project-summary">Maintain the local control plane: Windows-native execution, path and UTF-8 boundaries, credential egress checks, Goal/Turn state recovery, and desktop-signed updates.</p>
+              <div class="project-prs">
+                <p class="pr-label">Representative PRs</p>
+                <ul>
+                  <li><a href="https://github.com/loopx-project/loopx/pull/7636" target="_blank" rel="noopener"><span class="pr-number">#7636</span><span>Block outbound requests with unlabelled credentials</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/loopx-project/loopx/pull/7477" target="_blank" rel="noopener"><span class="pr-number">#7477</span><span>Stop retaining full Turn history under a race</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/loopx-project/loopx/pull/7381" target="_blank" rel="noopener"><span class="pr-number">#7381</span><span>Restore interrupted Goal creation</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                </ul>
+              </div>
+              <a class="project-all" href="https://github.com/search?q=repo%3Aloopx-project%2Floopx+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">All activity <span aria-hidden="true">↗</span></a>
+            </li>
+
+            <li class="project-row">
+              <div class="project-identity">
+                <span class="project-number" aria-hidden="true">02</span>
+                <h3 id="opensandbox-title"><a href="https://github.com/opensandbox-group/OpenSandbox" target="_blank" rel="noopener">OpenSandbox</a></h3>
+                <span class="project-role">Active contributor</span>
+              </div>
+              <p class="project-summary">Unify security and consistency across multilingual SDKs and the CLI: tenant key isolation, proxy authentication, idempotent retries, atomic file writes, and upload/download timeouts.</p>
+              <div class="project-prs">
+                <p class="pr-label">Representative PRs</p>
+                <ul>
+                  <li><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2433" target="_blank" rel="noopener"><span class="pr-number">#2433</span><span>Keep the previous file when an atomic upload fails</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2149" target="_blank" rel="noopener"><span class="pr-number">#2149</span><span>Isolate tenant keys and proxy requests</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2342" target="_blank" rel="noopener"><span class="pr-number">#2342</span><span>Do not retry non-idempotent writes by default</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                </ul>
+              </div>
+              <a class="project-all" href="https://github.com/search?q=repo%3Aopensandbox-group%2FOpenSandbox+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">All activity <span aria-hidden="true">↗</span></a>
+            </li>
+
+            <li class="project-row">
+              <div class="project-identity">
+                <span class="project-number" aria-hidden="true">03</span>
+                <h3 id="openclaw-title"><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">openclaw</a></h3>
+                <span class="project-role">Active contributor</span>
+              </div>
+              <p class="project-summary">Fixed Gateway streaming paths: long HTML/JSX, split tool markers, control tokens, and quoted text no longer stall replies or leak internal parameters.</p>
+              <div class="project-prs">
+                <p class="pr-label">Representative PRs</p>
+                <ul>
+                  <li><a href="https://github.com/openclaw/openclaw/pull/187656" target="_blank" rel="noopener"><span class="pr-number">#187656</span><span>Avoid full-document reparsing on ordinary double brackets</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/openclaw/openclaw/pull/185293" target="_blank" rel="noopener"><span class="pr-number">#185293</span><span>Fix stalling long HTML/JSX streaming output</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/openclaw/openclaw/pull/184529" target="_blank" rel="noopener"><span class="pr-number">#184529</span><span>Keep tool-call parameters out of streaming replies</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                </ul>
+              </div>
+              <a class="project-all" href="https://github.com/search?q=repo%3Aopenclaw%2Fopenclaw+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">All activity <span aria-hidden="true">↗</span></a>
+            </li>
+
+            <li class="project-row">
+              <div class="project-identity">
+                <span class="project-number" aria-hidden="true">04</span>
+                <h3 id="openagent-title"><a href="https://github.com/the-open-agent/openagent" target="_blank" rel="noopener">OpenAgent</a></h3>
+                <span class="project-role project-role--member">Organization member</span>
+              </div>
+              <p class="project-summary">Contributed to desktop execution and test infrastructure: Windows UIA GUI automation, session title and usage metadata fallbacks, the AgentBench benchmarking framework, and static assets.</p>
+              <div class="project-prs">
+                <p class="pr-label">Representative PRs</p>
+                <ul>
+                  <li><a href="https://github.com/the-open-agent/openagent/pull/2287" target="_blank" rel="noopener"><span class="pr-number">#2287</span><span>Remove duplicate model calls from the GetAnswer API</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/the-open-agent/openagent/pull/2267" target="_blank" rel="noopener"><span class="pr-number">#2267</span><span>Auto-generate session titles with a fallback</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/the-open-agent/openagent/pull/2192" target="_blank" rel="noopener"><span class="pr-number">#2192</span><span>Add a GUI automation tool based on Windows UIA</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                </ul>
+              </div>
+              <a class="project-all" href="https://github.com/search?q=org%3Athe-open-agent+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">All activity <span aria-hidden="true">↗</span></a>
+            </li>
+
+            <li class="project-row">
+              <div class="project-identity">
+                <span class="project-number" aria-hidden="true">05</span>
+                <h3 id="openstoryline-title"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline" target="_blank" rel="noopener">OpenStoryline</a></h3>
+                <span class="project-role project-role--core">Core contributor</span>
+              </div>
+              <p class="project-summary">Handled session recovery, history switching, media uploads, key validation, and network retries for an AI video-editing agent, preventing bad data and credential risks from disrupting creative workflows.</p>
+              <div class="project-prs">
+                <p class="pr-label">Representative PRs</p>
+                <ul>
+                  <li><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/79" target="_blank" rel="noopener"><span class="pr-number">#79</span><span>Fail closed on session recovery and hide sensitive settings</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/58" target="_blank" rel="noopener"><span class="pr-number">#58</span><span>Support drag-and-drop media uploads</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/57" target="_blank" rel="noopener"><span class="pr-number">#57</span><span>Add chat history and session switching safeguards</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                </ul>
+              </div>
+              <a class="project-all" href="https://github.com/search?q=repo%3AFireRedTeam%2FFireRed-OpenStoryline+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">All activity <span aria-hidden="true">↗</span></a>
+            </li>
+          </ol>
+        </section>
+
+        <section class="repo-directory" aria-labelledby="repo-title">
+          <div class="board-heading">
+            <div>
+              <p class="section-kicker">Repository index</p>
+              <h2 id="repo-title">Repositories I've contributed to</h2>
+            </div>
+            <p>Beyond the projects above, I have also had merged changes in the following repositories. Select a repository name to view its records.</p>
+          </div>
+
+          <ul class="repo-grid">
+            <li><a href="https://github.com/morluto/rea/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>morluto/rea</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/openclaw/openclaw/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>openclaw/openclaw</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/bytedance/deer-flow/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>bytedance/deer-flow</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/alibaba/open-code-review/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>alibaba/open-code-review</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/agentscope-ai/QwenPaw/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>agentscope-ai/QwenPaw</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/langchain-ai/deepagents/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>langchain-ai/deepagents</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/opensandbox-group/OpenSandbox/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>opensandbox-group/OpenSandbox</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/casdoor/casdoor/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>casdoor/casdoor</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/OpenDCAI/DataFlow/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>OpenDCAI/DataFlow</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/loopx-project/loopx/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>loopx-project/loopx</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/apache/maka/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>apache/maka</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/the-open-agent/openagent/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>the-open-agent/openagent</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/apache/fory/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>apache/fory</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>FireRedTeam/FireRed-OpenStoryline</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/taishi-i/awesome-ChatGPT-repositories/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>taishi-i/awesome-ChatGPT-repositories</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/kyrolabs/awesome-agents/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>kyrolabs/awesome-agents</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/0xsline/OpenChatCut/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>0xsline/OpenChatCut</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/Danielskry/Awesome-RAG/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>Danielskry/Awesome-RAG</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/TensorBlock/awesome-mcp-servers/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>TensorBlock/awesome-mcp-servers</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/higress-group/HiRoute/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>higress-group/HiRoute</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/JasonBuildAI/GoldMind/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>JasonBuildAI/GoldMind</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/the-open-agent/agentbench/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>the-open-agent/agentbench</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/the-open-agent/static/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>the-open-agent/static</span><span aria-hidden="true">↗</span></a></li>
+          </ul>
+
+          <p class="data-note"><strong>Data note:</strong> Representative PRs and repository records were verified on GitHub and last updated on <time datetime="2026-10-31">2026-10-31</time>. Unmerged, draft, or closed-but-unmerged records are excluded.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-current-year>2026</span> Jason Cat. Stay curious. Do the work.</p>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="/en/open-source.html">Open Source</a>
+        <a href="/en/projects.html">Projects</a>
+        <a href="/en/learning.html">Learning</a>
+        <a href="mailto:jasonbuildai@gmail.com">Email</a>
+        <a href="https://github.com/JasonBuildAI" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

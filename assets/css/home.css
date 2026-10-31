@@ -6,6 +6,13 @@
   overflow: hidden;
 }
 
+html[lang="en"] body.home-page {
+  height: auto;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: visible;
+}
+
 .home-page .site-header {
   position: relative;
 }
@@ -16,6 +23,10 @@
   align-items: center;
   overflow: hidden;
   padding-block: clamp(12px, 2.2vh, 28px);
+}
+
+html[lang="en"] .home-main {
+  overflow: visible;
 }
 
 .home-layout {

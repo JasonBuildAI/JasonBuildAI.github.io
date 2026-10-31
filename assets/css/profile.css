@@ -204,6 +204,50 @@ a:hover {
   color: var(--accent);
 }
 
+.language-switch {
+  display: inline-flex;
+  align-items: stretch;
+  min-height: 34px;
+  margin-left: 6px;
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+}
+
+.language-switch a {
+  display: grid;
+  place-items: center;
+  min-width: 34px;
+  padding: 0 8px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.language-switch a + a {
+  border-left: 1px solid var(--line-strong);
+}
+
+.language-switch a:hover {
+  color: var(--accent);
+}
+
+.language-switch a[aria-current="page"] {
+  background: var(--ink);
+  color: #fff;
+}
+
+.language-switch a:first-child {
+  border-radius: 1px 0 0 1px;
+}
+
+.language-switch a:last-child {
+  border-radius: 0 1px 1px 0;
+}
+
 .menu-toggle {
   display: none;
   width: 40px;
