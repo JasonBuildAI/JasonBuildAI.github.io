@@ -937,56 +937,6 @@ main {
   line-height: 1.72;
 }
 
-.life-lead {
-  max-width: 44em;
-  margin: 0 0 21px;
-  color: var(--ink-soft);
-  font-size: 16px;
-  line-height: 1.9;
-}
-
-.life-notes {
-  max-width: 44em;
-  margin: 0;
-  color: var(--ink-soft);
-  font-size: 15px;
-  line-height: 1.88;
-}
-
-.life-index {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin: 28px 0 0;
-  padding: 0;
-  border-top: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line);
-  list-style: none;
-}
-
-.life-index li {
-  padding: 15px 18px 16px 0;
-}
-
-.life-index li + li {
-  padding-left: 18px;
-  border-left: 1px solid var(--line);
-}
-
-.life-index strong {
-  display: block;
-  color: var(--ink);
-  font-size: 13.5px;
-  font-weight: 620;
-}
-
-.life-index span {
-  display: block;
-  margin-top: 2px;
-  color: var(--muted);
-  font-size: 11.5px;
-  line-height: 1.6;
-}
-
 .closing-invitation {
   max-width: 48em;
   margin-top: 30px;

@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>开源贡献 | Jason Cat</title>
-  <meta name="description" content="Jason Cat 在 23 个公开仓库中的 156 条已合并 PR，先重点整理 LoopX、OpenSandbox、openclaw、OpenAgent 与 OpenStoryline 的代表性贡献，再按项目影响力列出全部参与仓库。">
+  <meta name="description" content="Jason Cat 在 LoopX、OpenSandbox、openclaw、OpenAgent 与 OpenStoryline 的代表性已合并 PR，以及参与过的开源仓库索引。">
   <meta name="author" content="Jason Cat">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#f5f7f4">
   <meta name="color-scheme" content="light">
   <link rel="canonical" href="https://jasonbuildai.github.io/open-source.html">
-  <link rel="icon" href="/assets/img/favicon.svg?v=20261030b" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon.svg?v=20261031a" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/img/avatar-20261030.png">
-  <link rel="stylesheet" href="/assets/css/profile.css?v=20261030b">
-  <link rel="stylesheet" href="/assets/css/responsive.css?v=20261030b">
-  <link rel="stylesheet" href="/assets/css/open-source.css?v=20261030d">
+  <link rel="stylesheet" href="/assets/css/profile.css?v=20261031a">
+  <link rel="stylesheet" href="/assets/css/responsive.css?v=20261031a">
+  <link rel="stylesheet" href="/assets/css/open-source.css?v=20261031a">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="开源贡献 | Jason Cat">
-  <meta property="og:description" content="先阅读 Agent 运行时、沙箱安全与跨平台工程的代表性已合并 PR，再按项目影响力查看全部参与仓库。">
+  <meta property="og:description" content="Agent 运行时、沙箱安全与跨平台工程的代表性已合并 PR，以及参与过的开源仓库索引。">
   <meta property="og:url" content="https://jasonbuildai.github.io/open-source.html">
   <meta property="og:image" content="https://jasonbuildai.github.io/assets/img/og-card-20261030.png">
   <meta property="og:image:width" content="1200">
@@ -26,11 +26,11 @@
   <meta property="og:image:alt" content="Jason Cat 的个人主页分享图，包含身份、关注方向与开源贡献。">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="开源贡献 | Jason Cat">
-  <meta name="twitter:description" content="先阅读代表性已合并 PR，再按项目影响力查看全部参与仓库。">
+  <meta name="twitter:description" content="代表性已合并 PR，以及参与过的开源仓库索引。">
   <meta name="twitter:image" content="https://jasonbuildai.github.io/assets/img/og-card-20261030.png">
   <meta name="twitter:image:alt" content="Jason Cat 的个人主页分享图">
 
-  <script src="/assets/js/profile.js?v=20261030b" defer></script>
+  <script src="/assets/js/profile.js?v=20261031a" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
@@ -47,7 +47,6 @@
         <a href="/open-source.html" aria-current="page">开源贡献</a>
         <a href="/projects.html">实战项目</a>
         <a href="/learning.html">学习空间</a>
-        <a href="/life.html">业余生活</a>
       </nav>
 
       <a class="header-mail" href="mailto:jasonbuildai@gmail.com">写信给 Jason</a>
@@ -57,379 +56,158 @@
     </div>
   </header>
 
-  <main id="main">
-    <section class="page-hero oss-hero" aria-labelledby="page-title">
-      <div class="container">
-        <p class="page-kicker">Open Source · 开源贡献</p>
-        <h1 id="page-title">开源贡献</h1>
-        <p class="page-lede">持续参与 Agent 运行时、沙箱执行安全与跨平台工程。这里按真实合并记录整理我的开源工作：先展开五个长期投入项目的代表性贡献，再列出全部参与仓库。</p>
-        <ul class="hero-facts" aria-label="开源贡献数据概览">
-          <li><strong>156</strong><span>条已合并 PR</span></li>
-          <li><strong>23</strong><span>个参与仓库</span></li>
-          <li><strong>5</strong><span>个持续投入项目</span></li>
-        </ul>
+  <main id="main" class="oss-page">
+    <section class="oss-header" aria-labelledby="page-title">
+      <div class="container oss-header-inner">
+        <div>
+          <p class="page-kicker">Open Source · 开源贡献</p>
+          <h1 id="page-title">开源贡献</h1>
+        </div>
+        <p class="oss-lede">我持续参与 Agent 运行时、沙箱执行安全与跨平台工程。下面先列出主要工作与代表 PR，再附上参与过的仓库。</p>
       </div>
     </section>
 
-    <div class="page-content oss-content">
+    <div class="oss-content">
       <div class="container">
-        <section class="featured-contributions" aria-labelledby="featured-title">
-          <div class="section-heading featured-heading">
+        <section class="contribution-board" aria-labelledby="featured-title">
+          <div class="board-heading">
             <div>
-              <p class="section-kicker">Selected work</p>
+              <p class="section-kicker">Selected contributions</p>
               <h2 id="featured-title">主要贡献</h2>
             </div>
-            <div class="section-side">
-              <p class="section-deck">五个持续投入的项目，共 119 条已合并 PR。按近期投入由近及远排列，每张卡片保留最近一次合并时间、代表性 PR 与完整记录入口。</p>
-            </div>
+            <p>按近期投入排列，每项保留工作概述、代表 PR 与完整记录入口。</p>
           </div>
 
-          <div class="contribution-stack">
-            <article class="oss-project" aria-labelledby="loopx-title">
-              <div class="project-rail" aria-hidden="true"><span class="project-number">01</span></div>
-              <div class="project-body">
-                <div class="project-meta-row">
-                  <span class="project-role project-role--member">组织成员</span>
-                  <span class="project-latest">最近合并 <time datetime="2026-10-29">2026-10-29</time></span>
-                </div>
-                <h3 class="project-title" id="loopx-title"><a href="https://github.com/loopx-project/loopx" target="_blank" rel="noopener">LoopX<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
-                <p class="project-repo"><span>loopx-project / loopx</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">68 条已合并</span></p>
-                <p class="project-summary">围绕 LoopX 的本地控制平面，修复 Windows 原生运行、UTF-8 与路径边界、凭据出站检查、Goal/Turn 状态恢复、守护进程发现及桌面签名更新，让中断后的任务可恢复、不安全数据按失败关闭处理。</p>
-
-                <div class="representative-work">
-                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条近期记录</span></div>
-                  <ol class="representative-prs">
-                    <li class="rep-pr"><a href="https://github.com/loopx-project/loopx/pull/7636" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-29">2026-10-29</time><span class="pr-number">#7636</span><span class="pr-title">fix(capability): detect unlabeled provider tokens in the outbound scan</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/loopx-project/loopx/pull/7477" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-27">2026-10-27</time><span class="pr-number">#7477</span><span class="pr-title">fix(chat): keep a completed Turn's event history when a stop races it</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/loopx-project/loopx/pull/7381" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-26">2026-10-26</time><span class="pr-number">#7381</span><span class="pr-title">fix(coordination): resume interrupted canonical Goal creation</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/loopx-project/loopx/pull/6854" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-22">2026-10-22</time><span class="pr-number">#6854</span><span class="pr-title">feat(desktop): signed Windows NSIS updates on the main channel</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                  </ol>
-                </div>
-
-                <div class="project-footer">
-                  <a class="project-all-link" href="https://github.com/search?q=repo%3Aloopx-project%2Floopx+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
-                  <span class="project-record-note">该仓库共 68 条已合并 PR</span>
-                </div>
+          <ol class="project-board">
+            <li class="project-row">
+              <div class="project-identity">
+                <span class="project-number" aria-hidden="true">01</span>
+                <h3 id="loopx-title"><a href="https://github.com/loopx-project/loopx" target="_blank" rel="noopener">LoopX</a></h3>
+                <span class="project-role project-role--member">组织成员</span>
               </div>
-            </article>
-
-            <article class="oss-project" aria-labelledby="opensandbox-title">
-              <div class="project-rail" aria-hidden="true"><span class="project-number">02</span></div>
-              <div class="project-body">
-                <div class="project-meta-row">
-                  <span class="project-role">活跃贡献者</span>
-                  <span class="project-latest">最近合并 <time datetime="2026-10-28">2026-10-28</time></span>
-                </div>
-                <h3 class="project-title" id="opensandbox-title"><a href="https://github.com/opensandbox-group/OpenSandbox" target="_blank" rel="noopener">OpenSandbox<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
-                <p class="project-repo"><span>opensandbox-group / OpenSandbox</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">14 条已合并</span></p>
-                <p class="project-summary">为 OpenSandbox 的多语言 SDK 与 CLI 收紧租户密钥隔离、代理认证、幂等重试、原子文件写入和上传下载超时边界，使 Go、JavaScript、Kotlin、C# 与命令行接口在不同平台上保持一致。</p>
-
-                <div class="representative-work">
-                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条近期记录</span></div>
-                  <ol class="representative-prs">
-                    <li class="rep-pr"><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2433" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-28">2026-10-28</time><span class="pr-number">#2433</span><span class="pr-title">fix(execd): replace uploads atomically so a failed write keeps the old file</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2149" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-27">2026-10-27</time><span class="pr-number">#2149</span><span class="pr-title">fix(sdk): keep the tenant API key out of direct code-interpreter requests</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2342" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-24">2026-10-24</time><span class="pr-number">#2342</span><span class="pr-title">fix(sdk-go): stop retrying non-idempotent writes by default</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2206" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-15">2026-10-15</time><span class="pr-number">#2206</span><span class="pr-title">fix(sdk-csharp): stop capping file uploads and downloads at the request timeout</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                  </ol>
-                </div>
-
-                <div class="project-footer">
-                  <a class="project-all-link" href="https://github.com/search?q=repo%3Aopensandbox-group%2FOpenSandbox+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
-                  <span class="project-record-note">该仓库共 14 条已合并 PR</span>
-                </div>
+              <p class="project-summary">维护本地控制面：处理 Windows 原生运行、路径与 UTF-8 边界、凭据出站检查、Goal/Turn 状态恢复和桌面签名更新。</p>
+              <div class="project-prs">
+                <p class="pr-label">代表 PR</p>
+                <ul>
+                  <li><a href="https://github.com/loopx-project/loopx/pull/7636" target="_blank" rel="noopener"><span class="pr-number">#7636</span><span>阻断未标注凭据的出站请求</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/loopx-project/loopx/pull/7477" target="_blank" rel="noopener"><span class="pr-number">#7477</span><span>停止竞态下保留完整 Turn 历史</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/loopx-project/loopx/pull/7381" target="_blank" rel="noopener"><span class="pr-number">#7381</span><span>恢复被中断的 Goal 创建</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                </ul>
               </div>
-            </article>
-            <article class="oss-project" aria-labelledby="openclaw-title">
-              <div class="project-rail" aria-hidden="true"><span class="project-number">03</span></div>
-              <div class="project-body">
-                <div class="project-meta-row">
-                  <span class="project-role">活跃贡献者</span>
-                  <span class="project-latest">最近合并 <time datetime="2026-10-29">2026-10-29</time></span>
-                </div>
-                <h3 class="project-title" id="openclaw-title"><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">openclaw<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
-                <p class="project-repo"><span>openclaw / openclaw</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">16 条已合并</span></p>
-                <p class="project-summary">聚焦 openclaw Gateway 的流式输出路径，修复长 HTML/JSX、被拆分的工具调用标记、控制 token 与引用文本触发的停摆、重复解析和内部参数泄漏，让分块响应在异常边界下仍能持续、安全地推进。</p>
+              <a class="project-all" href="https://github.com/search?q=repo%3Aloopx-project%2Floopx+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">全部记录 <span aria-hidden="true">↗</span></a>
+            </li>
 
-                <div class="representative-work">
-                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条近期记录</span></div>
-                  <ol class="representative-prs">
-                    <li class="rep-pr"><a href="https://github.com/openclaw/openclaw/pull/187656" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-29">2026-10-29</time><span class="pr-number">#187656</span><span class="pr-title">fix: streamed replies with a literal [[ in prose no longer re-parse the whole answer</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/openclaw/openclaw/pull/185293" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-27">2026-10-27</time><span class="pr-number">#185293</span><span class="pr-title">fix: long streamed HTML/JSX replies no longer re-project the whole reply at every partial tag</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/openclaw/openclaw/pull/184529" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-27">2026-10-27</time><span class="pr-number">#184529</span><span class="pr-title">fix: block-streaming replies no longer post tool-call arguments</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/openclaw/openclaw/pull/181511" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-10-24">2026-10-24</time><span class="pr-number">#181511</span><span class="pr-title">fix: streamed answers with a list after a code block no longer re-project the whole list</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                  </ol>
-                </div>
-
-                <div class="project-footer">
-                  <a class="project-all-link" href="https://github.com/search?q=repo%3Aopenclaw%2Fopenclaw+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
-                  <span class="project-record-note">该仓库共 16 条已合并 PR</span>
-                </div>
+            <li class="project-row">
+              <div class="project-identity">
+                <span class="project-number" aria-hidden="true">02</span>
+                <h3 id="opensandbox-title"><a href="https://github.com/opensandbox-group/OpenSandbox" target="_blank" rel="noopener">OpenSandbox</a></h3>
+                <span class="project-role">活跃贡献者</span>
               </div>
-            </article>
-
-            <article class="oss-project" aria-labelledby="openagent-title">
-              <div class="project-rail" aria-hidden="true"><span class="project-number">04</span></div>
-              <div class="project-body">
-                <div class="project-meta-row">
-                  <span class="project-role project-role--member">组织成员</span>
-                  <span class="project-latest">最近合并 <time datetime="2026-05-22">2026-05-22</time></span>
-                </div>
-                <h3 class="project-title" id="openagent-title"><a href="https://github.com/the-open-agent" target="_blank" rel="noopener">OpenAgent<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
-                <p class="project-repo"><span>the-open-agent / openagent · agentbench · static</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">13 条已合并</span></p>
-                <p class="project-summary">为 OpenAgent 系列补齐基于 Windows UIA 的 GUI 自动化、会话标题与用量元数据回退、AgentBench 基准框架和静态资源，推动桌面执行、服务可用性与测试基础设施从 0 到 1 落地。</p>
-
-                <div class="representative-work">
-                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条跨仓库记录</span></div>
-                  <ol class="representative-prs">
-                    <li class="rep-pr"><a href="https://github.com/the-open-agent/openagent/pull/2287" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-05-22">2026-05-22</time><span class="pr-number">#2287</span><span class="pr-title"><span class="pr-repo">openagent</span> fix: remove duplicated LLM call in GetAnswer API</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/the-open-agent/openagent/pull/2267" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-05-18">2026-05-18</time><span class="pr-number">#2267</span><span class="pr-title"><span class="pr-repo">openagent</span> feat(chat): auto-generate chat titles with user-message fallback</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/the-open-agent/agentbench/pull/2" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-05-17">2026-05-17</time><span class="pr-number">#2</span><span class="pr-title"><span class="pr-repo">agentbench</span> feat: add system-level benchmark suites (startup, memory, throughput, reliability)</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/the-open-agent/openagent/pull/2192" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-04-30">2026-04-30</time><span class="pr-number">#2192</span><span class="pr-title"><span class="pr-repo">openagent</span> feat: add GUI tool based on windows gui automation uia</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                  </ol>
-                </div>
-
-                <div class="project-footer">
-                  <a class="project-all-link" href="https://github.com/search?q=org%3Athe-open-agent+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
-                  <span class="project-record-note">3 个仓库合计 13 条已合并 PR</span>
-                </div>
+              <p class="project-summary">统一多语言 SDK 与 CLI 的安全和一致性：租户密钥隔离、代理认证、幂等重试、原子文件写入与上传下载超时。</p>
+              <div class="project-prs">
+                <p class="pr-label">代表 PR</p>
+                <ul>
+                  <li><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2433" target="_blank" rel="noopener"><span class="pr-number">#2433</span><span>原子上传失败时保留旧文件</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2149" target="_blank" rel="noopener"><span class="pr-number">#2149</span><span>隔离租户密钥与代理请求</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/opensandbox-group/OpenSandbox/pull/2342" target="_blank" rel="noopener"><span class="pr-number">#2342</span><span>默认不重试非幂等写入</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                </ul>
               </div>
-            </article>
-            <article class="oss-project" aria-labelledby="openstoryline-title">
-              <div class="project-rail" aria-hidden="true"><span class="project-number">05</span></div>
-              <div class="project-body">
-                <div class="project-meta-row">
-                  <span class="project-role project-role--core">核心贡献者</span>
-                  <span class="project-latest">最近合并 <time datetime="2026-04-09">2026-04-09</time></span>
-                </div>
-                <h3 class="project-title" id="openstoryline-title"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline" target="_blank" rel="noopener">OpenStoryline<span class="project-title-arrow" aria-hidden="true">↗</span></a></h3>
-                <p class="project-repo"><span>FireRedTeam / FireRed-OpenStoryline</span><span class="project-repo-divider" aria-hidden="true">·</span><span class="project-pr-total">8 条已合并</span></p>
-                <p class="project-summary">为 AI 视频剪辑 Agent 处理会话恢复、聊天历史切换、媒体拖拽上传、API Key 校验与网络重试，重点防止损坏数据、凭据泄露和瞬时网络错误破坏创作流程。</p>
+              <a class="project-all" href="https://github.com/search?q=repo%3Aopensandbox-group%2FOpenSandbox+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">全部记录 <span aria-hidden="true">↗</span></a>
+            </li>
 
-                <div class="representative-work">
-                  <div class="pr-heading"><span class="pr-heading-label">代表性 PR</span><span class="pr-heading-note">4 条代表性记录</span></div>
-                  <ol class="representative-prs">
-                    <li class="rep-pr"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/79" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-04-09">2026-04-09</time><span class="pr-number">#79</span><span class="pr-title">Fix session restore invariants: fail-closed on corrupted tool rows, redact config secrets, and type getSession errors</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/58" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-03-18">2026-03-18</time><span class="pr-number">#58</span><span class="pr-title">feat: support drag-and-drop media upload</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/57" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-03-18">2026-03-18</time><span class="pr-number">#57</span><span class="pr-title">feat(web): add chat history and session switch guards</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                    <li class="rep-pr"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/26" target="_blank" rel="noopener"><time class="pr-date" datetime="2026-03-04">2026-03-04</time><span class="pr-number">#26</span><span class="pr-title">fix(search_media): add exponential backoff retry for network requests</span><span class="pr-link-arrow" aria-hidden="true">↗</span></a></li>
-                  </ol>
-                </div>
-
-                <div class="project-footer">
-                  <a class="project-all-link" href="https://github.com/search?q=repo%3AFireRedTeam%2FFireRed-OpenStoryline+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">查看全部 PR 与 Issue <span class="project-all-arrow" aria-hidden="true">↗</span></a>
-                  <span class="project-record-note">该仓库共 8 条已合并 PR</span>
-                </div>
+            <li class="project-row">
+              <div class="project-identity">
+                <span class="project-number" aria-hidden="true">03</span>
+                <h3 id="openclaw-title"><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">openclaw</a></h3>
+                <span class="project-role">活跃贡献者</span>
               </div>
-            </article>
-          </div>
-        </section>
+              <p class="project-summary">修复 Gateway 的流式输出路径：长 HTML/JSX、拆分工具标记、控制 token 与引用文本不会再让回复停摆或泄漏内部参数。</p>
+              <div class="project-prs">
+                <p class="pr-label">代表 PR</p>
+                <ul>
+                  <li><a href="https://github.com/openclaw/openclaw/pull/187656" target="_blank" rel="noopener"><span class="pr-number">#187656</span><span>避免普通双括号触发全文重解析</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/openclaw/openclaw/pull/185293" target="_blank" rel="noopener"><span class="pr-number">#185293</span><span>修复长 HTML/JSX 流式输出卡顿</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/openclaw/openclaw/pull/184529" target="_blank" rel="noopener"><span class="pr-number">#184529</span><span>阻止工具调用参数进入流式回复</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                </ul>
+              </div>
+              <a class="project-all" href="https://github.com/search?q=repo%3Aopenclaw%2Fopenclaw+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">全部记录 <span aria-hidden="true">↗</span></a>
+            </li>
 
-        <section class="repo-index" aria-labelledby="repo-index-title">
-          <div class="section-heading">
-            <div>
-              <p class="section-kicker">Repository index</p>
-              <h2 id="repo-index-title">参与仓库</h2>
-            </div>
-            <div class="section-side">
-              <p class="section-deck">按 GitHub Stars 从高到低排列。点击任一仓库，可查看我在该仓库中的全部已合并 PR。</p>
-              <a class="section-action" href="https://github.com/search?q=author%3AJasonBuildAI+is%3Apr+is%3Amerged&amp;type=pullrequests" target="_blank" rel="noopener">GitHub 全部合并 PR <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
+            <li class="project-row">
+              <div class="project-identity">
+                <span class="project-number" aria-hidden="true">04</span>
+                <h3 id="openagent-title"><a href="https://github.com/the-open-agent/openagent" target="_blank" rel="noopener">OpenAgent</a></h3>
+                <span class="project-role project-role--member">组织成员</span>
+              </div>
+              <p class="project-summary">参与桌面执行与测试基础设施：Windows UIA GUI 自动化、会话标题与用量元数据回退、AgentBench 基准框架和静态资源。</p>
+              <div class="project-prs">
+                <p class="pr-label">代表 PR</p>
+                <ul>
+                  <li><a href="https://github.com/the-open-agent/openagent/pull/2287" target="_blank" rel="noopener"><span class="pr-number">#2287</span><span>移除 GetAnswer API 的重复模型调用</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/the-open-agent/openagent/pull/2267" target="_blank" rel="noopener"><span class="pr-number">#2267</span><span>为会话自动生成标题并提供回退</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/the-open-agent/openagent/pull/2192" target="_blank" rel="noopener"><span class="pr-number">#2192</span><span>基于 Windows UIA 增加 GUI 自动化工具</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                </ul>
+              </div>
+              <a class="project-all" href="https://github.com/search?q=org%3Athe-open-agent+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">全部记录 <span aria-hidden="true">↗</span></a>
+            </li>
 
-          <ol class="repo-index-list">
-            <li>
-              <a class="repo-index-link" href="https://github.com/morluto/rea/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="morluto/rea，409,623 Stars，2 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">01</span>
-                <span class="repo-index-name">morluto/rea</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">409.6k ★</span><span class="repo-index-prs">2 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/openclaw/openclaw/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="openclaw/openclaw，393,416 Stars，16 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">02</span>
-                <span class="repo-index-name">openclaw/openclaw</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">393.4k ★</span><span class="repo-index-prs">16 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/bytedance/deer-flow/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="bytedance/deer-flow，84,708 Stars，11 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">03</span>
-                <span class="repo-index-name">bytedance/deer-flow</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">84.7k ★</span><span class="repo-index-prs">11 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/alibaba/open-code-review/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="alibaba/open-code-review，49,038 Stars，2 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">04</span>
-                <span class="repo-index-name">alibaba/open-code-review</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">49.0k ★</span><span class="repo-index-prs">2 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/agentscope-ai/QwenPaw/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="agentscope-ai/QwenPaw，36,977 Stars，3 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">05</span>
-                <span class="repo-index-name">agentscope-ai/QwenPaw</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">37.0k ★</span><span class="repo-index-prs">3 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/langchain-ai/deepagents/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="langchain-ai/deepagents，30,779 Stars，1 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">06</span>
-                <span class="repo-index-name">langchain-ai/deepagents</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">30.8k ★</span><span class="repo-index-prs">1 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/opensandbox-group/OpenSandbox/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="opensandbox-group/OpenSandbox，16,287 Stars，14 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">07</span>
-                <span class="repo-index-name">opensandbox-group/OpenSandbox</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">16.3k ★</span><span class="repo-index-prs">14 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/casdoor/casdoor/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="casdoor/casdoor，14,714 Stars，1 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">08</span>
-                <span class="repo-index-name">casdoor/casdoor</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">14.7k ★</span><span class="repo-index-prs">1 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/OpenDCAI/DataFlow/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="OpenDCAI/DataFlow，8,360 Stars，1 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">09</span>
-                <span class="repo-index-name">OpenDCAI/DataFlow</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">8.4k ★</span><span class="repo-index-prs">1 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/loopx-project/loopx/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="loopx-project/loopx，6,487 Stars，68 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">10</span>
-                <span class="repo-index-name">loopx-project/loopx</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">6.5k ★</span><span class="repo-index-prs">68 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/apache/maka/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="apache/maka，5,929 Stars，2 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">11</span>
-                <span class="repo-index-name">apache/maka</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">5.9k ★</span><span class="repo-index-prs">2 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/the-open-agent/openagent/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="the-open-agent/openagent，5,726 Stars，7 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">12</span>
-                <span class="repo-index-name">the-open-agent/openagent</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">5.7k ★</span><span class="repo-index-prs">7 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/apache/fory/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="apache/fory，4,576 Stars，1 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">13</span>
-                <span class="repo-index-name">apache/fory</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">4.6k ★</span><span class="repo-index-prs">1 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="FireRedTeam/FireRed-OpenStoryline，3,594 Stars，8 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">14</span>
-                <span class="repo-index-name">FireRedTeam/FireRed-OpenStoryline</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">3.6k ★</span><span class="repo-index-prs">8 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/taishi-i/awesome-ChatGPT-repositories/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="taishi-i/awesome-ChatGPT-repositories，3,334 Stars，1 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">15</span>
-                <span class="repo-index-name">taishi-i/awesome-ChatGPT-repositories</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">3.3k ★</span><span class="repo-index-prs">1 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/kyrolabs/awesome-agents/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="kyrolabs/awesome-agents，2,974 Stars，1 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">16</span>
-                <span class="repo-index-name">kyrolabs/awesome-agents</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">3.0k ★</span><span class="repo-index-prs">1 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/0xsline/OpenChatCut/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="0xsline/OpenChatCut，2,787 Stars，5 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">17</span>
-                <span class="repo-index-name">0xsline/OpenChatCut</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">2.8k ★</span><span class="repo-index-prs">5 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/Danielskry/Awesome-RAG/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="Danielskry/Awesome-RAG，1,416 Stars，1 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">18</span>
-                <span class="repo-index-name">Danielskry/Awesome-RAG</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">1.4k ★</span><span class="repo-index-prs">1 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/TensorBlock/awesome-mcp-servers/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="TensorBlock/awesome-mcp-servers，999 Stars，1 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">19</span>
-                <span class="repo-index-name">TensorBlock/awesome-mcp-servers</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">999 ★</span><span class="repo-index-prs">1 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/higress-group/HiRoute/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="higress-group/HiRoute，364 Stars，3 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">20</span>
-                <span class="repo-index-name">higress-group/HiRoute</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">364 ★</span><span class="repo-index-prs">3 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/JasonBuildAI/GoldMind/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="JasonBuildAI/GoldMind，67 Stars，1 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">21</span>
-                <span class="repo-index-name">JasonBuildAI/GoldMind</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">67 ★</span><span class="repo-index-prs">1 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/the-open-agent/agentbench/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="the-open-agent/agentbench，3 Stars，2 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">22</span>
-                <span class="repo-index-name">the-open-agent/agentbench</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">3 ★</span><span class="repo-index-prs">2 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
-            </li>
-            <li>
-              <a class="repo-index-link" href="https://github.com/the-open-agent/static/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener" aria-label="the-open-agent/static，0 Stars，4 条已合并 PR；在 GitHub 查看我的全部 PR">
-                <span class="repo-index-rank" aria-hidden="true">23</span>
-                <span class="repo-index-name">the-open-agent/static</span>
-                <span class="repo-index-stats"><span class="repo-index-stars">0 ★</span><span class="repo-index-prs">4 PR</span></span>
-                <span class="repo-index-arrow" aria-hidden="true">↗</span>
-              </a>
+            <li class="project-row">
+              <div class="project-identity">
+                <span class="project-number" aria-hidden="true">05</span>
+                <h3 id="openstoryline-title"><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline" target="_blank" rel="noopener">OpenStoryline</a></h3>
+                <span class="project-role project-role--core">核心贡献者</span>
+              </div>
+              <p class="project-summary">为 AI 视频剪辑 Agent 处理会话恢复、历史切换、媒体上传、密钥校验与网络重试，避免坏数据和凭据风险破坏创作流程。</p>
+              <div class="project-prs">
+                <p class="pr-label">代表 PR</p>
+                <ul>
+                  <li><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/79" target="_blank" rel="noopener"><span class="pr-number">#79</span><span>会话恢复失败关闭并隐藏敏感配置</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/58" target="_blank" rel="noopener"><span class="pr-number">#58</span><span>支持媒体拖拽上传</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                  <li><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pull/57" target="_blank" rel="noopener"><span class="pr-number">#57</span><span>增加聊天历史与会话切换保护</span><span class="pr-arrow" aria-hidden="true">↗</span></a></li>
+                </ul>
+              </div>
+              <a class="project-all" href="https://github.com/search?q=repo%3AFireRedTeam%2FFireRed-OpenStoryline+author%3AJasonBuildAI&amp;type=issues" target="_blank" rel="noopener">全部记录 <span aria-hidden="true">↗</span></a>
             </li>
           </ol>
-          <p class="repo-index-note"><span>整行链接至该仓库的已合并 PR 检索</span><span>Stars 与合并数均为 2026-10-30 快照</span></p>
         </section>
 
-        <footer class="data-note">
-          <span class="data-note-label">Data snapshot</span>
-          <p><strong>数据最后更新：</strong><time datetime="2026-10-30T16:53:00+08:00">2026-10-30 16:53（北京时间）</time>。仓库 Stars、合并 PR 数量与代表 PR 日期均核对自 GitHub；统计范围仅包含已合并 PR，不包含未合并、草稿或已关闭记录。</p>
-        </footer>
+        <section class="repo-directory" aria-labelledby="repo-title">
+          <div class="board-heading">
+            <div>
+              <p class="section-kicker">Repository index</p>
+              <h2 id="repo-title">参与过的仓库</h2>
+            </div>
+            <p>除上面的项目外，我也在以下仓库提交过已合并改动。点击仓库名可查看记录。</p>
+          </div>
+
+          <ul class="repo-grid">
+            <li><a href="https://github.com/morluto/rea/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>morluto/rea</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/openclaw/openclaw/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>openclaw/openclaw</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/bytedance/deer-flow/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>bytedance/deer-flow</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/alibaba/open-code-review/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>alibaba/open-code-review</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/agentscope-ai/QwenPaw/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>agentscope-ai/QwenPaw</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/langchain-ai/deepagents/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>langchain-ai/deepagents</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/opensandbox-group/OpenSandbox/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>opensandbox-group/OpenSandbox</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/casdoor/casdoor/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>casdoor/casdoor</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/OpenDCAI/DataFlow/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>OpenDCAI/DataFlow</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/loopx-project/loopx/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>loopx-project/loopx</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/apache/maka/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>apache/maka</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/the-open-agent/openagent/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>the-open-agent/openagent</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/apache/fory/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>apache/fory</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/FireRedTeam/FireRed-OpenStoryline/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>FireRedTeam/FireRed-OpenStoryline</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/taishi-i/awesome-ChatGPT-repositories/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>taishi-i/awesome-ChatGPT-repositories</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/kyrolabs/awesome-agents/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>kyrolabs/awesome-agents</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/0xsline/OpenChatCut/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>0xsline/OpenChatCut</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/Danielskry/Awesome-RAG/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>Danielskry/Awesome-RAG</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/TensorBlock/awesome-mcp-servers/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>TensorBlock/awesome-mcp-servers</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/higress-group/HiRoute/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>higress-group/HiRoute</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/JasonBuildAI/GoldMind/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>JasonBuildAI/GoldMind</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/the-open-agent/agentbench/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>the-open-agent/agentbench</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/the-open-agent/static/pulls?q=is%3Apr+author%3AJasonBuildAI+is%3Amerged" target="_blank" rel="noopener"><span>the-open-agent/static</span><span aria-hidden="true">↗</span></a></li>
+          </ul>
+
+          <p class="data-note"><strong>数据说明：</strong>代表 PR 与仓库记录均核对自 GitHub，最后更新于 <time datetime="2026-10-31">2026-10-31</time>。未合并、草稿或已关闭但未合并的记录不计入。</p>
+        </section>
       </div>
     </div>
   </main>
@@ -441,7 +219,6 @@
         <a href="/open-source.html">开源贡献</a>
         <a href="/projects.html">实战项目</a>
         <a href="/learning.html">学习空间</a>
-        <a href="/life.html">业余生活</a>
         <a href="mailto:jasonbuildai@gmail.com">邮箱</a>
         <a href="https://github.com/JasonBuildAI" target="_blank" rel="noopener">GitHub</a>
       </nav>

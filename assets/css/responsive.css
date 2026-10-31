@@ -301,32 +301,6 @@
     font-size: 13.5px;
   }
 
-  .life-lead {
-    font-size: 15.2px;
-  }
-
-  .life-index {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .life-index li {
-    padding: 13px 15px 13px 0;
-  }
-
-  .life-index li + li {
-    padding-left: 0;
-    border-left: 0;
-  }
-
-  .life-index li:nth-child(even) {
-    padding-left: 15px;
-    border-left: 1px solid var(--line);
-  }
-
-  .life-index li:nth-child(n + 3) {
-    border-top: 1px solid var(--line);
-  }
-
   .closing-contact {
     align-items: flex-start;
     flex-direction: column;
