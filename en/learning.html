@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Learning · Cairn Notes | Jason Cat</title>
-  <meta name="description" content="Cairn Notes is Jason Cat's open learning-notes project, publishing useful notes and practical experience over the long term. It currently includes two curricula: Pi and OpenSandbox.">
+  <title>Learning Space · Cairn Notes | Jason Cat</title>
+  <meta name="description" content="Cairn Notes is Jason Cat's personal AI Agent learning-notes project: seven tracks and 112 articles covering Pi, OpenSandbox, DeerFlow, LoopX, OpenClaw, Hermes, and engineering foundations.">
   <meta name="author" content="Jason Cat">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#f5f7f4">
@@ -17,19 +17,19 @@
   <link rel="apple-touch-icon" href="/assets/img/avatar-20261030.png">
   <link rel="stylesheet" href="/assets/css/profile.css?v=20261031b">
   <link rel="stylesheet" href="/assets/css/responsive.css?v=20261031b">
-  <link rel="stylesheet" href="/assets/css/learning.css?v=20261031a">
+  <link rel="stylesheet" href="/assets/css/learning.css?v=20261104a">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Learning · Cairn Notes | Jason Cat">
-  <meta property="og:description" content="Cairn Notes is my open learning-notes project, sharing useful notes and practical experience over the long term. It currently includes two curricula: Pi and OpenSandbox.">
+  <meta property="og:title" content="Learning Space · Cairn Notes | Jason Cat">
+  <meta property="og:description" content="Seven AI Agent tracks and 112 articles: start with Pi and OpenSandbox, study four production codebases, then fill in the engineering foundations.">
   <meta property="og:url" content="https://jasonbuildai.github.io/en/learning.html">
   <meta property="og:image" content="https://jasonbuildai.github.io/assets/img/og-card-en-20261031.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Jason Cat's English site share card, featuring his identity, focus areas, and open-source contributions.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Learning · Cairn Notes | Jason Cat">
-  <meta name="twitter:description" content="My open learning-notes project, sharing useful notes and practical experience over the long term.">
+  <meta name="twitter:title" content="Learning Space · Cairn Notes | Jason Cat">
+  <meta name="twitter:description" content="Seven AI Agent tracks, 112 articles, and a route from mental model to production source.">
   <meta name="twitter:image" content="https://jasonbuildai.github.io/assets/img/og-card-en-20261031.png">
   <meta name="twitter:image:alt" content="Jason Cat's English site share card">
 
@@ -48,7 +48,7 @@
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <a href="/en/">About</a>
         <a href="/en/open-source.html">Open Source</a>
-        <a href="/en/projects.html">Projects</a>
+        <a href="/en/projects.html">Hearth OS</a>
         <a href="/en/learning.html" aria-current="page">Learning</a>
       </nav>
 
@@ -64,80 +64,160 @@
   </header>
 
   <main id="main" class="notes-page">
-    <section class="notes-intro" aria-labelledby="page-title">
-      <div class="container notes-intro-grid">
-        <div class="notes-intro-copy">
-          <p class="page-kicker">Learning</p>
+    <section class="notes-hero" aria-labelledby="page-title">
+      <div class="container notes-hero-grid">
+        <div class="notes-hero-copy">
+          <p class="page-kicker">Learning Space · Cairn Notes</p>
           <h1 id="page-title">Cairn Notes</h1>
-          <p class="notes-lead">My personal learning notes, also shared as open source.</p>
-          <p class="notes-description">I organize notes and practical experience that I find valuable here and keep them updated. There are currently two curricula, covering Pi and OpenSandbox.</p>
+          <p class="notes-lead">Understand agents from source, and leave the learning path reusable.</p>
+          <p class="notes-description">A personal, continuously open-sourced collection of AI Agent study notes. Seven tracks and 112 articles: start with Pi and OpenSandbox to build the mental model, study four production codebases, then fill in the engineering foundations.</p>
+          <div class="notes-stats" aria-label="Cairn Notes at a glance">
+            <div><strong>07</strong><span>Tracks</span></div>
+            <div><strong>112</strong><span>Articles</span></div>
+            <div><strong>∞</strong><span>Living notes</span></div>
+          </div>
           <div class="notes-actions">
             <a class="notes-primary" href="https://jasonbuildai.github.io/cairn-notes/" target="_blank" rel="noopener">Open the learning site <span aria-hidden="true">↗</span></a>
             <a class="notes-secondary" href="https://github.com/JasonBuildAI/cairn-notes" target="_blank" rel="noopener">GitHub repository <span aria-hidden="true">↗</span></a>
+            <a class="notes-quiet" href="https://github.com/JasonBuildAI/cairn-notes/issues" target="_blank" rel="noopener">Feedback &amp; ideas <span aria-hidden="true">↗</span></a>
           </div>
         </div>
 
-        <aside class="notes-about" aria-labelledby="about-title">
-          <p class="notes-about-title" id="about-title">About this project</p>
-          <dl>
-            <div>
-              <dt>Project type</dt>
-              <dd>Personal learning notes, open source</dd>
-            </div>
-            <div>
-              <dt>Updates</dt>
-              <dd>Long-term and continuously revised</dd>
-            </div>
-            <div>
-              <dt>Current content</dt>
-              <dd>Two curricula: Pi and OpenSandbox</dd>
-            </div>
-            <div>
-              <dt>Scope</dt>
-              <dd>Learning notes, practical experience, and engineering problems</dd>
-            </div>
-          </dl>
+        <aside class="reading-route" aria-labelledby="route-title">
+          <p class="route-kicker">READING ROUTE / HOW TO READ</p>
+          <h2 id="route-title">From mental model to production systems.</h2>
+          <ol>
+            <li><span>01</span><div><strong>Build the agent mental model</strong><small>Pi · OpenSandbox</small></div></li>
+            <li><span>02</span><div><strong>Study four production source tracks</strong><small>DeerFlow · LoopX · OpenClaw · Hermes</small></div></li>
+            <li><span>03</span><div><strong>Fill in the engineering foundations</strong><small>Systems · Frontend/backend · Data · Models · Retrieval</small></div></li>
+          </ol>
+          <p class="route-footnote">Start anywhere. Reading toward a question matters more than reading in order.</p>
         </aside>
       </div>
     </section>
 
-    <section class="notes-library" aria-labelledby="library-title">
+    <section class="notes-collection" aria-labelledby="foundation-title">
       <div class="container">
-        <div class="notes-heading">
-          <h2 id="library-title">The two current curricula</h2>
-          <p>Start with either one. The notes will keep being revised as I learn and build.</p>
+        <div class="notes-section-head">
+          <div>
+            <p class="section-label">01 / START HERE</p>
+            <h2 id="foundation-title">Build the core mental model first.</h2>
+          </div>
+          <p>Two entry tracks: one builds outward from the agent loop; the other follows sandbox execution inward. Together they make the source studies more than a list of architecture terms.</p>
         </div>
 
-        <div class="book-grid">
-          <a class="note-book" href="https://jasonbuildai.github.io/cairn-notes/pi/" target="_blank" rel="noopener">
-            <span class="book-meta">Curriculum 1 · Pi v1.3.0</span>
+        <div class="foundation-grid">
+          <a class="course-card course-card--featured" href="https://jasonbuildai.github.io/cairn-notes/pi/" target="_blank" rel="noopener">
+            <div class="course-topline"><span>START HERE</span><span>13 articles</span></div>
+            <p class="course-version">Pi 1.3.0</p>
             <h3>Agent Harness</h3>
-            <p>Follows Pi to work through the agent loop, context, tools, and model integration, culminating in a mini agent.</p>
-            <span class="book-action">Start reading <span aria-hidden="true">↗</span></span>
+            <p class="course-copy">Model calls, the agent loop, context, tools, and extensions. Follow Pi end to end and finish with a working mini agent.</p>
+            <ul class="course-tags">
+              <li>Agent Loop</li>
+              <li>Context</li>
+              <li>Tools</li>
+              <li>Extensions</li>
+            </ul>
+            <span class="course-action">Start reading <span aria-hidden="true">↗</span></span>
           </a>
 
-          <a class="note-book" href="https://jasonbuildai.github.io/cairn-notes/opensandbox/" target="_blank" rel="noopener">
-            <span class="book-meta">Curriculum 2 · OpenSandbox release-1.1.1</span>
+          <a class="course-card course-card--featured" href="https://jasonbuildai.github.io/cairn-notes/opensandbox/" target="_blank" rel="noopener">
+            <div class="course-topline"><span>START HERE</span><span>14 articles</span></div>
+            <p class="course-version">OpenSandbox 1.1.1</p>
             <h3>Sandbox Execution</h3>
-            <p>Follows OpenSandbox to work through sandbox execution, network and credential boundaries, and the limits of real-world use.</p>
-            <span class="book-action">Start reading <span aria-hidden="true">↗</span></span>
+            <p class="course-copy">Sandbox lifecycle, runtimes, execution, networking, and security boundaries. See what a system must protect when an agent starts taking real actions.</p>
+            <ul class="course-tags">
+              <li>Sandbox</li>
+              <li>Runtime</li>
+              <li>Network</li>
+              <li>Security</li>
+            </ul>
+            <span class="course-action">Start reading <span aria-hidden="true">↗</span></span>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes-collection notes-collection--alt" aria-labelledby="source-title">
+      <div class="container">
+        <div class="notes-section-head">
+          <div>
+            <p class="section-label">02 / SOURCE STUDIES</p>
+            <h2 id="source-title">Then read four production source tracks.</h2>
+          </div>
+          <p>Not to memorize architecture terms, but to see how different systems handle long tasks, state, permissions, and recovery. Sixteen articles each, organized around real code paths.</p>
+        </div>
+
+        <div class="source-grid">
+          <a class="source-card" href="https://jasonbuildai.github.io/cairn-notes/deerflow/" target="_blank" rel="noopener">
+            <div class="source-index"><span>01</span><span>16 articles</span></div>
+            <p class="course-version">DeerFlow 2.1</p>
+            <h3>Gateway, run lifecycle, and recovery</h3>
+            <p>From the gateway to LangGraph, then into sandbox execution and failure recovery: how a real agent run is organized end to end.</p>
+            <span class="course-action">Enter the source track <span aria-hidden="true">↗</span></span>
+          </a>
+
+          <a class="source-card" href="https://jasonbuildai.github.io/cairn-notes/loopx/" target="_blank" rel="noopener">
+            <div class="source-index"><span>02</span><span>16 articles</span></div>
+            <p class="course-version">LoopX 2.1.1</p>
+            <h3>Long-running control plane and Turn transactions</h3>
+            <p>How long-running work persists state, controls quota, writes back verification results, and continues after an interruption instead of starting over.</p>
+            <span class="course-action">Enter the source track <span aria-hidden="true">↗</span></span>
+          </a>
+
+          <a class="source-card" href="https://jasonbuildai.github.io/cairn-notes/openclaw/" target="_blank" rel="noopener">
+            <div class="source-index"><span>03</span><span>16 articles</span></div>
+            <p class="course-version">OpenClaw 2026.10.9</p>
+            <h3>Gateway, sessions, and tool approvals</h3>
+            <p>Follow the gateway and session model into the agent loop, then see how tool approvals, the Writer, and the limits of autonomy are implemented.</p>
+            <span class="course-action">Enter the source track <span aria-hidden="true">↗</span></span>
+          </a>
+
+          <a class="source-card" href="https://jasonbuildai.github.io/cairn-notes/hermes/" target="_blank" rel="noopener">
+            <div class="source-index"><span>04</span><span>16 articles</span></div>
+            <p class="course-version">Hermes Agent 0.22.5</p>
+            <h3>Multi-frontend hosts and extension surfaces</h3>
+            <p>How multiple frontends share the Turn lifecycle, SessionDB, and extension capabilities, and how an agent host stays maintainable over time.</p>
+            <span class="course-action">Enter the source track <span aria-hidden="true">↗</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes-collection" aria-labelledby="engineering-title">
+      <div class="container">
+        <div class="engineering-card">
+          <div class="engineering-copy">
+            <p class="section-label">03 / FOUNDATION · 21 ARTICLES</p>
+            <h2 id="engineering-title">Engineering foundations</h2>
+            <p>From computer systems, frontend and backend, data, and deployment to models, retrieval, and agents. Come back here whenever a lower-level question blocks the next step.</p>
+            <a class="engineering-link" href="https://jasonbuildai.github.io/cairn-notes/engineering/" target="_blank" rel="noopener">Start reading <span aria-hidden="true">↗</span></a>
+          </div>
+          <ul class="engineering-topics">
+            <li><span>01</span>Computer systems</li>
+            <li><span>02</span>Frontend &amp; backend</li>
+            <li><span>03</span>Data &amp; deployment</li>
+            <li><span>04</span>Model fundamentals</li>
+            <li><span>05</span>Retrieval &amp; RAG</li>
+            <li><span>06</span>Agent engineering</li>
+          </ul>
         </div>
 
         <div class="notes-foot">
-          <p>I will keep adding notes and experience that are worth sharing publicly. If you spot a problem or have a suggestion, feel free to open an issue in the repository.</p>
-          <a href="https://github.com/JasonBuildAI/cairn-notes/issues" target="_blank" rel="noopener">Feedback &amp; suggestions <span aria-hidden="true">↗</span></a>
+          <p>These are personal notes, not official documentation or a complete tutorial. They may contain mistakes and will keep changing. The repository contains notes only, not upstream source, and does not accept pull requests. Please open an issue if you find a problem.</p>
+          <a href="https://github.com/JasonBuildAI/cairn-notes/issues" target="_blank" rel="noopener">Feedback &amp; ideas <span aria-hidden="true">↗</span></a>
         </div>
+        <p class="license-note">Pi, OpenSandbox, and the four source tracks are licensed under CC BY-SA 4.0; Engineering Foundations uses CC BY-NC-SA 4.0.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span data-current-year>2026</span> Jason Cat. Stay curious. Do the work.</p>
+      <p>&copy; <span data-current-year>2026</span> Jason Cat. Stay curious. Do the work.</p>
       <nav class="footer-links" aria-label="Footer links">
         <a href="/en/open-source.html">Open Source</a>
-        <a href="/en/projects.html">Projects</a>
+        <a href="/en/projects.html">Hearth OS</a>
         <a href="/en/learning.html">Learning</a>
         <a href="mailto:jasonbuildai@gmail.com">Email</a>
         <a href="https://github.com/JasonBuildAI" target="_blank" rel="noopener">GitHub</a>

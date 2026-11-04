@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>学习空间 · Cairn Notes | Jason Cat</title>
-  <meta name="description" content="Cairn Notes 是 Jason Cat 的个人学习笔记项目，开源有价值的笔记与经验分享，长期更新。目前包含 Pi 与 OpenSandbox 两套教材。">
+  <meta name="description" content="Cairn Notes 是 Jason Cat 的个人 AI Agent 学习笔记项目，开源 7 套笔记、112 篇正文，覆盖 Pi、OpenSandbox、DeerFlow、LoopX、OpenClaw、Hermes 与工程基础。">
   <meta name="author" content="Jason Cat">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#f5f7f4">
@@ -17,11 +17,11 @@
   <link rel="apple-touch-icon" href="/assets/img/avatar-20261030.png">
   <link rel="stylesheet" href="/assets/css/profile.css?v=20261031b">
   <link rel="stylesheet" href="/assets/css/responsive.css?v=20261031b">
-  <link rel="stylesheet" href="/assets/css/learning.css?v=20261031a">
+  <link rel="stylesheet" href="/assets/css/learning.css?v=20261104a">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="学习空间 · Cairn Notes | Jason Cat">
-  <meta property="og:description" content="Cairn Notes 是我的个人学习笔记项目，长期开源有价值的笔记与经验分享。目前包含 Pi 与 OpenSandbox 两套教材。">
+  <meta property="og:description" content="7 套 AI Agent 学习笔记、112 篇正文：从 Pi 与 OpenSandbox 出发，读懂四套生产级源码，再补齐工程基础。">
   <meta property="og:url" content="https://jasonbuildai.github.io/learning.html">
   <meta property="og:image" content="https://jasonbuildai.github.io/assets/img/og-card-20261030.png">
   <meta property="og:image:width" content="1200">
@@ -29,7 +29,7 @@
   <meta property="og:image:alt" content="Jason Cat 的个人主页分享图，包含身份、关注方向与开源贡献。">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="学习空间 · Cairn Notes | Jason Cat">
-  <meta name="twitter:description" content="我的个人学习笔记项目，长期开源有价值的笔记与经验分享。">
+  <meta name="twitter:description" content="7 套 AI Agent 学习笔记、112 篇正文，从源码理解 Agent。">
   <meta name="twitter:image" content="https://jasonbuildai.github.io/assets/img/og-card-20261030.png">
   <meta name="twitter:image:alt" content="Jason Cat 的个人主页分享图">
 
@@ -48,7 +48,7 @@
       <nav class="site-nav" id="site-nav" aria-label="主导航">
         <a href="/">介绍</a>
         <a href="/open-source.html">开源贡献</a>
-        <a href="/projects.html">实战项目</a>
+        <a href="/projects.html">Hearth OS</a>
         <a href="/learning.html" aria-current="page">学习空间</a>
       </nav>
 
@@ -64,80 +64,160 @@
   </header>
 
   <main id="main" class="notes-page">
-    <section class="notes-intro" aria-labelledby="page-title">
-      <div class="container notes-intro-grid">
-        <div class="notes-intro-copy">
-          <p class="page-kicker">学习空间</p>
+    <section class="notes-hero" aria-labelledby="page-title">
+      <div class="container notes-hero-grid">
+        <div class="notes-hero-copy">
+          <p class="page-kicker">Learning Space · 学习空间</p>
           <h1 id="page-title">Cairn Notes</h1>
-          <p class="notes-lead">我的个人学习笔记，也把这部分内容开源出来。</p>
-          <p class="notes-description">我会把个人觉得有价值的笔记和实践经验整理到这里，并一直更新。目前有两套教材，分别整理 Pi 和 OpenSandbox 的学习内容。</p>
+          <p class="notes-lead">从源码理解 Agent，也把学习过程留成一条可复用的路。</p>
+          <p class="notes-description">这是我个人整理并持续开源的 AI Agent 学习笔记。目前有 7 套笔记、112 篇正文：先用 Pi 与 OpenSandbox 建立基本心智模型，再读四套生产级源码课，最后用工程基础补齐底层知识。</p>
+          <div class="notes-stats" aria-label="Cairn Notes 内容规模">
+            <div><strong>07</strong><span>套笔记</span></div>
+            <div><strong>112</strong><span>篇正文</span></div>
+            <div><strong>∞</strong><span>持续修订</span></div>
+          </div>
           <div class="notes-actions">
             <a class="notes-primary" href="https://jasonbuildai.github.io/cairn-notes/" target="_blank" rel="noopener">打开学习网站 <span aria-hidden="true">↗</span></a>
             <a class="notes-secondary" href="https://github.com/JasonBuildAI/cairn-notes" target="_blank" rel="noopener">GitHub 仓库 <span aria-hidden="true">↗</span></a>
+            <a class="notes-quiet" href="https://github.com/JasonBuildAI/cairn-notes/issues" target="_blank" rel="noopener">反馈与建议 <span aria-hidden="true">↗</span></a>
           </div>
         </div>
 
-        <aside class="notes-about" aria-labelledby="about-title">
-          <p class="notes-about-title" id="about-title">关于这个项目</p>
-          <dl>
-            <div>
-              <dt>项目性质</dt>
-              <dd>个人学习笔记，公开开源</dd>
-            </div>
-            <div>
-              <dt>更新方式</dt>
-              <dd>长期整理，一直更新</dd>
-            </div>
-            <div>
-              <dt>当前内容</dt>
-              <dd>Pi、OpenSandbox 两套教材</dd>
-            </div>
-            <div>
-              <dt>内容范围</dt>
-              <dd>学习笔记、实践经验与工程问题</dd>
-            </div>
-          </dl>
+        <aside class="reading-route" aria-labelledby="route-title">
+          <p class="route-kicker">READING ROUTE / 怎么读</p>
+          <h2 id="route-title">从心智模型，到生产系统。</h2>
+          <ol>
+            <li><span>01</span><div><strong>建立 Agent 心智模型</strong><small>Pi · OpenSandbox</small></div></li>
+            <li><span>02</span><div><strong>读四套生产级源码</strong><small>DeerFlow · LoopX · OpenClaw · Hermes</small></div></li>
+            <li><span>03</span><div><strong>补齐工程底座</strong><small>计算机系统 · 前后端 · 数据 · 模型 · 检索</small></div></li>
+          </ol>
+          <p class="route-footnote">从任意一套开始。按问题读，比按顺序读更重要。</p>
         </aside>
       </div>
     </section>
 
-    <section class="notes-library" aria-labelledby="library-title">
+    <section class="notes-collection" aria-labelledby="foundation-title">
       <div class="container">
-        <div class="notes-heading">
-          <h2 id="library-title">目前的两套教材</h2>
-          <p>可以从任意一套开始读。笔记会随着学习和实践继续修订。</p>
+        <div class="notes-section-head">
+          <div>
+            <p class="section-label">01 / START HERE</p>
+            <h2 id="foundation-title">先建立 Agent 的基本心智模型。</h2>
+          </div>
+          <p>两套起点教材：一套从 Agent 循环向外搭，一套从沙箱执行向内收。读懂它们，后面的源码课才不会只剩名词。</p>
         </div>
 
-        <div class="book-grid">
-          <a class="note-book" href="https://jasonbuildai.github.io/cairn-notes/pi/" target="_blank" rel="noopener">
-            <span class="book-meta">教材一 · Pi v1.3.0</span>
+        <div class="foundation-grid">
+          <a class="course-card course-card--featured" href="https://jasonbuildai.github.io/cairn-notes/pi/" target="_blank" rel="noopener">
+            <div class="course-topline"><span>START HERE</span><span>13 篇</span></div>
+            <p class="course-version">Pi 1.3.0</p>
             <h3>Agent Harness</h3>
-            <p>以 Pi 为主线，整理 Agent 的循环、上下文、工具与模型接入，并完成一个 mini agent。</p>
-            <span class="book-action">开始阅读 <span aria-hidden="true">↗</span></span>
+            <p class="course-copy">模型调用、Agent 循环、上下文、工具与扩展。以 Pi 为主线，最后完成一个真正能跑的 mini agent。</p>
+            <ul class="course-tags">
+              <li>Agent Loop</li>
+              <li>Context</li>
+              <li>Tools</li>
+              <li>Extensions</li>
+            </ul>
+            <span class="course-action">开始阅读 <span aria-hidden="true">↗</span></span>
           </a>
 
-          <a class="note-book" href="https://jasonbuildai.github.io/cairn-notes/opensandbox/" target="_blank" rel="noopener">
-            <span class="book-meta">教材二 · OpenSandbox release-1.1.1</span>
+          <a class="course-card course-card--featured" href="https://jasonbuildai.github.io/cairn-notes/opensandbox/" target="_blank" rel="noopener">
+            <div class="course-topline"><span>START HERE</span><span>14 篇</span></div>
+            <p class="course-version">OpenSandbox 1.1.1</p>
             <h3>沙箱执行</h3>
-            <p>以 OpenSandbox 为主线，整理沙箱执行、网络与凭据边界，以及实际使用中的限制。</p>
-            <span class="book-action">开始阅读 <span aria-hidden="true">↗</span></span>
+            <p class="course-copy">沙箱生命周期、运行时、执行、网络与安全边界。理解 Agent 真正动手时，系统需要替它守住什么。</p>
+            <ul class="course-tags">
+              <li>Sandbox</li>
+              <li>Runtime</li>
+              <li>Network</li>
+              <li>Security</li>
+            </ul>
+            <span class="course-action">开始阅读 <span aria-hidden="true">↗</span></span>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes-collection notes-collection--alt" aria-labelledby="source-title">
+      <div class="container">
+        <div class="notes-section-head">
+          <div>
+            <p class="section-label">02 / SOURCE STUDIES</p>
+            <h2 id="source-title">再读四套生产级源码课。</h2>
+          </div>
+          <p>不是为了背架构名词，而是看不同系统如何处理长任务、状态、权限与恢复。每套 16 篇，按真实代码路径拆开。</p>
+        </div>
+
+        <div class="source-grid">
+          <a class="source-card" href="https://jasonbuildai.github.io/cairn-notes/deerflow/" target="_blank" rel="noopener">
+            <div class="source-index"><span>01</span><span>16 篇</span></div>
+            <p class="course-version">DeerFlow 2.1</p>
+            <h3>Gateway、Run 生命周期与恢复</h3>
+            <p>从 Gateway 到 LangGraph，再到 Sandbox 与故障恢复，理解一条真实 Agent Run 如何被组织起来。</p>
+            <span class="course-action">进入源码课 <span aria-hidden="true">↗</span></span>
+          </a>
+
+          <a class="source-card" href="https://jasonbuildai.github.io/cairn-notes/loopx/" target="_blank" rel="noopener">
+            <div class="source-index"><span>02</span><span>16 篇</span></div>
+            <p class="course-version">LoopX 2.1.1</p>
+            <h3>长程控制面与 Turn 事务</h3>
+            <p>长程任务如何保存状态、控制 Quota、写回验证结果，并在中断后继续，而不是重新来过。</p>
+            <span class="course-action">进入源码课 <span aria-hidden="true">↗</span></span>
+          </a>
+
+          <a class="source-card" href="https://jasonbuildai.github.io/cairn-notes/openclaw/" target="_blank" rel="noopener">
+            <div class="source-index"><span>03</span><span>16 篇</span></div>
+            <p class="course-version">OpenClaw 2026.10.9</p>
+            <h3>Gateway、Session 与工具审批</h3>
+            <p>从 Gateway 和 Session 进入 Agent Loop，理解工具审批、Writer 以及自主控制的边界如何落地。</p>
+            <span class="course-action">进入源码课 <span aria-hidden="true">↗</span></span>
+          </a>
+
+          <a class="source-card" href="https://jasonbuildai.github.io/cairn-notes/hermes/" target="_blank" rel="noopener">
+            <div class="source-index"><span>04</span><span>16 篇</span></div>
+            <p class="course-version">Hermes Agent 0.22.5</p>
+            <h3>多前端宿主与扩展平台</h3>
+            <p>多前端如何共享 Turn 生命周期、SessionDB 与扩展能力，以及一个 Agent 宿主怎样保持长期可维护。</p>
+            <span class="course-action">进入源码课 <span aria-hidden="true">↗</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes-collection" aria-labelledby="engineering-title">
+      <div class="container">
+        <div class="engineering-card">
+          <div class="engineering-copy">
+            <p class="section-label">03 / FOUNDATION · 21 篇</p>
+            <h2 id="engineering-title">工程基础</h2>
+            <p>从计算机系统、前后端、数据和部署，到模型、检索与 Agent。遇到读不懂的底层问题时，回到这里补课。</p>
+            <a class="engineering-link" href="https://jasonbuildai.github.io/cairn-notes/engineering/" target="_blank" rel="noopener">开始阅读 <span aria-hidden="true">↗</span></a>
+          </div>
+          <ul class="engineering-topics">
+            <li><span>01</span>计算机系统</li>
+            <li><span>02</span>前后端</li>
+            <li><span>03</span>数据与部署</li>
+            <li><span>04</span>模型基础</li>
+            <li><span>05</span>检索与 RAG</li>
+            <li><span>06</span>Agent 工程</li>
+          </ul>
         </div>
 
         <div class="notes-foot">
-          <p>之后我会继续补充值得公开的笔记和经验。发现问题或有建议，欢迎在仓库里告诉我。</p>
+          <p>这些是个人笔记，不是官方文档或完整教程。内容可能有错，也会继续修改；仓库只放笔记，不包含上游源码，不接受 Pull Request。发现问题请开 Issue。</p>
           <a href="https://github.com/JasonBuildAI/cairn-notes/issues" target="_blank" rel="noopener">反馈与建议 <span aria-hidden="true">↗</span></a>
         </div>
+        <p class="license-note">Pi、OpenSandbox 与四套源码课采用 CC BY-SA 4.0；工程基础采用 CC BY-NC-SA 4.0。</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span data-current-year>2026</span> Jason Cat。保持好奇，认真做事。</p>
+      <p>&copy; <span data-current-year>2026</span> Jason Cat。保持好奇，认真做事。</p>
       <nav class="footer-links" aria-label="页脚链接">
         <a href="/open-source.html">开源贡献</a>
-        <a href="/projects.html">实战项目</a>
+        <a href="/projects.html">Hearth OS</a>
         <a href="/learning.html">学习空间</a>
         <a href="mailto:jasonbuildai@gmail.com">邮箱</a>
         <a href="https://github.com/JasonBuildAI" target="_blank" rel="noopener">GitHub</a>

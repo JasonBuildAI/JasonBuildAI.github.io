@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects | Jason Cat</title>
-  <meta name="description" content="Jason Cat's projects page is being reimagined. Future work will explore RAG, Agent Harness, and digital humans, with a focus on building things that genuinely hold up in use.">
+  <title>Hearth OS · A personal Agent OS in development | Jason Cat</title>
+  <meta name="description" content="Hearth OS (hearth-os) is a personal Agent OS Jason Cat is independently designing and building: long-running digital work made delegable, auditable, and recoverable.">
   <meta name="author" content="Jason Cat">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#f5f7f4">
@@ -17,25 +17,25 @@
   <link rel="apple-touch-icon" href="/assets/img/avatar-20261030.png">
   <link rel="stylesheet" href="/assets/css/profile.css?v=20261031b">
   <link rel="stylesheet" href="/assets/css/responsive.css?v=20261031b">
-  <link rel="stylesheet" href="/assets/css/projects.css?v=20261030c">
+  <link rel="stylesheet" href="/assets/css/projects.css?v=20261104a">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Projects | Jason Cat">
-  <meta property="og:description" content="The projects page is intentionally open for now. The next body of work will explore RAG, Agent Harness, and digital humans.">
+  <meta property="og:title" content="Hearth OS · A personal Agent OS in development | Jason Cat">
+  <meta property="og:description" content="A personal Agent OS I am independently developing: durable execution, real tools, approvals, and receipts for long-running digital work.">
   <meta property="og:url" content="https://jasonbuildai.github.io/en/projects.html">
   <meta property="og:image" content="https://jasonbuildai.github.io/assets/img/og-card-en-20261031.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Jason Cat's English site share card, featuring his identity, focus areas, and representative open-source contributions.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Projects | Jason Cat">
-  <meta name="twitter:description" content="The projects page is intentionally open for now. The next body of work will explore RAG, Agent Harness, and digital humans.">
+  <meta name="twitter:title" content="Hearth OS · A personal Agent OS in development | Jason Cat">
+  <meta name="twitter:description" content="Long-running digital work made delegable, auditable, and recoverable.">
   <meta name="twitter:image" content="https://jasonbuildai.github.io/assets/img/og-card-en-20261031.png">
   <meta name="twitter:image:alt" content="Jason Cat's English site share card">
 
   <script src="/assets/js/profile.js?v=20261031b" defer></script>
 </head>
-<body>
+<body class="projects-page">
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
@@ -48,7 +48,7 @@
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <a href="/en/">About</a>
         <a href="/en/open-source.html">Open Source</a>
-        <a href="/en/projects.html" aria-current="page">Projects</a>
+        <a href="/en/projects.html" aria-current="page">Hearth OS</a>
         <a href="/en/learning.html">Learning</a>
       </nav>
 
@@ -64,73 +64,243 @@
   </header>
 
   <main id="main">
-    <section class="projects-hero" aria-labelledby="page-title">
-      <div class="container projects-hero-grid">
-        <div class="projects-hero-copy">
-          <p class="page-kicker">Projects</p>
-          <h1 id="page-title">Built to<br><span>hold up in use.</span></h1>
-          <p class="page-lede">This page is intentionally open for now. Rather than rushing a few demos online, I would rather wait until the work actually runs, can be used by other people, and holds up to scrutiny before presenting it here in full.</p>
-          <p class="projects-status"><span aria-hidden="true"></span>Thinking through the next set of projects</p>
-          <div class="projects-actions">
-            <a class="projects-button" href="https://github.com/JasonBuildAI" target="_blank" rel="noopener">Follow progress on GitHub</a>
-            <a class="projects-quiet-link" href="mailto:jasonbuildai@gmail.com">Share an idea</a>
+    <section class="hearth-hero" aria-labelledby="page-title">
+      <div class="container hearth-hero-grid">
+        <div class="hearth-hero-copy">
+          <p class="page-kicker">Personal Project</p>
+          <div class="hearth-title-line">
+            <h1 id="page-title">Hearth <span>OS</span></h1>
+            <span class="build-badge">In development</span>
+          </div>
+          <p class="hearth-tagline">Long-running digital work, made delegable, auditable, and recoverable.</p>
+          <p class="page-lede">Hearth (repo <code>hearth-os</code>) is a general-purpose personal Agent OS I am independently designing and building. It is not another chat window or coding agent; it is a personal digital-work system built around tasks, mandates, execution, evidence, and recovery.</p>
+          <p class="hearth-status-line"><span aria-hidden="true"></span>Independent personal project · Current stage: specification &amp; roadmap / Stage 0 next</p>
+          <div class="hearth-actions">
+            <a class="hearth-button" href="https://github.com/hearthproject/hearth-os" target="_blank" rel="noopener">View the GitHub repository <span aria-hidden="true">↗</span></a>
+            <a class="hearth-link" href="https://hearthproject.github.io/hearth-os/" target="_blank" rel="noopener">Read the docs <span aria-hidden="true">↗</span></a>
+            <a class="hearth-link" href="mailto:jasonbuildai@gmail.com">Share an idea</a>
           </div>
         </div>
 
-        <aside class="direction-note" aria-label="Initial project directions">
-          <p class="direction-kicker">INITIAL DIRECTIONS</p>
-          <ol class="direction-list">
-            <li>
-              <span>01</span>
-              <div><strong>RAG</strong><small>Close the loop between retrieval, evidence, and answers</small></div>
-            </li>
-            <li>
-              <span>02</span>
-              <div><strong>Agent Harness</strong><small>Build runtimes, tools, and security boundaries as one system</small></div>
-            </li>
-            <li>
-              <span>03</span>
-              <div><strong>Digital humans</strong><small>Explore more natural, continuous forms of interaction</small></div>
-            </li>
-          </ol>
-          <p class="direction-footnote">These are draft directions, not shipped projects.</p>
+        <aside class="hearth-card" aria-label="Hearth OS project overview">
+          <div class="hearth-card-grid" aria-hidden="true"></div>
+          <p class="hearth-card-kicker">HEARTH / PERSONAL AGENT OS</p>
+          <div class="hearth-card-head">
+            <img class="hearth-logo" src="/assets/img/hearth-logo.svg" alt="Hearth logo" width="64" height="64">
+            <div>
+              <p class="hearth-card-name">Hearth</p>
+              <p class="hearth-card-sub">Single-user · Self-hosted · Always available</p>
+            </div>
+          </div>
+          <dl class="hearth-meta">
+            <div><dt>Project type</dt><dd>Independent personal project</dd></div>
+            <div><dt>Current stage</dt><dd>Specification &amp; roadmap</dd></div>
+            <div><dt>Next milestone</dt><dd>Stage 0 · Prototype &amp; contracts</dd></div>
+            <div><dt>License</dt><dd>Apache-2.0</dd></div>
+          </dl>
+          <div class="hearth-mini-stack" aria-label="Core Hearth layers">
+            <span>Experience</span>
+            <span>Control</span>
+            <span>Harness</span>
+            <span>Executors</span>
+          </div>
         </aside>
       </div>
     </section>
 
-    <section class="projects-body" aria-labelledby="empty-heading">
+    <section class="project-block" aria-labelledby="why-title">
       <div class="container">
-        <div class="empty-project">
-          <span class="empty-index" aria-hidden="true">00</span>
-          <div class="empty-copy">
-            <p class="section-kicker">CURRENT STATUS</p>
-            <h2 id="empty-heading">No rush to fill the page.</h2>
-            <p>A project deserves to be shown not because it uses a long list of new technologies, but because it solves a real problem and people are willing to keep using it, giving feedback, and maintaining it together.</p>
+        <div class="project-block-head">
+          <p class="section-label">01 / WHY HEARTH</p>
+          <div class="block-heading">
+            <h2 id="why-title">The hard part is not the model.<br>It is everything around it.</h2>
+            <p>Hearth starts from a simple admission: a convincing demo and a piece of work you can delegate for months are not the same thing.</p>
           </div>
-          <p class="empty-aside">When the work is ready, I will add the problem context, architectural tradeoffs, key implementation details, real limitations, and a working link.</p>
         </div>
-
-        <div class="project-principles" aria-label="Three criteria for choosing projects">
-          <article>
+        <div class="problem-grid">
+          <article class="problem-card">
             <span>01</span>
-            <h3>Real problems</h3>
-            <p>Start with a specific, describable problem worth solving, not with a technical buzzword.</p>
+            <h3>State lives in chat</h3>
+            <p>After a crash, restart, or device switch, task context and progress cannot be recovered reliably. You start over by explaining again.</p>
           </article>
-          <article>
+          <article class="problem-card">
             <span>02</span>
-            <h3>Verifiable</h3>
-            <p>Results, boundaries, and failure paths can all be tested, reproduced, and explained, without relying on a lucky demo.</p>
+            <h3>Side effects have no ledger</h3>
+            <p>Sending email, editing files, or pushing code lacks approvals, idempotency, and receipts. Failure is hard to reconcile, so delegation stays risky.</p>
           </article>
-          <article>
+          <article class="problem-card">
             <span>03</span>
-            <h3>Built to last</h3>
-            <p>Withstand real use and maintenance, leaving behind clear documentation, decision records, and room to iterate.</p>
+            <h3>Permissions and memory blur</h3>
+            <p>Credentials, personal context, and tool permissions blend together. The user cannot tell what the Agent is actually allowed to do.</p>
+          </article>
+          <article class="problem-card">
+            <span>04</span>
+            <h3>Every task starts from zero</h3>
+            <p>Context and token costs are uncontrolled, while successful work never becomes a bounded, evaluated, reversible skill.</p>
           </article>
         </div>
+      </div>
+    </section>
 
-        <div class="projects-closing">
-          <p>If you're thinking about similar problems, I'd love to hear from you.</p>
-          <a href="mailto:jasonbuildai@gmail.com">jasonbuildai@gmail.com <span aria-hidden="true">↗</span></a>
+    <section class="definition-band" aria-labelledby="definition-title">
+      <div class="container definition-grid">
+        <div>
+          <p class="definition-kicker">ONE-SENTENCE DEFINITION</p>
+          <blockquote id="definition-title">Hearth is a general-purpose personal Agent OS with personal context, durable execution, real tools, and multi-device entry points.</blockquote>
+          <p class="definition-copy">The goal is not another chat window that needs supervision, but repetitive digital labor that can be confidently delegated, verified, and recovered.</p>
+        </div>
+        <ul class="definition-facts">
+          <li><strong>Single-user</strong><span>Designed around one person's real workflow, not enterprise multi-tenancy.</span></li>
+          <li><strong>Local-first</strong><span>Identity, state, and credentials stay as close to your own devices as possible.</span></li>
+          <li><strong>Parallel executors</strong><span>Codex is a powerful executor, not the product itself or the only brain.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-block architecture-block" aria-labelledby="architecture-title">
+      <div class="container">
+        <div class="project-block-head">
+          <p class="section-label">02 / SYSTEM</p>
+          <div class="block-heading">
+            <h2 id="architecture-title">One logical Agent.<br>Seven cooperating planes.</h2>
+            <p>Hearth does not make a model the system itself. The Control Plane decides what to do, whether it is allowed, and when to interrupt. The Durable Harness owns recovery and evidence. Executors are replaceable capability layers.</p>
+          </div>
+        </div>
+        <div class="architecture-grid">
+          <div class="architecture-copy">
+            <p class="architecture-lead">Every fact enters the <strong>Event Log</strong>. Every external side effect passes through the outbox, idempotency keys, and a <strong>Receipt</strong>. Every UI state is a projection, never the source of truth.</p>
+            <div class="architecture-note">
+              <span>DESIGN INVARIANT</span>
+              <p>Executors can change, devices can move, and model vendors can be swapped. The source of truth, authorization boundary, and recovery path cannot.</p>
+            </div>
+          </div>
+          <ol class="plane-stack">
+            <li><span>01</span><div><h3>Experience Plane</h3><p>Task cards · approvals · artifacts · takeover</p></div></li>
+            <li><span>02</span><div><h3>Personal Gateway</h3><p>Identity · channels · devices · attention entry</p></div></li>
+            <li><span>03</span><div><h3>Control Plane</h3><p>Triggers · policy · Mandate · scheduling · Watchdog</p></div></li>
+            <li><span>04</span><div><h3>Durable Harness</h3><p>Task graph · budget · lease · retry · recovery</p></div></li>
+            <li><span>05</span><div><h3>Executor Layer</h3><p>Native · Codex · Connector · Browser · GUI · Human</p></div></li>
+            <li><span>06</span><div><h3>Execution Gateway</h3><p>Workspace · Sandbox · network · Credential Broker</p></div></li>
+            <li><span>07</span><div><h3>Memory / Evolution</h3><p>Personal context · memory · skills · evaluation · rollback</p></div></li>
+          </ol>
+        </div>
+        <p class="invariant-bar"><span aria-hidden="true"></span>Event Log is the source of truth · side effects have receipts · UI is a projection</p>
+      </div>
+    </section>
+
+    <section class="project-block design-block" aria-labelledby="design-title">
+      <div class="container">
+        <div class="project-block-head">
+          <p class="section-label">03 / DESIGN CHOICES</p>
+          <div class="block-heading">
+            <h2 id="design-title">Four choices that cannot be compromised.</h2>
+            <p>Together they make Hearth something more than a UI wrapped around Codex: personal infrastructure that can run for a long time and be verified.</p>
+          </div>
+        </div>
+        <div class="design-grid">
+          <article><span>01</span><h3>Task Control Plane</h3><p>Define the task, mandate, and risk before choosing who executes it. An executor never decides its own authority.</p></article>
+          <article><span>02</span><h3>Durable execution</h3><p>Continue after a crash, network loss, sleep, or device switch instead of starting over. Every failure leaves a reason and a recovery path.</p></article>
+          <article><span>03</span><h3>Parallel executors</h3><p>Choose Codex, Connector, Browser, GUI, or Human by capability, risk, and token cost rather than cramming everything into one loop.</p></article>
+          <article><span>04</span><h3>Memory and evolution</h3><p>Make experience safely recallable, but require provenance, evaluation, and rollback for every write, promotion, and change.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-block flow-block" aria-labelledby="flow-title">
+      <div class="container">
+        <div class="project-block-head">
+          <p class="section-label">04 / TASK FLOW</p>
+          <div class="block-heading">
+            <h2 id="flow-title">From one sentence<br>to a verifiable receipt.</h2>
+            <p>The user never needs to learn Harness, Ticket, or WorkerEvent. The system must make three things clear: what is happening, whether you are needed, and how to continue after failure.</p>
+          </div>
+        </div>
+        <ol class="flow-list">
+          <li><span>01</span><h3>Intent</h3><p>A person, schedule, or external event produces input.</p></li>
+          <li><span>02</span><h3>Task card</h3><p>Turn intent into a clear goal, scope, and primary action.</p></li>
+          <li><span>03</span><h3>Mandate</h3><p>Policy, budget, and approvals decide what is allowed now.</p></li>
+          <li><span>04</span><h3>Execution</h3><p>The selected executor works in a restricted environment and keeps writing events.</p></li>
+          <li><span>05</span><h3>Verify &amp; recover</h3><p>Complete, retry, switch executors, or hand off to a human, with a receipt.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="project-block roadmap-block" aria-labelledby="roadmap-title">
+      <div class="container">
+        <div class="project-block-head">
+          <p class="section-label">05 / ROADMAP</p>
+          <div class="block-heading">
+            <h2 id="roadmap-title">Seven stages.<br>One capability ladder.</h2>
+            <p>The roadmap advances by capability gates, not date promises. Every stage must deliver a visible interface, durable state, verification evidence, and a recovery path together.</p>
+          </div>
+        </div>
+        <ol class="stage-list">
+          <li class="is-current"><span>Stage 0</span><strong>Prototype &amp; contracts</strong><small>Current starting point · product wedge, clickable prototype, schema v0</small></li>
+          <li><span>Stage 1</span><strong>Local MVP</strong><small>hearthd, SQLite, Event Log, Codex, approvals, and artifacts</small></li>
+          <li><span>Stage 2</span><strong>Daily operator</strong><small>Real work across email, calendar, documents, web, and data</small></li>
+          <li><span>Stage 3</span><strong>Desktop operator</strong><small>GUI execution, device agentd, takeover, and desktop isolation</small></li>
+          <li><span>Stage 4</span><strong>Proactive personal Agent</strong><small>Triggers, attention budget, mobile PWA, and device pairing</small></li>
+          <li><span>Stage 5</span><strong>Memory &amp; Evolution OS</strong><small>Memory OS, skill evaluation, promotion, and rollback</small></li>
+          <li><span>Stage 6</span><strong>Personal Agent OS v1.0</strong><small>Multi-device sync, migration, long-running operation, quotas</small></li>
+        </ol>
+        <p class="roadmap-note">Stage 0 is not about writing more documents. It is about pinning down the prototype, interaction, protocols, and acceptance.</p>
+      </div>
+    </section>
+
+    <section class="project-block status-block" aria-labelledby="status-title">
+      <div class="container">
+        <div class="status-panel">
+          <div class="status-intro">
+            <p class="section-label">06 / CURRENT STATUS</p>
+            <h2 id="status-title">In development, with the boundaries stated.</h2>
+            <p>Hearth is my personal project, not a company or team product. It is currently in the specification and roadmap stage: the product, architecture, safety, evaluation, and delivery documents are complete, while the runnable <code>hearthd</code>, <code>hearth</code> CLI, and Web interface have not yet begun.</p>
+          </div>
+          <div class="status-columns">
+            <div>
+              <h3>Completed</h3>
+              <ul>
+                <li>Product definition, non-goals, and primary user</li>
+                <li>Seven planes and domain model</li>
+                <li>Safety, privacy, and evaluation framework</li>
+                <li>Stage 0–6 roadmap</li>
+                <li>Bilingual documentation site</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Next up</h3>
+              <ul>
+                <li>Stage 0 product wedge and real task set</li>
+                <li>Clickable end-to-end Web prototype</li>
+                <li>Event / Task / Run / Receipt schema v0</li>
+                <li>Evaluation set and validator baseline</li>
+                <li>First Codex executor slice</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Not promised yet</h3>
+              <ul>
+                <li>Unattended high-risk automation</li>
+                <li>Enterprise multi-tenancy or org audit</li>
+                <li>A public Agent marketplace</li>
+                <li>Every channel on day one</li>
+                <li>Beating model vendors at model capability</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-cta" aria-labelledby="cta-title">
+      <div class="container project-cta-inner">
+        <div>
+          <p class="section-label">OPEN BUILDING</p>
+          <h2 id="cta-title">If you are building long-running Agents too,<br>or want to ask the questions more clearly.</h2>
+        </div>
+        <div class="project-cta-actions">
+          <a class="hearth-button" href="https://github.com/hearthproject/hearth-os" target="_blank" rel="noopener">View repository <span aria-hidden="true">↗</span></a>
+          <a class="hearth-link" href="https://hearthproject.github.io/hearth-os/en/delivery/roadmap.html" target="_blank" rel="noopener">Read the roadmap <span aria-hidden="true">↗</span></a>
+          <a class="hearth-link" href="mailto:jasonbuildai@gmail.com">Email Jason</a>
         </div>
       </div>
     </section>
@@ -138,10 +308,10 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span data-current-year>2026</span> Jason Cat. Stay curious. Do the work.</p>
+      <p>&copy; <span data-current-year>2026</span> Jason Cat. Stay curious. Do the work.</p>
       <nav class="footer-links" aria-label="Footer links">
         <a href="/en/open-source.html">Open Source</a>
-        <a href="/en/projects.html">Projects</a>
+        <a href="/en/projects.html">Hearth OS</a>
         <a href="/en/learning.html">Learning</a>
         <a href="mailto:jasonbuildai@gmail.com">Email</a>
         <a href="https://github.com/JasonBuildAI" target="_blank" rel="noopener">GitHub</a>
