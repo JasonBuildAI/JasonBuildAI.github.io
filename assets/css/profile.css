@@ -562,6 +562,87 @@ main {
   line-height: 1.8;
 }
 
+.project-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 620px;
+  margin-top: 30px;
+}
+
+.project-repo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 14px 16px 15px;
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.project-repo:hover {
+  border-color: var(--accent);
+  background: var(--paper-raised);
+}
+
+.project-meta-label {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-repo-value {
+  color: var(--ink);
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+
+.project-repo-value span {
+  color: var(--accent);
+}
+
+.project-progress {
+  padding: 14px 16px 15px;
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+}
+
+.project-progress-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-progress-value {
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.project-progress-value i {
+  color: var(--muted);
+  font-size: 11px;
+  font-style: normal;
+}
+
+.project-progress-track {
+  height: 4px;
+  margin-top: 14px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.project-progress-track span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+
 .explore {
   padding: var(--section-space) 0;
   border-top: 1px solid var(--line);

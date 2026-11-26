@@ -314,6 +314,10 @@
     flex-direction: column;
   }
 
+  .project-meta {
+    grid-template-columns: 1fr;
+  }
+
   .footer-inner {
     display: grid;
   }

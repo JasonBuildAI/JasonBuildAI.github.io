@@ -12,8 +12,8 @@
 | --- | --- | --- | --- |
 | 介绍 | `index.html` | `en/index.html` | 一屏式个人档案：最新头像、正式介绍、两个邮箱、QQ 号与微信号，以及其余页面导航 |
 | 开源贡献 | `open-source.html` | `en/open-source.html` | 首屏展示 LoopX、OpenSandbox、openclaw、OpenAgent、OpenStoryline 的代表性 PR，下方列出参与过的全部仓库 |
-| hearth-os | `hearth-os.html` | `en/hearth-os.html` | 项目占位页，内容整理中 |
-| hearth-eval | `hearth-eval.html` | `en/hearth-eval.html` | 项目占位页，内容整理中 |
+| hearth-os | `hearth-os.html` | `en/hearth-os.html` | 项目占位页：GitHub 仓库链接与开发进度（95%），正文待补充 |
+| hearth-eval | `hearth-eval.html` | `en/hearth-eval.html` | 项目占位页：GitHub 仓库链接与开发进度（45%），正文待补充 |
 
 `projects.html` 与 `en/projects.html` 保留为跳转页，分别指向 `hearth-os.html` 与 `en/hearth-os.html`，避免旧链接失效。
 
@@ -55,7 +55,7 @@ python -m http.server 8765
 
 - 首页介绍与联系方式：同时编辑 `index.html`、`en/index.html` 与 `assets/css/home.css`。
 - 开源贡献：同时编辑 `open-source.html`、`en/open-source.html` 与 `assets/css/open-source.css`。两版的 PR 标题应一一对应，外链保持一致。
-- hearth-os / hearth-eval：目前为占位页，分别编辑 `hearth-os.html`、`en/hearth-os.html` 与 `hearth-eval.html`、`en/hearth-eval.html`。补内容时再决定是否新增独立样式文件。
+- hearth-os / hearth-eval：目前为占位页，分别编辑 `hearth-os.html`、`en/hearth-os.html` 与 `hearth-eval.html`、`en/hearth-eval.html`。仓库分别为 <https://github.com/hearthproject/hearth-os> 与 <https://github.com/hearthproject/hearth-eval>；开发进度同时写在文案、进度条宽度与 `aria-valuenow` 中，改数字时三处一起改。补内容时再决定是否新增独立样式文件。
 - 顶栏最后更新时间：所有内容页的 `.header-updated` 需保持一致，发布当天同步修改 `datetime` 与显示的日期。
 - 颜色、字体与布局：编辑 `assets/css/profile.css` 顶部的设计变量和对应组件。
 - 响应式断点：编辑 `assets/css/responsive.css`。
