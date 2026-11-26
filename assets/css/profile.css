@@ -204,6 +204,26 @@ a:hover {
   color: var(--accent);
 }
 
+.header-updated {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-left: 4px;
+  padding-left: 18px;
+  border-left: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11.5px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.header-updated time {
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.01em;
+}
+
 .language-switch {
   display: inline-flex;
   align-items: stretch;
@@ -510,6 +530,36 @@ main {
 
 .page-content .container {
   width: min(calc(100% - (2 * var(--gutter))), 920px);
+}
+
+.placeholder-main {
+  display: grid;
+  align-items: center;
+  min-height: calc(100vh - 66px - 110px);
+  padding: clamp(64px, 11vw, 128px) 0;
+}
+
+.placeholder-inner {
+  max-width: 880px;
+}
+
+.placeholder-inner h1 {
+  margin: 0;
+  font-family: Bahnschrift, "Segoe UI Variable Display", "Segoe UI", "Microsoft YaHei UI", sans-serif;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 620;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.placeholder-note {
+  max-width: 32em;
+  margin: 26px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--line-strong);
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 .explore {

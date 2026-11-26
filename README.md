@@ -2,9 +2,9 @@
 
 线上地址：**https://jasonbuildai.github.io/**
 
-一份克制的技术工作者个人主页，提供中英文双语版本。首页是一屏式个人介绍，包含 GitHub 最新头像、正式个人简介与可一键复制的联系方式；其他页面呈现 AI Agent 运行时、执行安全与跨平台工程方向的开源工作、正在独立开发的 Hearth OS 个人 Agent OS，以及长期更新的 Cairn Notes 学习笔记。
+一份克制的技术工作者个人主页，提供中英文双语版本。首页是一屏式个人介绍，包含 GitHub 最新头像、正式个人简介与可一键复制的联系方式；其他页面呈现 AI Agent 运行时、执行安全与跨平台工程方向的开源工作，以及正在筹备中的 `hearth-os` 与 `hearth-eval` 两个项目页面。
 
-站点是**多页面结构**：顶部导航点击后进入独立页面，不再是单页锚点滚动。右上角的 `中 / EN` 切换器会在对应的中文页和英文页之间跳转；英文版使用独立的 `/en/` 静态页面，不依赖运行时翻译。页面是纯静态 HTML / CSS / JavaScript，直接托管于 GitHub Pages，不依赖 CDN、前端框架或网络字体。
+站点是**多页面结构**：顶部导航点击后进入独立页面，不再是单页锚点滚动。顶栏显示站点最后更新时间（精确到天）。右上角的 `中 / EN` 切换器会在对应的中文页和英文页之间跳转；英文版使用独立的 `/en/` 静态页面，不依赖运行时翻译。页面是纯静态 HTML / CSS / JavaScript，直接托管于 GitHub Pages，不依赖 CDN、前端框架或网络字体。
 
 ## 页面结构
 
@@ -12,8 +12,10 @@
 | --- | --- | --- | --- |
 | 介绍 | `index.html` | `en/index.html` | 一屏式个人档案：最新头像、正式介绍、两个邮箱、QQ 号与微信号，以及其余页面导航 |
 | 开源贡献 | `open-source.html` | `en/open-source.html` | 首屏展示 LoopX、OpenSandbox、openclaw、OpenAgent、OpenStoryline 的代表性 PR，下方列出参与过的全部仓库 |
-| Hearth OS | `projects.html` | `en/projects.html` | 正在独立开发的个人 Agent OS：问题背景、七个系统平面、设计取舍、任务流、路线图与当前状态 |
-| 学习空间 | `learning.html` | `en/learning.html` | Cairn Notes 学习笔记项目：7 套笔记、112 篇正文、推荐阅读路径、四套生产级源码课与工程基础 |
+| hearth-os | `hearth-os.html` | `en/hearth-os.html` | 项目占位页，内容整理中 |
+| hearth-eval | `hearth-eval.html` | `en/hearth-eval.html` | 项目占位页，内容整理中 |
+
+`projects.html` 与 `en/projects.html` 保留为跳转页，分别指向 `hearth-os.html` 与 `en/hearth-os.html`，避免旧链接失效。
 
 开源贡献只展示 GitHub 已合并的 Pull Request。页首先展示长期投入项目、角色、工作概述、代表性 PR 与完整记录入口，方便访问者直接了解实际贡献；页面下方再按项目影响力列出参与过的全部仓库，不展示 PR 数量或仓库数量统计。
 
@@ -23,19 +25,19 @@
 | --- | --- |
 | `index.html` | 首页：一屏式个人介绍、四项可复制联系方式、SEO / Open Graph 元数据 |
 | `open-source.html` | 开源贡献页 |
-| `projects.html` | Hearth OS 项目介绍页 |
-| `learning.html` | 学习空间页 |
+| `hearth-os.html` | hearth-os 占位页 |
+| `hearth-eval.html` | hearth-eval 占位页 |
+| `projects.html` | 旧 Hearth OS 链接跳转到 `hearth-os.html` |
 | `en/index.html` | 英文首页，完整英文元数据与共享图说明 |
 | `en/open-source.html` | 英文开源贡献页，PR 与仓库链接同中文版保持一致 |
-| `en/projects.html` | 英文 Hearth OS 项目介绍页 |
-| `en/learning.html` | 英文学习空间页 |
+| `en/hearth-os.html` | 英文 hearth-os 占位页 |
+| `en/hearth-eval.html` | 英文 hearth-eval 占位页 |
+| `en/projects.html` | 旧英文 Hearth OS 链接跳转到 `en/hearth-os.html` |
 | `404.html` | 独立 404 页面 |
-| `assets/css/profile.css` | 设计变量、基础排版、布局与组件 |
+| `assets/css/profile.css` | 设计变量、基础排版、布局、顶栏更新时间与占位页样式 |
 | `assets/css/responsive.css` | 平板、手机、减少动态效果与打印样式 |
 | `assets/css/home.css` | 首页单屏布局与各尺寸下的紧凑排版 |
 | `assets/css/open-source.css` | 开源贡献页的首屏贡献列表、代表 PR 与仓库索引样式 |
-| `assets/css/projects.css` | Hearth OS 项目页的编辑式排版、架构平面、路线图与响应式样式 |
-| `assets/css/learning.css` | 学习空间页的阅读路径、7 套笔记、源码课与工程基础样式 |
 | `assets/js/profile.js` | 移动导航、联系方式复制与年份 |
 | `assets/img/` | 头像、站点图标与社交分享图 |
 
@@ -53,13 +55,13 @@ python -m http.server 8765
 
 - 首页介绍与联系方式：同时编辑 `index.html`、`en/index.html` 与 `assets/css/home.css`。
 - 开源贡献：同时编辑 `open-source.html`、`en/open-source.html` 与 `assets/css/open-source.css`。两版的 PR 标题应一一对应，外链保持一致。
-- Hearth OS：同时编辑 `projects.html`、`en/projects.html` 与 `assets/css/projects.css`。Hearth 是 Jason 的个人独立项目，不是公司或团队产品；页面应明确区分“规格与路线图已完成”和“运行时代码尚未开始”。仓库为 <https://github.com/hearthproject/hearth-os>，文档站为 <https://hearthproject.github.io/hearth-os/>。
-- 学习空间：同时编辑 `learning.html`、`en/learning.html` 与 `assets/css/learning.css`。Cairn Notes 线上站点为 <https://jasonbuildai.github.io/cairn-notes/>，仓库为 <https://github.com/JasonBuildAI/cairn-notes>。当前结构为 7 套笔记、112 篇正文：Pi 13 篇、OpenSandbox 14 篇、DeerFlow 16 篇、LoopX 16 篇、OpenClaw 16 篇、Hermes 16 篇、工程基础 21 篇。
+- hearth-os / hearth-eval：目前为占位页，分别编辑 `hearth-os.html`、`en/hearth-os.html` 与 `hearth-eval.html`、`en/hearth-eval.html`。补内容时再决定是否新增独立样式文件。
+- 顶栏最后更新时间：所有内容页的 `.header-updated` 需保持一致，发布当天同步修改 `datetime` 与显示的日期。
 - 颜色、字体与布局：编辑 `assets/css/profile.css` 顶部的设计变量和对应组件。
 - 响应式断点：编辑 `assets/css/responsive.css`。
 - 头像与社交分享图：中文页使用 `assets/img/og-card-20261030.png`，英文页使用 `assets/img/og-card-en-20261031.png`；替换时保持 1200 × 630 尺寸，并同步更新对应页面的 `og:image` / `twitter:image`。
 
-新增页面时，除了新建中英文 HTML，还要同步五处：页面顶部的 `.site-nav`、右上角的 `.language-switch`、页面底部的 `.footer-links`、每个页面自己的 `<title>` / `description` / `canonical`，以及双向的 `hreflang` 链接。导航当前项和当前语言项都用 `aria-current="page"` 标记。
+新增页面时，除了新建中英文 HTML，还要同步六处：页面顶部的 `.site-nav`、顶栏的 `.header-updated`、右上角的 `.language-switch`、页面底部的 `.footer-links`、每个页面自己的 `<title>` / `description` / `canonical`，以及双向的 `hreflang` 链接。导航当前项和当前语言项都用 `aria-current="page"` 标记。
 
 ## 双语约定
 

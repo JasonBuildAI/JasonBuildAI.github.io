@@ -23,6 +23,10 @@
     display: none;
   }
 
+  .header-updated {
+    display: none;
+  }
+
   .language-switch {
     margin-left: auto;
   }
